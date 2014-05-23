@@ -7,11 +7,8 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <jdoc:include type="head" />    
     <!-- Le styles -->
     <link href="<?php echo $temp_path; ?>/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo $temp_path; ?>/css/bootstrap-responsive.css" rel="stylesheet">
@@ -43,6 +40,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 </a>
                 <a id="logo" class="pull-left" href="./"></a>
                 <div class="nav-collapse collapse pull-right">
+                    <!--
                     <ul class="nav">
                         <li class="active"><a href="index.html">About Team</a></li>
                         <li><a href="about-us.html">Java</a></li>
@@ -57,7 +55,8 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                         <li class="login">
                             <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>
                         </li>
-                    </ul>        
+                    </ul> -->
+                    <jdoc:include type="modules" name="menutop" style="none" />       
                 </div><!--/.nav-collapse -->
             </div>
         </div>
@@ -66,8 +65,10 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 
     <section id="about-us" class="container main">
         <div class="row-fluid">
+            
             <div class="span8">
-                <div class="blog">
+                <!--
+				<div class="blog">
                     <div class="blog-item well">
                         <a href="#"><h2>Duis sed odio sit amet nibh vulputate cursus</h2></a>
                         <div class="blog-meta clearfix">
@@ -81,7 +82,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                       <a class="btn btn-link" href="#">Read More <i class="icon-angle-right"></i></a>
                   </div>
                   <!-- End Blog Item -->
-
+				 <!--		
                   <div class="blog-item well">
                     <a href="#"><h2>Duis sed odio sit amet nibh vulputate cursus a sit</h2></a>
                     <div class="blog-meta clearfix">
@@ -96,10 +97,10 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                   <a class="btn btn-link" href="#">Read More <i class="icon-angle-right"></i></a>
               </div>
               <!-- End Blog Item -->
-
+			<!--	
               <div class="gap"></div>
 
-              <!-- Paginationa -->
+             
               <div class="pagination">
                 <ul>
                     <li><a href="#"><i class="icon-angle-left"></i></a></li>
@@ -110,18 +111,21 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                     <li><a href="#">5</a></li>
                     <li><a href="#"><i class="icon-angle-right"></i></a></li>
                 </ul>
-            </div>
+              </div>
 
 
-        </div>
-    </div>
+        </div>-->
+		<jdoc:include type="message" />
+		<jdoc:include type="component" />
+    </div> 
     <aside class="span4">
-        <div class="widget search">
+        <!--
+		<div class="widget search">
             <form>
                 <input type="text" class="input-block-level" placeholder="Search">
             </form>
         </div>
-        <!-- /.search -->
+       
 
         <div class="widget ads">
             <div class="row-fluid">
@@ -144,7 +148,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 </div>
             </div>
         </div>
-        <!-- /.ads -->
+       
 
         <div class="widget widget-popular">
             <h3>Popular Posts</h3>
@@ -187,7 +191,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 
             </div>                        
         </div>
-        <!-- End Popular Posts -->        
+                
 
         <div class="widget">
             <h3>Blog Categories</h3>
@@ -216,7 +220,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 
             </div>                       
         </div>
-        <!-- End Category Widget -->
+       
 
         <div class="widget">
             <h3>Tag Cloud</h3>
@@ -233,7 +237,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 <li><a class="btn btn-mini btn-primary" href="#">Update</a></li>
             </ul>
         </div> 
-        <!-- End Tag Cloud Widget -->
+        
 
         <div class="widget">
             <h3>Archive</h3>
@@ -244,8 +248,8 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 <li><a href="#">February 2013</a></li>
             </ul>
         </div> 
-        <!-- End Archive Widget -->   
-
+       -->
+		<jdoc:include type="modules" name="right" style="none" />
     </aside>
 </div>
 
