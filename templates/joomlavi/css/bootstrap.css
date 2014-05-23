@@ -760,7 +760,7 @@ h6 small {
 h1,
 h2,
 h3 {
-  line-height: 40px;
+  line-height: 20px;
 }
 
 h1 {
@@ -804,9 +804,8 @@ h4 small {
 }
 
 .page-header {
-  padding-bottom: 0px;
-  margin: 10px 0 15px;
-  border-bottom: 1px solid #eeeeee;
+  margin: 10px 0 12px;
+  padding-bottom: 0;
 }
 /*for pagination */
 
@@ -832,10 +831,12 @@ h4 small {
 .icon-last:before {
 	content: "\e000";
 }
-
+.icon-first:before, .icon-next:before,.icon-previous:before,.icon-last:before {
+	font-family: 'IcoMoonPagination';
+}
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-	font-family: 'IcoMoonPagination';
+	
 	font-style: normal;
 	speak: none;
 }
