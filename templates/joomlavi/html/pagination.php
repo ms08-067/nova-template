@@ -158,7 +158,7 @@ function pagination_item_active(&$item)
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		$display = '<i class="icon-previous icon-angle-left"> </i>';
+		$display = '<i class="icon-previous"> </i>';
 	}
 
 	// Check for "Next" item
