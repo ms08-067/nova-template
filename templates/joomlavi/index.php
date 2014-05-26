@@ -14,7 +14,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <link href="<?php echo $temp_path; ?>/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="<?php echo $temp_path; ?>/css/main.css" rel="stylesheet">
     <link href="<?php echo $temp_path; ?>/css/font-awesome.min.css" rel="stylesheet">
-	<link href="<?php echo $temp_path; ?>/css/template1.css" rel="stylesheet"> 
+	<!--<link href="<?php echo $temp_path; ?>/css/template1.css" rel="stylesheet"> -->
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -298,6 +298,16 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <script src="<?php echo $temp_path; ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-typeahead.js"></script>
-
+	<script>
+		$(function(){
+			
+			$("#gototop").click(function(){
+				//alert(123);
+				$('body').animate({scrollTop:0}, 'slow');
+			});
+		});
+		
+	</script>
+	
   </body>
 </html>
