@@ -46,8 +46,20 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 
     <!--Header-->
     <header class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
+         
+		<div class="navbar-inner">
+           
+			
+			<div class="container">
+				 <?php if ($this->countModules('hotline')) : ?>
+				   <div class="row-fluid hotline">
+					<div class="span8"></div>
+					<div class="span4">
+						<jdoc:include type="modules" name="hotline" />
+					</div>
+				   </div>
+				   <?php endif;?>
+			
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -55,22 +67,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 </a>
                 <a id="logo" class="pull-left" href="./"></a>
                 <div class="nav-collapse collapse pull-right">
-                    <!--
-                    <ul class="nav">
-                        <li class="active"><a href="index.html">About Team</a></li>
-                        <li><a href="about-us.html">Java</a></li>
-                        <li><a href="about-us.html">Android</a></li>
-                        <li><a href="services.html">Cordova</a></li>
-                        <li><a href="career.html">Phonegap</a></li>
-                        <li><a href="pricing.html">Sencha</a></li>
-                        <li><a href="pricing.html">PHP Development</a></li>
-                        <li><a href="portfolio.html">Templates</a></li>
-                        <li><a href="blog.html">Blog</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li class="login">
-                            <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>
-                        </li>
-                    </ul> -->
+                    
                     <jdoc:include type="modules" name="menutop" style="none" />       
                 </div><!--/.nav-collapse -->
             </div>
@@ -79,15 +76,6 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <!-- /header -->
 
     <section id="about-us" class="container main">
-         <?php if ($this->countModules('hotline')) : ?>
-	   <div class="row-fluid hotline">
-		<div class="span8"></div>
-		<div class="span4">
-			<jdoc:include type="modules" name="hotline" />
-		</div>
-	   </div>
-	   <?php endif;?>
-		
 		<div class="row-fluid">
             
             <div class="span8">
