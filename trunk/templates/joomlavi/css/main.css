@@ -127,13 +127,46 @@ a:focus {
 }
 
 body>section {
-  padding:50px 0;
+  padding: 40px 0px 50px;
 }
 
 body>section#slide-show {
   padding:0;
 }
+.c_hotline {
+	margin-bottom: 0px;
+	margin-right: 9px;
+}
+.c_hotline img {
 
+    height: 30px;
+    margin-right: 2px !important;
+    margin-top: 11px;
+}
+.mail {
+margin-left: 5px;
+}
+.face {
+	margin-left: 6px;
+}
+.hotline  {
+	height: 42px;
+	overflow: hidden;
+}
+.qcontact {
+	color: #999;
+    float: left;
+    font-family: "Fjalla One";
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 18px;
+    text-transform: uppercase;
+    width: 234px;
+}
+.item-110 a {
+
+	padding-right: 0px !important;
+}
 #recent-works {
   background:#2dcc70;
   color:#fff;
@@ -292,6 +325,7 @@ header.navbar .navbar-inner {
 header #logo {
   width:220px;
   height:80px;
+  margin-top: -42px;
   background:url(../images/logo.png) no-repeat 0 50%;
 }
 
@@ -300,7 +334,7 @@ header.navbar {
 }
 
 header.navbar .nav {
-  margin-top:20px;
+  margin-top: 0px;
 }
 
 header.navbar .nav>li {
