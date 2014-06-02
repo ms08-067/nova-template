@@ -14,7 +14,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <link href="<?php echo $temp_path; ?>/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="<?php echo $temp_path; ?>/css/main.css" rel="stylesheet">
     <link href="<?php echo $temp_path; ?>/css/font-awesome.min.css" rel="stylesheet">
-	<!--<link href="<?php echo $temp_path; ?>/css/template1.css" rel="stylesheet"> -->
+	<link href="<?php echo $temp_path; ?>/css/template1.css" rel="stylesheet"> 
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -27,6 +27,19 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $temp_path; ?>/images/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="<?php echo $temp_path; ?>/images/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="<?php echo $temp_path; ?>/images/favicon.png">
+	
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32806964-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	
   </head>
 
   <body>
@@ -66,7 +79,16 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <!-- /header -->
 
     <section id="about-us" class="container main">
-        <div class="row-fluid">
+         <?php if ($this->countModules('hotline')) : ?>
+	   <div class="row-fluid hotline">
+		<div class="span8"></div>
+		<div class="span4">
+			<jdoc:include type="modules" name="hotline" />
+		</div>
+	   </div>
+	   <?php endif;?>
+		
+		<div class="row-fluid">
             
             <div class="span8">
                 <!--
@@ -298,16 +320,6 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <script src="<?php echo $temp_path; ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-typeahead.js"></script>
-	<script>
-		$(function(){
-			
-			$("#gototop").click(function(){
-				//alert(123);
-				$('body').animate({scrollTop:0}, 'slow');
-			});
-		});
-		
-	</script>
-	
+
   </body>
 </html>
