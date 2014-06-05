@@ -1241,8 +1241,13 @@ body
 }
 .nav-collapse,.nav-collapse.collapse
 {
-	height:0;
-	overflow:hidden
+	background: none repeat scroll 0 0 #F5F5F5;
+    border-radius: 2px;
+    float: right;
+	overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 101px;
 }
 .navbar .btn-navbar
 {
