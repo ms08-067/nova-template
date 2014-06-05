@@ -53,8 +53,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 			<div class="container">
 				 <?php if ($this->countModules('hotline')) : ?>
 				   <div class="row-fluid hotline">
-					<div class="span8"></div>
-					<div class="span4">
+					<div class="span12 head_contact">
 						<jdoc:include type="modules" name="hotline" />
 					</div>
 				   </div>
@@ -271,20 +270,16 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 <footer id="footer">
     <div class="container">
         <div class="row-fluid">
-            <div class="span5 cp">
+            <div class="span12 cp">
                 &copy; 2013 Joomlavi. All Rights Reserved.
-            </div>
-            <!--/Copyright-->
-
-            <div class="span6">
+           
                 <ul class="social pull-right">
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-google-plus"></i></a></li>                       
+                    <li><a href="#"><i class="icon-google-plus"></i></a></li>   
+					<li class="go_top"> <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a></li>	
                 </ul>
-            </div>
-
-            <div class="span1">
-                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+           
+               
             </div>
             <!--/Goto Top-->
         </div>

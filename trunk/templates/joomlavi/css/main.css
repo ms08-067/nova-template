@@ -35,10 +35,18 @@
 }
 
 body {
- padding-top:80px;
   font-size:12px;
   color:#34495e;
   background:#f5f5f5;
+}
+@media (min-width: 979px) {
+
+	body {
+	  padding-top:80px;
+	}
+}
+.head_contact {
+	
 }
 /*
 @media (min-width: 768px) {
@@ -134,8 +142,10 @@ body>section#slide-show {
   padding:0;
 }
 .c_hotline {
-	margin-bottom: 0px;
-	margin-right: 9px;
+	width: 382px;
+    float: right;
+    margin-bottom: 0;
+    margin-right: 9px;
 }
 .c_hotline img {
 
@@ -322,10 +332,22 @@ header.navbar .navbar-inner {
   box-shadow:none;
 }
 
+
+@media (min-width: 979px) {
+header #logo {
+	margin-top: -42px;
+}
+
+}
+@media (max-width: 979px) {
+.navbar .btn-navbar {
+	margin-top: 28px;
+}	
+}
 header #logo {
   width:220px;
   height:80px;
-  margin-top: -42px;
+  
   background:url(../images/logo.png) no-repeat 0 50%;
 }
 
@@ -685,10 +707,11 @@ ul.rss li::before {
   text-align:center;
   display:inline-block;
   background:#1d1d1d;
-  font-size:24px;
   color:#fff;
 }
-
+.go_top {
+	
+}
 #footer #gototop:hover {
   background:#2b2b2b;
   text-decoration:none;
@@ -700,7 +723,7 @@ ul.rss li::before {
 
 ul.social {
   list-style:none;
-  margin:10px 0 0;
+  margin:-18px 0 0;
   padding:0;
   display:inline-block;
 }
@@ -711,7 +734,7 @@ ul.social>li {
 }
 
 ul.social>li>a {
-  font-size:24px;
+  font-size: 32px;
   color:#666;
 }
 
