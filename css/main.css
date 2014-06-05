@@ -123,10 +123,25 @@ body {
 {
 	padding:0
 }
+
 .c_hotline {
-	margin-bottom: 0px;
-	margin-right: 9px;
+	width: 382px;
+    float: right;
+    margin-bottom: 0;
+    margin-right: 9px;
 }
+@media (min-width: 979px) {
+header #logo {
+	margin-top: -42px;
+}
+
+}
+@media (max-width: 979px) {
+.navbar .btn-navbar {
+	margin-top: 28px;
+}	
+}
+
 .c_hotline img {
 
     height: 30px;
@@ -314,7 +329,6 @@ margin-left: 5px;
 {
 	width:220px;
 	height:80px;
-	margin-top: -42px;
 	background:url(../images/logo.png) no-repeat 0 50%
 }
 	header.navbar
