@@ -304,13 +304,17 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <script src="<?php echo $temp_path; ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-typeahead.js"></script>
 	<script>
-		/*
+		
 		$(function(){
-			$(".btn-navbar").click(function(){
+			//alert($( window ).width());
+		//	alert($(window).with());
+			
+			/*$(".btn-navbar").click(function(){
 				$(".collapse").toggle(".animateMenu");
 			});
+			*/
 		});
-		*/
+		
 	</script>
   </body>
 </html>

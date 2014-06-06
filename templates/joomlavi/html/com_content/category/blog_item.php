@@ -31,7 +31,7 @@ JHtml::_('behavior.framework');
 	<?php //echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 <div class="blog-meta clearfix">
 	<p class="pull-left">
-	  <i class="icon-user"></i> by <a href="#">Hung Phan</a> | <i class="icon-folder-close"></i> Category <a href="#">Java</a> | <i class="icon-calendar"></i> May 22th, 2014
+	  <i class="icon-user"></i> by <a href="#">Hung Phan</a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="#">Java</a> |</span> <i class="icon-calendar"></i> May 22th, 2014
   </p>
   <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
 </div>
