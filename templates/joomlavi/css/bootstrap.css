@@ -220,7 +220,11 @@ textarea {
     page-break-after: avoid;
   }
 }
-
+@font-face
+{
+font-family: lora;
+src: url(lora.woff);
+}
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
