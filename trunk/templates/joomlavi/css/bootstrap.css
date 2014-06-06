@@ -457,11 +457,33 @@ a:focus {
   width: 57.44680851063829%;
   *width: 57.39361702127659%;
 }
+@media (max-width: 979px) {
+
+.ads .row-fluid .span6 {
+   
+    float: left !important;
+    width: 50% !important;
+	
+}
+.ads .row-fluid .ads1 {
+	padding-right: 10px;
+	padding-left: 2px;
+}
+.ads .row-fluid .ads2 {
+	padding-left: 10px;
+	padding-right: 2px;
+}
+p.ads_devision {
+	margin: 0px;
+	height: 20px;
+}
+}
 
 .row-fluid .span6 {
   width: 48.93617021276595%;
   *width: 48.88297872340425%;
 }
+
 
 .row-fluid .span5 {
   width: 40.42553191489362%;

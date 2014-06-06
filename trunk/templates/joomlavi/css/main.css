@@ -847,10 +847,12 @@ textarea#message {
   padding:10px 15px;
   height:219px;
 }
-
+@media (min-width: 979px) {
 .widget {
   margin-bottom:30px;
 }
+}
+
 
 .widget>h3 {
   font-size:16px;
