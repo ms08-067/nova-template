@@ -1107,7 +1107,9 @@
     position: absolute;
     right: 0;
     top: 110px;
+	z-index: 1;
   }
+  
   .navbar .btn-navbar {
     display: block;
   }

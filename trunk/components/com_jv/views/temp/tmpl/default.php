@@ -5,18 +5,16 @@ defined('_JEXEC') or die('Restricted access');
 <section class="title">
         <div class="container">
             <div class="row-fluid">
-                <div class="span12">
-                   
-                </div>
+                
             </div>
         </div>
 </section>
+
 <section id="portfolio" class="container main">    
-        <ul class="gallery col-4">
-            <!--Item 1-->
-            <li>
+			<div class="row gallery col-4">
+			<div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item1.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item1.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -33,13 +31,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 1--> 
 
             <!--Item 2-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item2.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item2.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -56,13 +54,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 2-->
 
             <!--Item 3-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item3.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item3.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -79,13 +77,14 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item3.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 3--> 
-
+			
             <!--Item 4-->
-            <li>
+			
+           <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item4.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item4.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -102,13 +101,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item4.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 4--> 
 
             <!--Item 5-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item5.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item5.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -125,13 +124,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item5.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 5--> 
 
             <!--Item 6-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item6.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item6.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -148,13 +147,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item6.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 6-->                 
-
+			
             <!--Item 7-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item1.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item1.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -171,13 +170,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 7-->
 
             <!--Item 8-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item5.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item5.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -194,13 +193,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item5.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 8-->
             
             <!--Item 9-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item1.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item1.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -217,13 +216,14 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 9--> 
-
+			
             <!--Item 10-->
-            <li>
+           
+		   <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item2.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item2.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -240,13 +240,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 10-->
 
             <!--Item 11-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item3.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item3.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -263,13 +263,13 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item3.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 11--> 
 
             <!--Item 12-->
-            <li>
+            <div class="span4">
                 <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item4.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item4.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -286,10 +286,10 @@ defined('_JEXEC') or die('Restricted access');
                         <img src="images/portfolio/full/item4.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
-            </li>
+            </div>
             <!--/Item 12-->                
-
-        </ul>
+		</div>
+     
         
     </section>
 <section class="main" id="bottom">

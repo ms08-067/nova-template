@@ -132,6 +132,10 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <script src="<?php echo $temp_path; ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-typeahead.js"></script>
-	
+	<script>
+		$(document).ready(function(){
+			//alert($(window).height());
+		});
+	</script>
   </body>
 </html>
