@@ -56,7 +56,7 @@ class JConfig {
 	public $feed_limit = '10';
 	public $log_path = 'D:\\xampp\\htdocs\\nova/logs';
 	public $tmp_path = 'D:\\xampp\\htdocs\\nova/tmp';
-	public $lifetime = '15000';
+	public $lifetime = '10';
 	public $session_handler = 'database';
 	public $proxy_enable = '0';
 	public $proxy_host = '';
@@ -71,4 +71,16 @@ class JConfig {
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';
+	public $memcache_persist = '1';
+	public $memcache_compress = '0';
+	public $memcache_server_host = 'localhost';
+	public $memcache_server_port = '11211';
+	public $memcached_persist = '1';
+	public $memcached_compress = '0';
+	public $memcached_server_host = 'localhost';
+	public $memcached_server_port = '11211';
+	public $session_memcache_server_host = 'localhost';
+	public $session_memcache_server_port = '11211';
+	public $session_memcached_server_host = 'localhost';
+	public $session_memcached_server_port = '11211';
 }
