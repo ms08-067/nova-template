@@ -186,11 +186,11 @@ defined('_JEXEC') or die('Restricted access');
                     </li>
                     <li>
                         <i class="icon-envelope"></i>
-                        <strong>Email: </strong> hunguit@yahoo.com
+                        <strong>Email: </strong><a href="mailto:hunguit@yahoo.com"> hunguit@yahoo.com </a>
                     </li>
                     <li>
                         <i class="icon-globe"></i>
-                        <strong>Website:</strong> www.joomlavi.net
+                        <strong>Website:</strong><a href=""> www.joomlavi.net</a>
                     </li>
                     <li>
                         <i class="icon-phone"></i>
