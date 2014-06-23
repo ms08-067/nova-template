@@ -18,12 +18,12 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>                                
+                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a target="_blank" href="http://joomlavi.net/demo/v2"><i class="icon-link"></i></a>                                
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <small>Portfolio item short description</small>
+                    <h5>SFB Research & Trainning</h5>
+                    <small>Template html - Slice as bootstrap 3</small>
                 </div>
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
@@ -41,14 +41,14 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>                                
+                        <a data-toggle="modal" href="#modal-2"><i class="icon-eye-open"></i></a><a target="_blank" href="http://joomlavi.net/demo/niemtinmoi"><i class="icon-link"></i></a>                                
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <small>Portfolio item short description</small>
+                    <h5>The website niemtinmoi company</h5>
+                    <small>Joomla version 2.5 </small>
                 </div>
-                <div id="modal-1" class="modal hide fade">
+                <div id="modal-2" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
                         <img src="images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
@@ -153,7 +153,7 @@ defined('_JEXEC') or die('Restricted access');
             <!--Item 7-->
             <div class="span4">
                 <div class="preview">
-                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item1.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item7.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -164,10 +164,10 @@ defined('_JEXEC') or die('Restricted access');
                     <h5>Lorem ipsum dolor sit amet</h5>
                     <small>Portfolio item short description</small>
                 </div>
-                <div id="modal-1" class="modal hide fade">
+                <div id="modal-7" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="images/portfolio/full/item7.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
@@ -176,7 +176,7 @@ defined('_JEXEC') or die('Restricted access');
             <!--Item 8-->
             <div class="span4">
                 <div class="preview">
-                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item5.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item8.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -190,7 +190,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="modal-8" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item5.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="images/portfolio/full/item8.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
@@ -199,7 +199,7 @@ defined('_JEXEC') or die('Restricted access');
             <!--Item 9-->
             <div class="span4">
                 <div class="preview">
-                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item1.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item9.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -213,7 +213,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="modal-9" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="images/portfolio/full/item9.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
@@ -223,7 +223,7 @@ defined('_JEXEC') or die('Restricted access');
            
 		   <div class="span4">
                 <div class="preview">
-                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item2.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item10.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -237,7 +237,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="modal-10" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="images/portfolio/full/item10.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
@@ -246,7 +246,7 @@ defined('_JEXEC') or die('Restricted access');
             <!--Item 11-->
             <div class="span4">
                 <div class="preview">
-                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item3.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item11.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -260,7 +260,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="modal-11" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item3.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="images/portfolio/full/item11.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
@@ -269,7 +269,7 @@ defined('_JEXEC') or die('Restricted access');
             <!--Item 12-->
             <div class="span4">
                 <div class="preview">
-                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item4.jpg">
+                    <img style="width: 100%" alt=" " src="images/portfolio/thumb/item12.jpg">
                     <div class="overlay">
                     </div>
                     <div class="links">
@@ -283,7 +283,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="modal-12" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item4.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="images/portfolio/full/item12.jpg" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
