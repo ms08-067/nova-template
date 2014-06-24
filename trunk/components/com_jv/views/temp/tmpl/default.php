@@ -23,7 +23,7 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <div class="desc">
                     <h5>SFB Research & Trainning</h5>
-                    <small>Template html - Slice as bootstrap 3</small>
+                    <small>Template html - Slice as bootstrap 3 - Templates responsive</small>
                 </div>
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
@@ -64,12 +64,12 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-3"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>                                
+                        <a data-toggle="modal" href="#modal-3"><i class="icon-eye-open"></i></a><a target="_blank" href="http://simsodepsaithanh.com"><i class="icon-link"></i></a>                                
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <small>Portfolio item short description</small>
+                    <h5>The simsodepsaithanh.com website</h5>
+                    <small>Shop of mobile number</small>
                 </div>
                 <div id="modal-3" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
@@ -273,12 +273,12 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-12"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>                                
+                        <a data-toggle="modal" href="#modal-12"><i class="icon-eye-open"></i></a><a target="_blank" href="http://simsodeptphcm.com.vn"><i class="icon-link"></i></a>                                
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <small>Portfolio item short description</small>
+                     <h5>The simsodeptphcm.com.vn website</h5>
+                    <small>Shop of mobile number</small>
                 </div>
                 <div id="modal-12" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
@@ -308,11 +308,11 @@ defined('_JEXEC') or die('Restricted access');
                     </li>
                     <li>
                         <i class="icon-envelope"></i>
-                        <strong>Email: </strong> hunguit@yahoo.com
+                        <strong>Email: </strong><a href="">hunguit@yahoo.com</a>
                     </li>
                     <li>
                         <i class="icon-globe"></i>
-                        <strong>Website:</strong> www.joomlavi.net
+                        <strong>Website:</strong><a href="">www.joomlavi.net</a>
                     </li>
                     <li>
                         <i class="icon-phone"></i>
