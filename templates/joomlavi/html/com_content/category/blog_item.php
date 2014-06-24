@@ -6,7 +6,8 @@
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-defined('_JEXEC') or die;?>
+defined('_JEXEC') or die;		
+?>
 <?php
 // Create a shortcut for params.
 $params = $this->item->params;
@@ -23,15 +24,13 @@ JHtml::_('behavior.framework');
 
 <?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
 
-<?php // Todo Not that elegant would be nice to group the params ?>
 <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
 
 <?php if ($useDefList) : ?>
-	<?php //echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 <div class="blog-meta clearfix">
 	<p class="pull-left">
-	  <i class="icon-user"></i> by <a href="#">Hung Phan</a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="#">Java</a> |</span> <i class="icon-calendar"></i> May 22th, 2014
+	  <i class="icon-user"></i> By <a href=""><?php echo $this->item->author ?></a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="index.php?option=com_content&view=category&layout=blog&id=<?php echo $this->item->catid;?>"><?php echo $this->item->category_title; ?></a> |</span> <i class="icon-calendar"></i> <?php echo date("M jS, Y",strtotime($this->item->created));?>
   </p>
   <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
 </div>
@@ -64,24 +63,6 @@ JHtml::_('behavior.framework');
 
 	<p class="readmore"><a class="btn btn-link" href="<?php echo $link; ?>">
 	Read More <i class="icon-angle-right"></i>
-	<?php 
-	/*
-	if (!$params->get('access-view')) :
-		echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-	elseif ($readmore = $this->item->alternative_readmore) :
-		echo $readmore;
-		if ($params->get('show_readmore_title', 0) != 0) :
-		echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-		endif;
-	elseif ($params->get('show_readmore_title', 0) == 0) :
-		echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
-	else :
-		echo JText::_('COM_CONTENT_READ_MORE');
-		echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-	endif; 
-	*/
-	?>
-	
 	</a>
 	</p>
 
