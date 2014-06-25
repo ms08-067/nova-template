@@ -128,7 +128,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php if (isset ($this->item->toc)) :
 		echo $this->item->toc;
 	endif; ?>
-	<span itemprop="articleBody">
+	<span class="txtcontent" itemprop="articleBody">
 		<?php echo $this->item->text; ?>
 	</span>
 
