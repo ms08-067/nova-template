@@ -47,6 +47,7 @@ section.services {
 body {
   font-size:12px;
   color:#333;
+  font:13px/1.5 Helvetica,Arial,Sens-serif;
   background: url("../images/bg_item.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 @media (min-width: 979px) {
@@ -369,10 +370,10 @@ header #logo {
 }	
 }
 header #logo {
-  width:220px;
-  height:80px;
-  
-  background:url(../images/logo.png) no-repeat 0 50%;
+background: url("../images/logo.png") no-repeat scroll 0 50% rgba(0, 0, 0, 0);
+height: 73px;
+width: 206px;
+padding-top: 6px;
 }
 
 header.navbar {
