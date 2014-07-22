@@ -22,7 +22,7 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="progress"><div class="bar" style="width: 90%; text-align:left; padding-left:10px;">PHP & Open-source PHP</div></div>
                     <div class="progress progress-warning"><div class="bar" style="width: 50%; text-align:left; padding-left:10px;">Android</div></div>
                     <div class="progress progress-info"><div class="bar" style="width: 30%; text-align:left; padding-left:10px;">Sencha</div></div>
-                    <div class="progress progress-danger"><div class="bar" style="width: 40%; text-align:left; padding-left:10px;">Phonegap</div></div>
+                    <div class="progress progress-danger"><div class="bar" style="width: 40%; text-align:left; padding-left:10px;">Cordova / Phonegap</div></div>
                    
                 </div>
             </div>
