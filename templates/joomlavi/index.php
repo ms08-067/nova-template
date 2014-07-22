@@ -8,7 +8,8 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php $this->setMetaData('generator','Joomlavi.net offer some solutions for Mobile Native Apps combine  standard web technologies such as HTML5, CSS3, and JavaScript for cross-platform development'); ?>
+    
+	<?php $this->setMetaData('generator','Joomlavi | Joomla templates, Joomla extensions, JV Framework'); ?>
 	<jdoc:include type="head" />    
     <!-- Le styles -->
     <link href="<?php echo $temp_path; ?>/css/bootstrap.css" rel="stylesheet">
