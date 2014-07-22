@@ -30,7 +30,7 @@ JHtml::_('behavior.framework');
 <?php if ($useDefList) : ?>
 <div class="blog-meta clearfix">
 	<p class="pull-left">
-	  <i class="icon-user"></i> By <a href=""><?php echo $this->item->author ?></a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="index.php?option=com_content&view=category&layout=blog&id=<?php echo $this->item->catid;?>"><?php echo $this->item->category_title; ?></a> |</span> <i class="icon-calendar"></i> <?php echo date("M jS, Y",strtotime($this->item->created));?>
+	  <i class="icon-user"></i> By <a href=""><?php echo $this->item->author ?></a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="index.php?option=com_content&view=category&layout=blog&id=<?php echo $this->item->catid;?>"><?php echo $this->item->category_title; ?></a> |</span> <i class="icon-calendar"></i> <?php echo date("M jS, Y",strtotime($this->item->publish_up));?>
   </p>
   <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
 </div>
