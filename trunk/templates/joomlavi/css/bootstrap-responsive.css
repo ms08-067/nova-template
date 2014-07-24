@@ -947,7 +947,7 @@
   .media .pull-left,
   .media .pull-right {
     display: block;
-    float: none;
+    
     margin-bottom: 10px;
   }
   .media-object {
@@ -976,10 +976,10 @@
   }
   
   .page-header h2 {
-	font-size: 22px;
-    line-height: 25px;
+	font-size: 18px !important;margin-top: 14px;
+    line-height: 28px;
   }
-  
+  .page-header{margin:-5px 0 12px;}
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: static;
@@ -1123,7 +1123,7 @@
 	overflow: hidden;
     position: absolute;
     right: 0;
-    top: 110px;
+    top: 98px;
 	z-index: 1;
   }
   
