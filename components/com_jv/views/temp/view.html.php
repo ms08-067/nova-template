@@ -11,10 +11,15 @@ jimport('joomla.application.component.view');
 class JvViewTemp extends JViewLegacy
 {
 	// Overwriting JView display method
+	
+	
 	function display($tpl = null)
 	{
-		// Assign data to the view
+	
 		$this->msg = $this->get('Msg');
 		parent::display($tpl);
 	}
+	
+	
+	
 }

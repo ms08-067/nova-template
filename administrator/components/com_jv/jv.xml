@@ -28,6 +28,10 @@
 	<administration>
 		<!-- Administration Menu Section -->
 		<menu>COM_JV_MENU</menu>
+		<submenu>
+            <menu view="cpanel" img="" link="option=com_jv&amp;view=jv">COM_JV_MENU_SUB_JV</menu>
+            <menu view="config" img="" link="option=com_jv&amp;view=temp">COM_JV_MENU_SUB_TEMP</menu>
+        </submenu>
 		<files folder="admin">
 			<filename>index.html</filename>
 			<filename>jv.php</filename>

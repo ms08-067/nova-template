@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2014 at 12:25 AM
+-- Generation Time: Jul 26, 2014 at 04:51 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -1346,11 +1346,26 @@ CREATE TABLE IF NOT EXISTS `d6k20_jv_temp` (
   `title` varchar(255) NOT NULL,
   `short_des` varchar(255) NOT NULL,
   `des` text NOT NULL,
+  `publish` int(3) DEFAULT NULL,
   `created_date` date NOT NULL,
   `count_buy` int(11) NOT NULL,
   `price` int(11) NOT NULL,
+  `id_categories_temp` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `d6k20_jv_temp_categories`
+--
+
+DROP TABLE IF EXISTS `d6k20_jv_temp_categories`;
+CREATE TABLE IF NOT EXISTS `d6k20_jv_temp_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1428,7 +1443,7 @@ CREATE TABLE IF NOT EXISTS `d6k20_menu` (
   KEY `idx_alias` (`alias`),
   KEY `idx_path` (`path`(255)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=117 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=119 ;
 
 --
 -- Dumping data for table `d6k20_menu`
@@ -1474,7 +1489,9 @@ INSERT INTO `d6k20_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (113, 'main', 'WF_MENU_CONFIG', 'wf-menu-config', '', 'jce/wf-menu-config', 'index.php?option=com_jce&view=config', 'component', 0, 111, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-config.png', 0, '', 70, 71, 0, '', 1),
 (114, 'main', 'WF_MENU_PROFILES', 'wf-menu-profiles', '', 'jce/wf-menu-profiles', 'index.php?option=com_jce&view=profiles', 'component', 0, 111, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-profiles.png', 0, '', 72, 73, 0, '', 1),
 (115, 'main', 'WF_MENU_INSTALL', 'wf-menu-install', '', 'jce/wf-menu-install', 'index.php?option=com_jce&view=installer', 'component', 0, 111, 2, 10003, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_jce/media/img/menu/jce-install.png', 0, '', 74, 75, 0, '', 1),
-(116, 'main', 'COM_JV_MENU', 'com-jv-menu', '', 'com-jv-menu', 'index.php?option=com_jv', 'component', 0, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '', 77, 78, 0, '', 1);
+(116, 'main', 'COM_JV_MENU', 'com-jv-menu', '', 'com-jv-menu', 'index.php?option=com_jv', 'component', 0, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '', 77, 78, 0, '', 1),
+(117, 'main', 'COM_JV_MENU_SUB_JV', 'jv-view-jv', '', 'com-jv-menu', 'index.php?option=com_jv&view=jv', 'component', 0, 116, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '', 77, 78, 0, '', 1),
+(118, 'main', 'COM_JV_MENU_SUB_TEMP', 'jv-view-temp', '', 'com-jv-menu', 'index.php?option=com_jv&view=temp', 'component', 0, 116, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '', 77, 78, 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -1799,8 +1816,7 @@ CREATE TABLE IF NOT EXISTS `d6k20_session` (
 --
 
 INSERT INTO `d6k20_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('jumlin89fq41cj1n7kcq2nlvq0', 1, 1, '1406240152', '__default|a:9:{s:15:"session.counter";i:1;s:19:"session.timer.start";i:1406240152;s:18:"session.timer.last";i:1406240152;s:17:"session.timer.now";i:1406240152;s:24:"session.client.forwarded";s:12:"1.54.211.251";s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.0; rv:31.0) Gecko/20100101 Firefox/31.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\\0\\0\\0isRoot";N;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";N;s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"d56367f2c6c5c403801ea0228e13bffa";}', 0, ''),
-('t0id32fjvqtpkq7gdu9tqthoe7', 0, 1, '1406240155', '__default|a:8:{s:15:"session.counter";i:2;s:19:"session.timer.start";i:1406240149;s:18:"session.timer.last";i:1406240149;s:17:"session.timer.now";i:1406240155;s:24:"session.client.forwarded";s:12:"1.54.211.251";s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.0; rv:31.0) Gecko/20100101 Firefox/31.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\\0\\0\\0isRoot";N;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:1:{i:0;s:1:"9";}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:12:"requireReset";N;s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":0:{}}s:14:"\\0\\0\\0_authGroups";N;s:14:"\\0\\0\\0_authLevels";a:3:{i:0;i:1;i:1;i:1;i:2;i:5;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;}}', 0, '');
+('drr6k1huh07vjte7p8crpet8g1', 1, 0, '1406341610', '__default|a:8:{s:15:"session.counter";i:28;s:19:"session.timer.start";i:1406336942;s:18:"session.timer.last";i:1406341069;s:17:"session.timer.now";i:1406341609;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.0; rv:31.0) Gecko/20100101 Firefox/31.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:11:"com_content";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:7:"article";O:8:"stdClass":1:{s:4:"data";N;}}}}}s:4:"user";O:5:"JUser":27:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"262";s:4:"name";s:9:"Hung Phan";s:8:"username";s:5:"admin";s:5:"email";s:17:"hunguit@yahoo.com";s:8:"password";s:60:"$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-05-19 16:18:32";s:13:"lastvisitDate";s:19:"2014-07-26 00:51:22";s:10:"activation";s:1:"0";s:6:"params";s:92:"{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":6:{s:11:"admin_style";s:0:"";s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:0:"";}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"803620da3d7e7e98babd49465c94b19d";}__wf|a:1:{s:13:"session.token";s:32:"1c22ff7505f9ec497fec8eaf27d8012a";}', 262, 'admin');
 
 -- --------------------------------------------------------
 
@@ -2240,7 +2256,7 @@ CREATE TABLE IF NOT EXISTS `d6k20_users` (
 --
 
 INSERT INTO `d6k20_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(262, 'Hung Phan', 'admin', 'hunguit@yahoo.com', '$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm', 0, 1, '2014-05-19 16:18:32', '2014-07-24 21:07:21', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
+(262, 'Hung Phan', 'admin', 'hunguit@yahoo.com', '$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm', 0, 1, '2014-05-19 16:18:32', '2014-07-26 01:09:07', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
