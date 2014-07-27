@@ -5697,7 +5697,8 @@ a.thumbnail:focus {
 }
 
 .media > .pull-left {
-  margin-right: 10px;
+  margin-right: 0px;
+  width: 32px;
 }
 
 .media > .pull-right {
