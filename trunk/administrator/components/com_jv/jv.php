@@ -20,6 +20,7 @@ require_once $path;
 $className = "JvController$controllerName";
 //echo $className;exit;
 $controller = new $className();
+
 $controller->execute(JRequest::getCmd('task'));
 //$controller = JControllerLegacy::getInstance('Jv');
 $controller->redirect();
