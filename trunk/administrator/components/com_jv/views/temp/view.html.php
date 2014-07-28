@@ -39,11 +39,12 @@ class JvViewTemp extends JViewLegacy
 		
 		parent::display($tpl);
 	}
+	
 	public  function displayEdit($tpl = null){
 		JToolBarHelper::title(JText::_('JV Temp : Add new temp'), 'logo.png');
-		JToolbarHelper::apply('article.apply');
-		JToolbarHelper::save('article.save');
-		JToolbarHelper::cancel('article.cancel', 'JTOOLBAR_CLOSE');
+		JToolbarHelper::apply('apply');
+		JToolbarHelper::save('save');
+		JToolbarHelper::cancel('cancel', 'JTOOLBAR_CLOSE');
 		
 		parent::display($tpl);
 	}

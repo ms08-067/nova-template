@@ -31,7 +31,10 @@ class JvControllerTemp extends JControllerLegacy {
 		JRequest::setVar( 'view'  , 'temp');
 		parent::display();
 	}
-	
+	public  function  cannel() {
+		
+		echo 123;exit;
+	}
 	
 }
 ?>

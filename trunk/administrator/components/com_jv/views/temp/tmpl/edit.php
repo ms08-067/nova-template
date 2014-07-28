@@ -1,22 +1,21 @@
-
- <div class="container-fluid container-main">
+<div class="container-fluid container-main">
 	<section id="content">
 		<!-- Begin Content -->
 		
-		<div class="row-fluid">
-							<div class="span12">
+<div class="row-fluid">
+<div class="span12">
 										
 <div id="system-message-container">
 </div>
 
-<form class="form-validate" id="item-form" name="adminForm" method="post" action="/nova/administrator/index.php?option=com_content&amp;layout=edit&amp;id=0">
+<form class="form-validate" id="item-form" name="adminForm" method="post" action="<?php echo JRoute::_('index.php?option=com_jv&view=temp'); ?>">
 
 	<div class="form-inline form-inline-header">
 	
 <div class="span6">
 <div class="control-group ">
 <div class="control-label">
-<label title="" class="hasTooltip required invalid" for="jform_title" id="jform_title-lbl" data-original-title="&lt;strong&gt;Title&lt;/strong&gt;" aria-invalid="true">Title<span class="star">&nbsp;*</span></label></div>
+<label title="" class="required invalid" id="jform_title-lbl" aria-invalid="true">Title</label></div>
 <div class="controls">
 <input style="width: 100%;" type="text" aria-required="true" required="" size="40" class=" input-large-text invalid" value="" id="title" name="title" aria-invalid="true">
 	</div>
@@ -26,7 +25,7 @@
 <div class="span6">
 <div class="control-group ">
 <div class="control-label">
-<label title="" class="hasTooltip" for="jform_alias" id="jform_alias-lbl">Short Description</label>
+<label class="hasTooltip" id="jform_alias-lbl">Short Description</label>
 </div>
 <div class="controls">
 
@@ -38,8 +37,7 @@
 
 </div>
 
-	<div class="form-horizontal">
-		
+<div class="form-horizontal">		
 <ul id="myTabTabs" class="nav nav-tabs">
 <li class=" active"><a data-toggle="tab" href="#general">Content</a></li>
 <li class=""><a data-toggle="tab" href="#images">Images and links</a></li>
@@ -65,15 +63,13 @@
 </div>
 
 <div class="controls">
-<select aria-required="true" required="" name="jform[catid]" id="jform_catid"  class="chzn-done">
-	<option value="2">- Uncategorised</option>
-	<option value="14">- Document-Blog</option>
-	<option value="8">- - Java Development</option>
-	<option value="9">- - Android </option>
-	<option value="10">- - Cordova/Phonegap</option>
-	<option value="11">- - Phonegap</option>
-	<option value="12">- - Sencha</option>
-	<option value="13">- - PHP Development</option>
+
+<select aria-required="true" required="" name="temp_catid" id="temp_catid"  class="">
+	<option value="1">- Templates Boostrap</option>
+	<option value="2">- Templates Admin</option>
+	<option value="3">- Templates Responsive</option>
+	<option value="4">- Extension Joomla</option>
+	<option value="5">- Templates Joomla</option>
 </select>
 
 </div>
@@ -83,14 +79,19 @@
 
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_state" id="jform_state-lbl" data-original-title="&lt;strong&gt;Status&lt;/strong&gt;&lt;br /&gt;Set publication status.">Status</label></div>
-			<div class="controls">
-		<select size="1" class="chzn-color-state chzn-done" name="jform[state]" id="jform_state">
-	<option selected="selected" value="1">Published</option>
+
+<div class="control-label">
+<label id="temp_status_lbl" >Status</label>
+</div>
+
+<div class="controls">
+<select name="temp_status" id="temp_status">
+	<option value="1">Published</option>
 	<option value="0">Unpublished</option>
 </select>
 
 </div>
+
 </div>
 
 </fieldset>
