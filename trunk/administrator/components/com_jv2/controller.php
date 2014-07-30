@@ -22,7 +22,7 @@ class JvController extends JControllerLegacy
 	 * @var		string	The default view.
 	 * @since   1.6
 	 */
-	protected $default_view = 'products';
+	protected $default_view = 'temp';
 
 	/**
 	 * Method to display a view.
@@ -36,17 +36,17 @@ class JvController extends JControllerLegacy
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{
-		$view   = $this->input->get('view', 'products');
-		$layout = $this->input->get('layout', 'products');
+		$view   = $this->input->get('view', 'temp');
+		$layout = $this->input->get('layout', 'temp');
 		$id     = $this->input->getInt('id');
 
 		// Check for edit form.
-		if ($view == 'product' && $layout == 'edit' && !$this->checkEditId('com_jv.edit.product', $id))
+		if ($view == 'article' && $layout == 'edit')
 		{
 			// Somehow the person just went to the form - we don't allow that.
 			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 			$this->setMessage($this->getError(), 'error');
-			$this->setRedirect(JRoute::_('index.php?option=com_jv&view=products', false));
+			$this->setRedirect(JRoute::_('index.php?option=com_jv&view=temp', false));
 
 			return false;
 		}
