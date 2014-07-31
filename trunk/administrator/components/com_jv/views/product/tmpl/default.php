@@ -48,7 +48,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <div class="form-horizontal">		
 <ul id="myTabTabs" class="nav nav-tabs">
 <li class=" active"><a data-toggle="tab" href="#general">Content</a></li>
-<li class=""><a data-toggle="tab" href="#images">Images and links</a></li>
+<li class=""><a data-toggle="tab" href="#images">Images</a></li>
 
 </ul>
 <div id="myTabContent" class="tab-content">
@@ -114,24 +114,21 @@ JHtml::_('formbehavior.chosen', 'select');
 																
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_intro" id="jform_images_image_intro-lbl" data-original-title="&lt;strong&gt;Intro Image&lt;/strong&gt;&lt;br /&gt;Image for the intro text layouts such as blogs and featured">Intro Image</label></div>
+			<div class="control-label"><label title="" class="hasTooltip" id="jform_images_image_intro-lbl" >Intro Image</label></div>
 		<div class="controls"><div class="input-prepend input-append">
 <div class="media-preview add-on">
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
 	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_intro" name="img_thumb">
-<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_content&amp;author=&amp;fieldid=jform_images_image_intro&amp;folder=" title="Select" class="modal btn">
-Select</a><a onclick="
-jInsertFieldValue('', 'jform_images_image_intro');
-return false;
-" href="#" title="" class="btn hasTooltip" data-original-title="Clear">
+<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_intro&amp;folder="  class="modal btn">
+Select</a><a onclick="jInsertFieldValue('', 'jform_images_image_intro');return false;" href="#"  class="btn hasTooltip">
 <i class="icon-remove"></i></a>
 </div></div>
 </div>
 																				
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip"  id="jform_images_image_intro_alt-lbl" data-original-title="&lt;strong&gt;Alt text&lt;/strong&gt;&lt;br /&gt;Alternative text used for visitors without access to images. Replaced with caption text if it is present.">Alt text</label></div>
+			<div class="control-label"><label title="" class="hasTooltip"  id="jform_images_image_intro_alt-lbl" >Alt text</label></div>
 		<div class="controls"><input type="text" size="40" value="" id="jform_images_image_intro_alt" name="img_thumb_alt"></div>
 </div>
 																			
@@ -143,7 +140,7 @@ return false;
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
 	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_fulltext" name="jform[images][image_fulltext]">
-<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_content&amp;author=&amp;fieldid=jform_images_image_fulltext&amp;folder=" title="Select" class="modal btn">
+<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_fulltext&amp;folder=" title="Select" class="modal btn">
 Select</a><a onclick="
 jInsertFieldValue('', 'jform_images_image_fulltext');
 return false;
