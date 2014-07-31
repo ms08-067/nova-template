@@ -33,100 +33,21 @@ class JvViewProducts extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
-		if ($this->getLayout() !== 'modal')
-		{
-			JvHelper::addSubmenu('products');
-		}
 
-		$this->items         = $this->get('Items');
-		$this->pagination    = $this->get('Pagination');
-		$this->state         = $this->get('State');
-		$this->authors       = $this->get('Authors');
-		$this->filterForm    = $this->get('FilterForm');
-		$this->activeFilters = $this->get('ActiveFilters');
-
-		// Check for errors.
-		if (count($errors = $this->get('Errors')))
-		{
-			JError::raiseError(500, implode("\n", $errors));
-
-			return false;
-		}
-
-		// Levels filter.
-		$options	= array();
-		$options[]	= JHtml::_('select.option', '1', JText::_('J1'));
-		$options[]	= JHtml::_('select.option', '2', JText::_('J2'));
-		$options[]	= JHtml::_('select.option', '3', JText::_('J3'));
-		$options[]	= JHtml::_('select.option', '4', JText::_('J4'));
-		$options[]	= JHtml::_('select.option', '5', JText::_('J5'));
-		$options[]	= JHtml::_('select.option', '6', JText::_('J6'));
-		$options[]	= JHtml::_('select.option', '7', JText::_('J7'));
-		$options[]	= JHtml::_('select.option', '8', JText::_('J8'));
-		$options[]	= JHtml::_('select.option', '9', JText::_('J9'));
-		$options[]	= JHtml::_('select.option', '10', JText::_('J10'));
-
-		$this->f_levels = $options;
-
-		// We don't need toolbar in the modal window.
-		if ($this->getLayout() !== 'modal')
-		{
-			$this->addToolbar();
-			$this->sidebar = JHtmlSidebar::render();
-		}
-
+		$this->addToolbar();
+		$this->sidebar = JHtmlSidebar::render();
 		parent::display($tpl);
 	}
-
-	/**
-	 * Add the page title and toolbar.
-	 *
-	 * @return  void
-	 *
-	 * @since   1.6
-	 */
 	protected function addToolbar()
 	{
+		$user  = JFactory::getUser();	
 		
-		$user  = JFactory::getUser();
-
-		// Get the toolbar object instance
 		$bar = JToolBar::getInstance('toolbar');
-
-		JToolbarHelper::title(JText::_('com_jv_products_TITLE'), 'stack product');
-
-			JToolbarHelper::addNew('product.add');
 		
+		JToolbarHelper::title('JV Products List');
 		
-			JToolbarHelper::publish('products.publish', 'JTOOLBAR_PUBLISH', true);
-			JToolbarHelper::unpublish('products.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-			JToolbarHelper::custom('products.featured', 'featured.png', 'featured_f2.png', 'JFEATURED', true);
-			JToolbarHelper::archiveList('products.archive');
-			JToolbarHelper::checkin('products.checkin');
-		
-			JToolbarHelper::deleteList('', 'products.delete', 'JTOOLBAR_EMPTY_TRASH');
-		
-			JToolbarHelper::trash('products.trash');
-		
-
-		// Add a batch button
-		if ($user->authorise('core.create', 'com_jv') && $user->authorise('core.edit', 'com_jv') && $user->authorise('core.edit.state', 'com_jv'))
-		{
-			JHtml::_('bootstrap.modal', 'collapseModal');
-			$title = JText::_('JTOOLBAR_BATCH');
-
-			// Instantiate a new JLayoutFile instance and render the batch button
-			$layout = new JLayoutFile('joomla.toolbar.batch');
-
-			$dhtml = $layout->render(array('title' => $title));
-			$bar->appendButton('Custom', $dhtml, 'batch');
-		}
-
-		
-			JToolbarHelper::preferences('com_jv');
-		
-
-		JToolbarHelper::help('JHELP_CONTENT_product_MANAGER');
+		JToolbarHelper::addNew('product.add');
+		JToolbarHelper::deleteList('', 'remove', 'Delete');
 	}
 
 
