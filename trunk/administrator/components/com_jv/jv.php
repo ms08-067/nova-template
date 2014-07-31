@@ -10,7 +10,6 @@
 defined('_JEXEC') or die;
 JHtml::_('behavior.tabstate');
 
-JLoader::register('JvHelper', __DIR__ . '/helpers/jv.php');
 
 $controller = JControllerLegacy::getInstance('Jv');
 $controller->execute(JFactory::getApplication()->input->get('task'));

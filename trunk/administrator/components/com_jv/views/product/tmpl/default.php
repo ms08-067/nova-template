@@ -1,14 +1,22 @@
+<?php
+/**
+ * com_jv
+ */
+defined('_JEXEC') or die;
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
+JHtml::_('behavior.multiselect');
+JHtml::_('formbehavior.chosen', 'select');
+?>
 <div class="container-fluid container-main">
-	<section id="content">
-		<!-- Begin Content -->
-		
+
+<section id="content">	
 <div class="row-fluid">
 <div class="span12">
 										
 <div id="system-message-container">
 </div>
 
-<form class="form-validate" id="item-form" name="adminForm" method="post" action="<?php echo JRoute::_('index.php?option=com_jv&controller=temp&layout=edit'); ?>">
+<form class="form-validate" id="frmproduct" name="adminForm" method="post" action="<?php echo JRoute::_('index.php?option=com_jv&view=product'); ?>">
 
 	<div class="form-inline form-inline-header">
 	
@@ -148,8 +156,8 @@ return false;
 											
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext_alt" id="jform_images_image_fulltext_alt-lbl" data-original-title="&lt;strong&gt;Alt text&lt;/strong&gt;&lt;br /&gt;Alternative text used for visitors without access to images. Replaced with caption text if it is present.">Alt text</label></div>
-		<div class="controls"><input type="text" size="20" value="" id="jform_images_image_fulltext_alt" name="jform[images][image_fulltext_alt]"></div>
+<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext_alt" id="jform_images_image_fulltext_alt-lbl" data-original-title="&lt;strong&gt;Alt text&lt;/strong&gt;&lt;br /&gt;Alternative text used for visitors without access to images. Replaced with caption text if it is present.">Alt text</label></div>
+<div class="controls"><input type="text" size="20" value="" id="jform_images_image_fulltext_alt" name="jform[images][image_fulltext_alt]"></div>
 </div>
 											
 </div>
@@ -158,9 +166,8 @@ return false;
 			
 </div>				
 </div>
-
-<input type="hidden" name="controller" value="temp" />
-<input type="hidden" name="option" value="com_jv" />
+<input type="hidden" value="" name="layout">
+<input type="hidden" name="controller" value="product" />
 <input type="hidden" value="" name="task">
 <?php echo JHTML::_( 'form.token' ); ?>
 </div>
