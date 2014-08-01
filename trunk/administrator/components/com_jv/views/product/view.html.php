@@ -35,6 +35,8 @@ class JvViewProduct extends JViewLegacy
 		
 		JToolbarHelper::title(($isNew ? 'JV new product' : 'JV edit product'));
 		
+		JToolBarHelper::custom('test', 'extrahello.png', 'extrahello_f2.png', 'Test', true);
+		
 		JToolbarHelper::apply('product.apply');
 		JToolbarHelper::save('product.save');
 		JToolbarHelper::save2new('product.save2new');
