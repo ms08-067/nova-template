@@ -47,6 +47,7 @@ class JvViewProducts extends JViewLegacy
 		JToolbarHelper::title('JV Products List');
 		
 		JToolbarHelper::addNew('product.add');
+		JToolbarHelper::save('products.save');
 		JToolbarHelper::deleteList('', 'remove', 'Delete');
 	}
 

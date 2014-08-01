@@ -28,5 +28,6 @@ class JvControllerProduct extends JControllerForm
 		parent::__construct($config);
 
 	}
+	
 
 }

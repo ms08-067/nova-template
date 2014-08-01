@@ -15,7 +15,7 @@ $user		= JFactory::getUser();
 <link rel="stylesheet" href="/nova/media/jui/css/jquery.searchtools.css" type="text/css" />
 <script src="/nova/media/jui/js/jquery.searchtools.min.js" type="text/javascript"></script>
 
-<form action="<?php echo JRoute::_('index.php?option=com_jv&view=temp'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_jv&controller=products'); ?>" method="post" name="adminForm" id="adminForm">
 
 	<div class="span2" id="j-sidebar-container">
 		<div id="sidebar">
@@ -445,7 +445,7 @@ $user		= JFactory::getUser();
 
 		<input type="hidden" value="" name="task">
 		<input type="hidden" value="" name="layout">
-		<input type="hidden" value="temp" name="controller">
+		<input type="hidden" value="products" name="controller">
 		<input type="hidden" value="0" name="boxchecked">
 		
 </div>	
