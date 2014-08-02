@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_content
@@ -85,7 +85,6 @@ if (isset($this->item->attribs['show_urls_images_backend']) && $this->item->attr
 		<div class="row-fluid">
 			<div class="span9">
 				<fieldset class="adminform">
-					<?php //echo "<pre>";print_r($this->form);?>
 					<?php echo $this->form->getInput('articletext'); ?>
 				</fieldset>
 			</div>

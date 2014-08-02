@@ -24,13 +24,7 @@ class JvViewProducts extends JViewLegacy
 
 	protected $state;
 
-	/**
-	 * Display the view
-	 *
-	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
-	 *
-	 * @return  void
-	 */
+
 	public function display($tpl = null)
 	{
 
@@ -40,15 +34,13 @@ class JvViewProducts extends JViewLegacy
 	}
 	protected function addToolbar()
 	{
-		$user  = JFactory::getUser();	
-		
+			
 		$bar = JToolBar::getInstance('toolbar');
-		
 		JToolbarHelper::title('JV Products List');
-		
 		JToolbarHelper::addNew('product.add');
 		JToolbarHelper::save('products.save');
 		JToolbarHelper::deleteList('', 'remove', 'Delete');
+		
 	}
 
 

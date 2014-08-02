@@ -15,6 +15,7 @@ $controller = JControllerLegacy::getInstance('Jv');
 $controller->execute(JFactory::getApplication()->input->get('task'));
 $controller->redirect();
 */
+JLoader::register('JvHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'jv.php');
 $controllerName = JRequest::getVar('controller');
 if ($controllerName == '') {
 	$view = JRequest::getCmd('view');
