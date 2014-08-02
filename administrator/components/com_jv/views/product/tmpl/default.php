@@ -3,41 +3,28 @@
  * com_jv
  */
 defined('_JEXEC') or die;
-JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
-JHtml::_('behavior.multiselect');
-JHtml::_('formbehavior.chosen', 'select');
 ?>
-<div class="container-fluid container-main">
-
-<section id="content">	
-<div class="row-fluid">
-<div class="span12">
-										
-<div id="system-message-container">
-</div>
-
-<form class="form-validate" id="frmproduct" name="adminForm" method="post" action="<?php echo JRoute::_('index.php?option=com_jv&view=product'); ?>">
-
-	<div class="form-inline form-inline-header">
+<form class="form-validate" id="frmproduct" name="adminForm" method="post" action="<?php echo JRoute::_('index.php?option=com_jv&controller=product'); ?>">
+<div class="form-inline form-inline-header">
 	
 <div class="span6">
 <div class="control-group ">
 <div class="control-label">
-<label title="" class="required invalid" id="jform_title-lbl" aria-invalid="true">Title</label></div>
+<label title="" class="required invalid" id="" aria-invalid="true">Title</label></div>
 <div class="controls">
-<input style="width: 100%;" type="text" aria-required="true" required="" size="40" class=" input-large-text invalid" value="" id="title" name="title" aria-invalid="true">
-	</div>
+<input style="width: 100%;" type="text" aria-required="true" required="" size="40" class="input-large-text invalid" value="" id="title" name="title" aria-invalid="true">
+</div>
 </div>
 </div>
 
 <div class="span6">
 <div class="control-group ">
 <div class="control-label">
-<label class="hasTooltip" id="jform_alias-lbl">Short Description</label>
+<label class="hasTooltip" id="">Short Description</label>
 </div>
 <div class="controls">
 
-<input style="width: 100%;" type="text" size="40" value="" id="jform_alias" name="short_des">
+<input style="width: 100%;" type="text" size="40" value="" id="" name="short_des">
 
 </div>
 </div>
@@ -58,8 +45,7 @@ JHtml::_('formbehavior.chosen', 'select');
 			<div class="span9">
 				<?php
 					$editor = JFactory::getEditor();
-					echo $editor->display('temp', "", '100%', '450', '60', '20', false);
-					
+					echo $editor->display('des', "data-des", '100%', '450', '60', '20', false);
 				?>
 			</div>
 			<div class="span3">
@@ -114,37 +100,33 @@ JHtml::_('formbehavior.chosen', 'select');
 																
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" id="jform_images_image_intro-lbl" >Intro Image</label></div>
+			<div class="control-label"><label title="" class="hasTooltip" id="" >Intro Image</label></div>
 		<div class="controls"><div class="input-prepend input-append">
 <div class="media-preview add-on">
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
-	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_intro" name="img_thumb">
-<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_intro&amp;folder="  class="modal btn">
-Select</a><a onclick="jInsertFieldValue('', 'jform_images_image_intro');return false;" href="#"  class="btn hasTooltip">
-<i class="icon-remove"></i></a>
+	<input type="text" class="input-small" readonly="readonly" value="" id="" name="img_thumb">
+<a rel="" href=""  class="modal btn">
+Select</a>
 </div></div>
 </div>
 																				
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip"  id="jform_images_image_intro_alt-lbl" >Alt text</label></div>
-		<div class="controls"><input type="text" size="40" value="" id="jform_images_image_intro_alt" name="img_thumb_alt"></div>
+			<div class="control-label"><label title="" class="hasTooltip"  id="" >Alt text</label></div>
+		<div class="controls"><input type="text" size="40" value="" id="" name="img_thumb_alt"></div>
 </div>
 																			
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext" id="jform_images_image_fulltext-lbl" data-original-title="&lt;strong&gt;Full article image&lt;/strong&gt;&lt;br /&gt;Image for the single article display">Full article image</label></div>
+			<div class="control-label"><label title="" class="hasTooltip"  id="" >Full article image</label></div>
 		<div class="controls"><div class="input-prepend input-append">
 <div class="media-preview add-on">
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
-	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_fulltext" name="jform[images][image_fulltext]">
-<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_fulltext&amp;folder=" title="Select" class="modal btn">
-Select</a><a onclick="
-jInsertFieldValue('', 'jform_images_image_fulltext');
-return false;
-" href="#" title="" class="btn hasTooltip" data-original-title="Clear">
+<input type="text" class="input-small" readonly="readonly" value="" id="" name="img">
+<a rel="" href="" title="Select" class="modal btn">
+Select</a><a onclick="" href="#" title="" class="btn hasTooltip" data-original-title="Clear">
 <i class="icon-remove"></i></a>
 </div></div>
 </div>
@@ -153,26 +135,22 @@ return false;
 											
 
 <div class="control-group ">
-<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext_alt" id="jform_images_image_fulltext_alt-lbl" data-original-title="&lt;strong&gt;Alt text&lt;/strong&gt;&lt;br /&gt;Alternative text used for visitors without access to images. Replaced with caption text if it is present.">Alt text</label></div>
-<div class="controls"><input type="text" size="20" value="" id="jform_images_image_fulltext_alt" name="jform[images][image_fulltext_alt]"></div>
-</div>
-											
+<div class="control-label"><label title="" class="hasTooltip"  id="" >Alt text</label></div>
+<div class="controls"><input type="text" size="20" value="" id="" name="img_alt"></div>
 </div>
 
-			</div>
+</div>
+</div>
 			
 </div>				
 </div>
+
+<button class="btn btn-small btn-success"><span class="icon-apply icon-white"></span>Save</button>
+
 <input type="hidden" value="" name="layout">
 <input type="hidden" name="controller" value="product" />
-<input type="hidden" value="" name="task">
+<input type="hidden" name="task" value="" />
 <?php echo JHTML::_( 'form.token' ); ?>
+
 </div>
 </form>
-
-</div>
-</div>
-						<!-- End Content -->
-	</section>
-
-	</div>
