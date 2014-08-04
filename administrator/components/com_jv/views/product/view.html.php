@@ -15,9 +15,12 @@ class JvViewProduct extends JViewLegacy
 	}
 	public function display($tpl = null)
 	{
+		$this->form	= $this->get('Form');
+		//echo "<pre>";print_r($this->form);
 		$this->addToolbar();
 		parent::display($tpl);
 	}
+	
 	protected function addToolbar()
 	{
 		$user		= JFactory::getUser();
@@ -31,4 +34,6 @@ class JvViewProduct extends JViewLegacy
 		JToolbarHelper::cancel('product.cancel');
 		
 	}
+	
+	
 }
