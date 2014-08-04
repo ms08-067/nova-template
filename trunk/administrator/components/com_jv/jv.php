@@ -2,20 +2,18 @@
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_jv
- *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 JHtml::_('behavior.tabstate');
+define('DS', DIRECTORY_SEPARATOR);
 
-/*
-$controller = JControllerLegacy::getInstance('Jv');
-$controller->execute(JFactory::getApplication()->input->get('task'));
-$controller->redirect();
-*/
+
+JLoader::register('JvModel', JPATH_COMPONENT_ADMINISTRATOR.DS.'classes'.DS.'model.php');
+JLoader::register('JvTableProduct', JPATH_COMPONENT_ADMINISTRATOR.DS.'tables'.DS.'product.php');
 JLoader::register('JvHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'jv.php');
+
+
 $controllerName = JRequest::getVar('controller');
 if ($controllerName == '') {
 	$view = JRequest::getCmd('view');

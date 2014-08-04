@@ -1,64 +1,74 @@
 <?php
 /**
- * com_jv
+ * @package     Joomla.Administrator
+ * @subpackage  com_content
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+
 defined('_JEXEC') or die;
+
+// Include the component HTML helpers.
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
+
+JHtml::_('behavior.formvalidation');
+JHtml::_('behavior.keepalive');
+JHtml::_('formbehavior.chosen', 'select');
+
+$this->hiddenFieldsets = array();
+$this->hiddenFieldsets[0] = 'basic-limited';
+$this->configFieldsets = array();
+$this->configFieldsets[0] = 'editorConfig';
+
+
+$app = JFactory::getApplication();
+$input = $app->input;
+$assoc = JLanguageAssociations::isEnabled();
+
 ?>
-<form class="form-validate" id="frmproduct" name="adminForm" method="post" action="<?php echo JRoute::_('index.php?option=com_jv&controller=product'); ?>">
-<div class="form-inline form-inline-header">
-	
-<div class="span6">
-<div class="control-group ">
-<div class="control-label">
-<label title="" class="required invalid" id="" aria-invalid="true">Title</label></div>
-<div class="controls">
-<input style="width: 100%;" type="text" aria-required="true" required="" size="40" class="input-large-text invalid" value="" id="title" name="title" aria-invalid="true">
-</div>
-</div>
-</div>
 
-<div class="span6">
-<div class="control-group ">
-<div class="control-label">
-<label class="hasTooltip" id="">Short Description</label>
-</div>
-<div class="controls">
+<script type="text/javascript">
 
-<input style="width: 100%;" type="text" size="40" value="" id="" name="short_des">
+Joomla.submitbutton = function(task)
+{
+	if (task == 'article.cancel' || document.formvalidator.isValid(document.id('item-form')))
+	{
+		Joomla.submitform(task, document.getElementById('item-form'));
+	}
+}
 
-</div>
-</div>
-</div>
+</script>
 
-</div>
+<form action="<?php echo JRoute::_('index.php?option=com_jv&controller=product'); ?>" method="post" name="adminForm" id="item-form" class="form-validate">
 
-<div class="form-horizontal">		
-<ul id="myTabTabs" class="nav nav-tabs">
-<li class=" active"><a data-toggle="tab" href="#general">Content</a></li>
-<li class=""><a data-toggle="tab" href="#images">Images</a></li>
+	<?php echo JLayoutHelper::render('joomla.edit.title_alias', $this); ?>
 
-</ul>
-<div id="myTabContent" class="tab-content">
-		
-<div class="tab-pane active" id="general">
+	<div class="form-horizontal">
+		<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'general')); ?>
+
+		<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'general', JText::_('COM_JV_PRODUCT_CONTENT', true)); ?>
 		<div class="row-fluid">
 			<div class="span9">
-				<?php
-					$editor = JFactory::getEditor();
-					echo $editor->display('des', "data-des", '100%', '450', '60', '20', false);
+				<fieldset class="adminform">
+					<?php echo $this->form->getInput('articletext'); ?>
+					<?php
+					//$editor = JFactory::getEditor();
+					//echo $editor->display('des', "data-des", '100%', '450', '60', '20', false);
 				?>
+				</fieldset>
 			</div>
-			<div class="span3">
-				<fieldset class="form-vertical">
+<div class="span3">
+<fieldset class="form-vertical">
 
 <div class="control-group ">
 <div class="control-label">
-<label id="jform_catid-lbl">Category</label>
+<label>Category</label>
 </div>
 
 <div class="controls">
 
-<select aria-required="true" required="" name="temp_catid" id="temp_catid"  class="">
+<select aria-required="true" required="" name="product_catid" id="product_catid"  class="">
 	<option value="1">- Templates Boostrap</option>
 	<option value="2">- Templates Admin</option>
 	<option value="3">- Templates Responsive</option>
@@ -69,17 +79,14 @@ defined('_JEXEC') or die;
 </div>
 </div>
 
-
-
-
 <div class="control-group ">
 
 <div class="control-label">
-<label id="temp_status_lbl" >Status</label>
+<label id="publish_lbl" >Status</label>
 </div>
 
 <div class="controls">
-<select name="temp_status" id="temp_status">
+<select name="publish" id="publish">
 	<option value="1">Published</option>
 	<option value="0">Unpublished</option>
 </select>
@@ -88,69 +95,97 @@ defined('_JEXEC') or die;
 
 </div>
 
+<div class="control-group ">
+
+<div class="control-label">
+<label id="price_lbl" >Price</label>
+</div>
+
+<div class="controls">
+<input  type="text" size="40" id="price" name="price">
+</div>
+
+</div>
+
+
 </fieldset>
 </div>
-</div>
-		
-</div>
-														
-<div class="tab-pane" id="images">
+			
+		</div>
+		<?php echo JHtml::_('bootstrap.endTab'); ?>
+
+		<?php // Do not show the publishing options if the edit form is configured not to. ?>
+		<?php if ($params->show_publishing_options == 1) : ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'publishing', JText::_('COM_CONTENT_FIELDSET_PUBLISHING', true)); ?>
 			<div class="row-fluid form-horizontal-desktop">
-				<div class="span12">
+				<div class="span6">
+					<?php echo JLayoutHelper::render('joomla.edit.publishingdata', $this); ?>
+				</div>
+				<div class="span6">
+					<?php echo JLayoutHelper::render('joomla.edit.metadata', $this); ?>
+				</div>
+			</div>
+			<?php echo JHtml::_('bootstrap.endTab'); ?>
+		<?php endif; ?>
+
+		<?php // Do not show the images and links options if the edit form is configured not to. ?>
+		<?php //if ($params->show_urls_images_backend == 1) : ?>
+			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'images', JText::_('COM_JV_PRODUCT_IMAGES', true)); ?>
+			<div class="row-fluid form-horizontal-desktop">
+				<div class="span6">
 																
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" id="" >Intro Image</label></div>
+			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_intro" id="jform_images_image_intro-lbl" data-original-title="&lt;strong&gt;Images Thumb&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_INTRO_DESC">Images Thumb</label></div>
 		<div class="controls"><div class="input-prepend input-append">
 <div class="media-preview add-on">
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
-	<input type="text" class="input-small" readonly="readonly" value="" id="" name="img_thumb">
-<a rel="" href=""  class="modal btn">
-Select</a>
-</div></div>
-</div>
-																				
-
-<div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip"  id="" >Alt text</label></div>
-		<div class="controls"><input type="text" size="40" value="" id="" name="img_thumb_alt"></div>
-</div>
-																			
-
-<div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip"  id="" >Full article image</label></div>
-		<div class="controls"><div class="input-prepend input-append">
-<div class="media-preview add-on">
-<span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
-</div>
-<input type="text" class="input-small" readonly="readonly" value="" id="" name="img">
-<a rel="" href="" title="Select" class="modal btn">
-Select</a><a onclick="" href="#" title="" class="btn hasTooltip" data-original-title="Clear">
+	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_intro" name="jform[images][image_intro]">
+<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_intro&amp;folder=" title="Select" class="modal btn">
+Select</a><a onclick="
+jInsertFieldValue('', 'jform_images_image_intro');
+return false;
+" href="#" title="" class="btn hasTooltip" data-original-title="Clear">
 <i class="icon-remove"></i></a>
 </div></div>
 </div>
 											
 
+<div class="control-group ">
+			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_intro_alt" id="jform_images_image_intro_alt-lbl" data-original-title="&lt;strong&gt;Alt images&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_IMAGE_ALT_DESC">Alt images</label></div>
+		<div class="controls"><input type="text" size="20" value="" id="jform_images_image_intro_alt" name="jform[images][image_intro_alt]"></div>
+</div>
 											
 
 <div class="control-group ">
-<div class="control-label"><label title="" class="hasTooltip"  id="" >Alt text</label></div>
-<div class="controls"><input type="text" size="20" value="" id="" name="img_alt"></div>
+			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext" id="jform_images_image_fulltext-lbl" data-original-title="&lt;strong&gt;Images&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_FULL_DESC" aria-invalid="false">Images</label></div>
+		<div class="controls"><div class="input-prepend input-append">
+<div class="media-preview add-on">
+<span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
+	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_fulltext" name="jform[images][image_fulltext]" aria-invalid="false">
+<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_fulltext&amp;folder=" title="Select" class="modal btn">
+Select</a><a onclick="
+jInsertFieldValue('', 'jform_images_image_fulltext');
+return false;
+" href="#" title="" class="btn hasTooltip" data-original-title="Clear">
+<i class="icon-remove"></i></a>
+</div></div>
+</div>
+											
 
+<div class="control-group ">
+			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext_alt" id="jform_images_image_fulltext_alt-lbl" data-original-title="&lt;strong&gt;Alt images&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_IMAGE_ALT_DESC" aria-invalid="false">Alt images</label></div>
+		<div class="controls"><input type="text" size="20" value="" id="jform_images_image_fulltext_alt" name="jform[images][image_fulltext_alt]" aria-invalid="false"></div>
 </div>
-</div>
-			
-</div>				
-</div>
-
-<button class="btn btn-small btn-success"><span class="icon-apply icon-white"></span>Save</button>
-
-<input type="hidden" value="" name="layout">
-<input type="hidden" name="controller" value="product" />
-<input type="hidden" name="task" value="" />
-<?php echo JHTML::_( 'form.token' ); ?>
-
-</div>
+									</div>
+			</div>
+			<?php echo JHtml::_('bootstrap.endTab'); ?>
+		<?php //endif; ?>
+		
+		<button class="btn btn-small btn-success"><span class="icon-apply icon-white"></span>Save</button>
+		<input type="hidden" name="task" value="" />
+		<?php echo JHtml::_('form.token'); ?>
+		</div>
 </form>
