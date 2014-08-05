@@ -136,13 +136,13 @@ Joomla.submitbutton = function(task)
 																
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_intro" id="jform_images_image_intro-lbl" data-original-title="&lt;strong&gt;Images Thumb&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_INTRO_DESC">Images Thumb</label></div>
+			<div class="control-label"><label class="hasTooltip" for="jform_images_image_intro" id="jform_images_image_intro-lbl" >Images Thumb</label></div>
 		<div class="controls"><div class="input-prepend input-append">
 <div class="media-preview add-on">
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
-	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_intro" name="jform[images][image_intro]">
-<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_intro&amp;folder=" title="Select" class="modal btn">
+	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_intro" name="image_intro">
+<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_intro&amp;folder=" class="modal btn">
 Select</a><a onclick="
 jInsertFieldValue('', 'jform_images_image_intro');
 return false;
@@ -153,19 +153,19 @@ return false;
 											
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_intro_alt" id="jform_images_image_intro_alt-lbl" data-original-title="&lt;strong&gt;Alt images&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_IMAGE_ALT_DESC">Alt images</label></div>
-		<div class="controls"><input type="text" size="20" value="" id="jform_images_image_intro_alt" name="jform[images][image_intro_alt]"></div>
+			<div class="control-label"><label title="" class="hasTooltip"  id="jform_images_image_intro_alt-lbl" >Alt images</label></div>
+			<div class="controls"><input type="text" size="20" value="" id="jform_images_image_intro_alt" name="image_intro_alt"></div>
 </div>
 											
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext" id="jform_images_image_fulltext-lbl" data-original-title="&lt;strong&gt;Images&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_FULL_DESC" aria-invalid="false">Images</label></div>
+			<div class="control-label"><label class="hasTooltip"  id="jform_images_image_fulltext-lbl"  aria-invalid="false">Images</label></div>
 		<div class="controls"><div class="input-prepend input-append">
 <div class="media-preview add-on">
 <span title="" class="hasTipPreview"><i class="icon-eye"></i></span>
 </div>
-	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_fulltext" name="jform[images][image_fulltext]" aria-invalid="false">
-<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_fulltext&amp;folder=" title="Select" class="modal btn">
+	<input type="text" class="input-small" readonly="readonly" value="" id="jform_images_image_fulltext" name="image_fulltext" aria-invalid="false">
+<a rel="{handler: 'iframe', size: {x: 800, y: 500}}" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;asset=com_jv&amp;author=&amp;fieldid=jform_images_image_fulltext&amp;folder=" class="modal btn">
 Select</a><a onclick="
 jInsertFieldValue('', 'jform_images_image_fulltext');
 return false;
@@ -176,8 +176,8 @@ return false;
 											
 
 <div class="control-group ">
-			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext_alt" id="jform_images_image_fulltext_alt-lbl" data-original-title="&lt;strong&gt;Alt images&lt;/strong&gt;&lt;br /&gt;COM_CONTENT_FIELD_IMAGE_ALT_DESC" aria-invalid="false">Alt images</label></div>
-		<div class="controls"><input type="text" size="20" value="" id="jform_images_image_fulltext_alt" name="jform[images][image_fulltext_alt]" aria-invalid="false"></div>
+			<div class="control-label"><label title="" class="hasTooltip" for="jform_images_image_fulltext_alt" id="jform_images_image_fulltext_alt-lbl"  aria-invalid="false">Alt images</label></div>
+		<div class="controls"><input type="text" size="20" value="" id="jform_images_image_fulltext_alt" name="image_fulltext_alt" aria-invalid="false"></div>
 </div>
 									</div>
 			</div>
