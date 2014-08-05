@@ -129,7 +129,10 @@ class JCacheStorageApc extends JCacheStorage
 	 */
 	public function clean($group, $mode = null)
 	{
+		if (function_exists(apc_cache_info)){
 		$allinfo = apc_cache_info('user');
+		}
+		
 		$keys = $allinfo['cache_list'];
 		$secret = $this->_hash;
 
