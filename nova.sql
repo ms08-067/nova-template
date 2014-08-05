@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2014 at 06:27 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Generation Time: Aug 05, 2014 at 12:17 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.4.22
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -1345,7 +1345,7 @@ CREATE TABLE IF NOT EXISTS `d6k20_jv_product` (
   `img_thumb_alt` varchar(255) DEFAULT NULL,
   `img` text NOT NULL,
   `img_alt` varchar(255) DEFAULT NULL,
-  `title` varchar(255) NOT NULL,
+  `name_project` varchar(255) NOT NULL,
   `short_des` varchar(255) NOT NULL,
   `des` text NOT NULL,
   `publish` int(3) DEFAULT NULL,
@@ -1354,7 +1354,15 @@ CREATE TABLE IF NOT EXISTS `d6k20_jv_product` (
   `price` int(11) NOT NULL,
   `id_categories_product` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `d6k20_jv_product`
+--
+
+INSERT INTO `d6k20_jv_product` (`id`, `img_thumb`, `img_thumb_alt`, `img`, `img_alt`, `name_project`, `short_des`, `des`, `publish`, `created_date`, `count_buy`, `price`, `id_categories_product`) VALUES
+(6, '', '', '', '', 'Template shoping cart', 'this template joomla', '', 0, '2014-08-05 17:13:08', 0, 16, 3),
+(7, '', 'alt thumb', '', 'alt full image', 'Template shoping cart', 'this template joomla', '', 1, '2014-08-05 17:14:22', 0, 12, 3);
 
 -- --------------------------------------------------------
 
@@ -1829,7 +1837,7 @@ CREATE TABLE IF NOT EXISTS `d6k20_session` (
 --
 
 INSERT INTO `d6k20_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-('gshk1fcqkd1sd5suihu3dki871', 1, 0, '1407169521', '__default|a:9:{s:15:"session.counter";i:72;s:19:"session.timer.start";i:1407165578;s:18:"session.timer.last";i:1407169519;s:17:"session.timer.now";i:1407169521;s:22:"session.client.browser";s:65:"Mozilla/5.0 (Windows NT 6.0; rv:31.0) Gecko/20100101 Firefox/31.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:14:"com_categories";O:8:"stdClass":2:{s:10:"categories";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:9:"extension";s:11:"com_content";}}s:4:"edit";O:8:"stdClass":1:{s:8:"category";O:8:"stdClass":1:{s:4:"data";N;}}}}}s:4:"user";O:5:"JUser":27:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"262";s:4:"name";s:9:"Hung Phan";s:8:"username";s:5:"admin";s:5:"email";s:17:"hunguit@yahoo.com";s:8:"password";s:60:"$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-05-19 16:18:32";s:13:"lastvisitDate";s:19:"2014-08-03 07:22:17";s:10:"activation";s:1:"0";s:6:"params";s:92:"{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":6:{s:11:"admin_style";s:0:"";s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:0:"";}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"c6a44bbf1c0725bb0b64b9ca49ae2d13";s:20:"com_media.return_url";s:118:"index.php?option=com_media&view=images&tmpl=component&fieldid=jform_images_image_fulltext&e_name=&asset=com_jv&author=";}__wf|a:1:{s:13:"session.token";s:32:"b950b092c00e7e55cb931fcef425a82f";}', 262, 'admin');
+('h1v1i4fohlo7f4v25de860dr51', 1, 0, '1407233663', '__default|a:9:{s:15:"session.counter";i:136;s:19:"session.timer.start";i:1407201695;s:18:"session.timer.last";i:1407233645;s:17:"session.timer.now";i:1407233662;s:22:"session.client.browser";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0";s:8:"registry";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":2:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:5:"en-GB";}s:13:"com_installer";O:8:"stdClass":2:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";}}}s:4:"user";O:5:"JUser":27:{s:9:"\\0\\0\\0isRoot";b:1;s:2:"id";s:3:"262";s:4:"name";s:9:"Hung Phan";s:8:"username";s:5:"admin";s:5:"email";s:17:"hunguit@yahoo.com";s:8:"password";s:60:"$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm";s:14:"password_clear";s:0:"";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2014-05-19 16:18:32";s:13:"lastvisitDate";s:19:"2014-08-04 15:20:16";s:10:"activation";s:1:"0";s:6:"params";s:92:"{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:12:"requireReset";s:1:"0";s:10:"\\0\\0\\0_params";O:24:"Joomla\\Registry\\Registry":1:{s:7:"\\0\\0\\0data";O:8:"stdClass":6:{s:11:"admin_style";s:0:"";s:14:"admin_language";s:0:"";s:8:"language";s:0:"";s:6:"editor";s:0:"";s:8:"helpsite";s:0:"";s:8:"timezone";s:0:"";}}s:14:"\\0\\0\\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\\0\\0\\0_authLevels";a:5:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;i:4;i:6;}s:15:"\\0\\0\\0_authActions";N;s:12:"\\0\\0\\0_errorMsg";N;s:10:"\\0\\0\\0_errors";a:0:{}s:3:"aid";i:0;s:6:"otpKey";s:0:"";s:4:"otep";s:0:"";}s:13:"session.token";s:32:"4b47b3ff1e85b90568bc537b7a47409d";s:20:"com_media.return_url";s:94:"index.php?option=com_media&view=images&tmpl=component&fieldid=img&e_name=&asset=com_jv&author=";}__wf|a:1:{s:13:"session.token";s:32:"6eff9c438bde380ff645eeb0be5d96c2";}', 262, 'admin');
 
 -- --------------------------------------------------------
 
@@ -2269,7 +2277,7 @@ CREATE TABLE IF NOT EXISTS `d6k20_users` (
 --
 
 INSERT INTO `d6k20_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(262, 'Hung Phan', 'admin', 'hunguit@yahoo.com', '$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm', 0, 1, '2014-05-19 16:18:32', '2014-08-04 15:20:16', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
+(262, 'Hung Phan', 'admin', 'hunguit@yahoo.com', '$2y$10$OcRUJJziVr1.pdCArveA/OHMTbE86bTO7TqdocMEAuJ9MTu81QXFm', 0, 1, '2014-05-19 16:18:32', '2014-08-05 01:21:45', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
