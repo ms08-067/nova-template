@@ -18,7 +18,7 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a target="_blank" href="http://joomlavi.net/demo/v2"><i class="icon-link"></i></a>                                
+                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a target="_blank" href="http://joomlavi.net/demo/v1"><i class="icon-link"></i></a>                                
                     </div>
                 </div>
                 <div class="desc">

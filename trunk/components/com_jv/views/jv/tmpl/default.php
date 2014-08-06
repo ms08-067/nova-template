@@ -10,8 +10,7 @@ defined('_JEXEC') or die('Restricted access');
                 <p>Our team specializes in web design and development, but we don’t stop there. We’re a full–service firm that will do whatever it takes to help you grow your business and your presence on the web. Looking to rebrand yourself? Maybe increase your search engine rankings or create the next big thing on the internet? We can do it. Just say the word and we’re on the job.</p>
                 <ul>
                 	<li>Website Design</li>
-                    <li>Aplication Development</li>
-                    <li>Search Engine Optimization (SEO)</li>
+                    <li>Aplication Development</li>                  
                     <li>Design</li>
                    
                 </ul>
