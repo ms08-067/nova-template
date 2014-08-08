@@ -31,7 +31,13 @@ defined('_JEXEC') or die('Restricted access');
         <div class="row-fluid">
             <div class="span6">
                 <h2>Why Choose Us?</h2>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                <p>
+				We have many years experience in develop  websites used many different Open Source PHP. 
+				We know many advanced techniques in develop web as big data processing, 
+				website speed optimization, optimize view on mobile, tablet. 
+				We also have more experience in android application development, 
+				web apps, hybrid apps by native apps combine web technology and more...
+				</p>
             </div>
             <div class="span6">
                 <h2>Our Services</h2>
@@ -105,8 +111,10 @@ defined('_JEXEC') or die('Restricted access');
                         <i class="icon-thumbs-up-alt icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">html5/css3 techniques</h4>
-                        <p>Beside the standard HTML and CSS, we also provide support for the newer HTML5 & CSS3 to take full advantage of modern web technologies.</p>
+                        <h4 class="media-heading">Web Development</h4>
+                        <p>
+						We can help you build website a quickly, optimize view on many screen, correct of standard modern web and nice design
+						</p>
                     </div>
                 </div>
             </div>            
@@ -159,8 +167,13 @@ defined('_JEXEC') or die('Restricted access');
                         <i class="icon-globe icon-medium"></i>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Bootstrap</h4>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <h4 class="media-heading">Templates Website</h4>
+                        <p>
+						We offer website templates has been built with many sample beautiful,  
+						optimally  when view on  computer, tablet, mobile. 
+						Those templates are built correct standard of web modern, make it convenient for users as well as admin. 
+						Help to them to build a website in a short time, but the lowest cost
+						</p>
                     </div>
                 </div>
             </div>
