@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HTML View class for the HelloWorld Component
  */
-class JvViewTemp extends JViewLegacy
+class JvViewProducts extends JViewLegacy
 {
 	// Overwriting JView display method
 	
