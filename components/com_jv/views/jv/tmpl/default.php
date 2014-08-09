@@ -7,11 +7,15 @@ defined('_JEXEC') or die('Restricted access');
         <div class="row-fluid">
             <div class="span6">
                 <h2>What we do</h2>
-                <p>Our team specializes in web design and development, but we don’t stop there. We’re a full–service firm that will do whatever it takes to help you grow your business and your presence on the web. Looking to rebrand yourself? Maybe increase your search engine rankings or create the next big thing on the internet? We can do it. Just say the word and we’re on the job.</p>
+                <p>
+				We are a team specializing in web application development, mobile applications, mobile web, cover engineers many years of experience in programming and graphics design team.
+				We understand design trend, web standards and offer to  technology solutions to marketing, business and application management, make more business  efficiency  to your company. 
+				This is  some of main service:
+				</p>
                 <ul>
-                	<li>Website Design</li>
-                    <li>Aplication Development</li>                  
-                    <li>Design</li>
+                	<li>Web Design - Web Development</li>
+                    <li>Android Aplication Development</li>                  
+                    <li>Email Marketing</li>
                    
                 </ul>
             </div>
