@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
                 <ul>
                 	<li>Web Design - Web Development</li>
                     <li>Android Aplication Development</li>                  
-                    <li>Email Marketing</li>
+                    <li>Templates Website</li>
                    
                 </ul>
             </div>
@@ -36,7 +36,7 @@ defined('_JEXEC') or die('Restricted access');
             <div class="span6">
                 <h2>Why Choose Us?</h2>
                 <p>
-				We have many years experience in develop  websites used many different Open Source PHP. 
+				We have many experience in develop  websites used many different Open Source PHP. 
 				We know many advanced techniques in develop web as big data processing, 
 				website speed optimization, optimize view on mobile, tablet. 
 				We also have more experience in android application development, 
