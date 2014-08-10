@@ -8,7 +8,7 @@ defined('_JEXEC') or die('Restricted access');
             <div class="span6">
                 <h2>What we do</h2>
                 <p>
-				We are a team specializing in web application development, mobile applications, mobile web, cover engineers many years of experience in programming and graphics design team.
+				We are a team specializing in web application development, mobile applications, mobile web, cover engineers many of experience in programming and graphics design team.
 				We understand design trend, web standards and offer to  technology solutions to marketing, business and application management, make more business  efficiency  to your company. 
 				This is  some of main service:
 				</p>
