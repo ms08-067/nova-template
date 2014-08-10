@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
@@ -47,10 +47,10 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-2">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="http://joomlavi.net/demo/niemtinmoi">
 						Live Preview
 						</a>
                     </div>
@@ -75,10 +75,10 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-3">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="http://simsodepsaithanh.com">
 						Live Preview
 						</a>
                     </div>
@@ -104,17 +104,17 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-4">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="http://thangvietsecurity.com">
 						Live Preview
 						</a>
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <small>Portfolio item short description</small>
+                   <h5>The web Thangviet Security company </h5>
+                   <small>Web to introduction company</small>
                 </div>
                 <div id="modal-4" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
@@ -132,17 +132,17 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-5">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="http://simsodeptphcm.com.vn">
 						Live Preview
 						</a>
                     </div>
                 </div>
                 <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                    <small>Portfolio item short description</small>
+                    <h5>The web simsodeptphcm.com.vn </h5>
+                    <small>Shop of mobile number</small>
                 </div>
                 <div id="modal-5" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
@@ -160,10 +160,10 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-6">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="#">
 						Live Preview
 						</a>
                     </div>
@@ -188,7 +188,7 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-7">
 						View Detail
 						</a>
 						<a target="_blank" href="http://joomlavi.net/demo/v1">
@@ -216,10 +216,10 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-8">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="http://joomlavi.net/demo/niemtinmoi">
 						Live Preview
 						</a>
                     </div>
@@ -244,10 +244,10 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a data-toggle="modal" href="#modal-9">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a target="_blank" href="#">
 						Live Preview
 						</a>
                     </div>
