@@ -73,7 +73,7 @@ class JvModelCategories extends JModelAdmin
 		
 		$where 		= ( count( $where ) ? ' WHERE ' . implode( ' AND ', $where ) : '' );
 		
-		$query = ' SELECT p.*,c.name AS categories FROM #__jv_product as p LEFT JOIN #__jv_product_categories AS c ON p.id_categories_product = c.id'
+		$query = ' SELECT c.* FROM #__jv_product_categories as c'
 		. $where
 		. $orderby;
 		
@@ -139,7 +139,16 @@ class JvModelCategories extends JModelAdmin
 			return 0;
 		}
   	}
-  	
+  	public function getForm($data = array(), $loadData = true)
+	{
+		// Get the form.
+		$form = $this->loadForm('com_jv.product', 'product', array('control' => 'jform', 'load_data' => $loadData));
+		if (empty($form))
+		{
+			return false;
+		}
+		return $form;
+	}
   	function getItem($id){
 	
   		$query = 'SELECT * FROM #__jv_product WHERE id = '.$id;
