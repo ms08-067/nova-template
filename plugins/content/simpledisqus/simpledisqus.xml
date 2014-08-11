@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+
+	<name>Content - Simple Disqus Comments</name>
+	<author>Marcu Alin</author>
+	<creationDate>Dec 2011</creationDate>
+	<copyright>Copyright (C) 2010 www.deconf.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.deconf.com/</authorUrl>
+	<version>1.7</version>
+	<description>	<![CDATA[
+	<u>Simple Disqus Comments</u><br /><br />
+	For help, support and FAQ visit: <a href="http://www.deconf.com/en" target="_blank">Simple Disqus Comments</a>.<br />
+	]]></description>
+	<files>
+		<filename plugin="simpledisqus">simpledisqus.php</filename>
+	</files>
+  <config>
+  
+  <fields name="params" addfieldpath="/plugins/content">
+  
+  <fieldset name="basic">
+	  <field name="spacer1" type="spacer" default="" label="&lt;b&gt;&lt;u&gt;Disqus Setup&lt;/b&gt;&lt;/u&gt;" description="" />
+	  <field name="disqus_shortname" type="text" default="" label="Disqus Shortname" description="Enter your Disqus ShortName"/>
+	  <field name="spacer2" type="spacer" default="" label="&lt;b&gt;&lt;u&gt;Advanced Disqus Settings&lt;/b&gt;&lt;/u&gt;" description="" />  
+      <field name="Exclude_Article_Ids" type="text" default="" label="Exclude Articles" description="Article IDs separated by commas"/>
+      <field name="Exclude_Category_Ids" type="text" default="" label="Exclude Category" description="Category IDs separated by commas"/>
+	  <field name="Merge_Comments" type="list" default="0" label="Merge Comments" description="Merge comments on multilanguage websites">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+	  </field>	 
+  </fieldset>
+  </fields>
+</config>
+</extension>
