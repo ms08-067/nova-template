@@ -28,10 +28,10 @@ class JvViewProduct extends JViewLegacy
 		$isNew		= ($this->item->id == 0);
 		
 		JToolbarHelper::title(($isNew ? 'JV new product' : 'JV edit product'));		
-		JToolbarHelper::apply('product.apply');
-		JToolbarHelper::save('product.save');
-		JToolbarHelper::save2new('product.save2new');
-		JToolbarHelper::cancel('product.cancel');
+		JToolbarHelper::apply('apply');
+		JToolbarHelper::save('save');
+		JToolbarHelper::save2new('save2new');
+		JToolbarHelper::cancel('cancel');
 		
 	}
 	

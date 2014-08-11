@@ -26,14 +26,7 @@ class JvModelProduct extends JModelAdmin
 		$this->setState('limitstart', $this->_limitstart);
 		
 	}
-	/**
-	 * Method to get the record form.
-	 *
-	 * @param   array      $data        Data for the form.
-	 * @param   boolean    $loadData    True if the form is to load its own data (default case), false if not.
-	 *
-	 * @return  mixed  A JForm object on success, false on failure
-	 */
+	
 	public function getForm($data = array(), $loadData = true)
 	{
 		// Get the form.
@@ -83,15 +76,11 @@ class JvModelProduct extends JModelAdmin
 		$search 			= JString::strtolower( $search );
 		
 		$where = array();
-		if ( $search ){
-			$where[] = 'p.title LIKE '.$this->_db->Quote( '%'.$this->_db->getEscaped( $search, true ).'%', false );
-		}
+		
 		if ( $filter_state != -1 ){
 			$where[] = 'p.publish = '.$filter_state;
 		}
-		if ( $filter_user  != -1){
-			$where[] = 'p.created_id = '.$filter_user;
-		}
+		
 		
 		$where 		= ( count( $where ) ? ' WHERE ' . implode( ' AND ', $where ) : '' );
 		

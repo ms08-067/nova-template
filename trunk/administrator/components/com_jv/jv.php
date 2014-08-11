@@ -12,6 +12,7 @@ define('DS', DIRECTORY_SEPARATOR);
 JLoader::register('JvModel', JPATH_COMPONENT_ADMINISTRATOR.DS.'classes'.DS.'model.php');
 JLoader::register('JvTableProduct', JPATH_COMPONENT_ADMINISTRATOR.DS.'tables'.DS.'product.php');
 JLoader::register('JvHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'jv.php');
+JLoader::register('JvModelProduct', dirname(__FILE__) . DS . 'models' . DS . 'product.php');
 
 
 $controllerName = JRequest::getVar('controller');

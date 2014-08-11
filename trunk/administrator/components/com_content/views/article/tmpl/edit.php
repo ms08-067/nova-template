@@ -153,7 +153,6 @@ if (isset($this->item->attribs['show_urls_images_backend']) && $this->item->attr
 		<input type="hidden" name="task" value="" />
 		<input type="hidden" name="return" value="<?php echo $input->getCmd('return'); ?>" />
 		<?php echo JHtml::_('form.token'); ?>
-
-
+		
 		</div>
 </form>
