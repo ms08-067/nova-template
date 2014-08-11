@@ -196,7 +196,7 @@ ID<i class="icon-arrow-down-3"></i>
 
 			
 <tbody>
-
+<?php foreach($this->products as $rows => $row) : ?>
 <tr sortable-group-id="10" class="row0">
 <td class="order nowrap center hidden-phone">
 <span title="" class="sortable-handler inactive tip-top hasTooltip" data-original-title="Please sort by order to enable reordering">
@@ -206,22 +206,19 @@ ID<i class="icon-arrow-down-3"></i>
 <td class="center hidden-phone">
 <input type="checkbox" onclick="Joomla.isChecked(this.checked);" value="23" name="cid[]" id="cb0">
 </td>
-
 <td class="has-context">
 <div class="pull-left">
-																							<a title="Edit" href="/nova/administrator/index.php?option=com_content&amp;task=article.edit&amp;id=23">
-Duis sed odio sit amet nibh vulputate cursus </a>
-<span class="small">
-(<span>Alias</span>: java-article-6)								</span>
-<div class="small">
-Category: Cordova/Phonegap								</div>
+<a href="index.php?option=com_jv&controller=product&id=23"><?php echo $row->name_project; ?></a><br/>
+<span class="small">(<span>Alias</span>: java-article-6)</span>
+<div class="small">Category: Cordova/Phonegap</div>
 </div>
 </td>
-<td class="small hidden-phone">Public</td>
+<td class="small hidden-phone"><?php echo $row->publish; ?></td>
 <td class="small hidden-phone">Hung Phan</td>
-<td class="nowrap small hidden-phone">2014-05-22</td>
-<td class="center hidden-phone">23</td>
+<td class="nowrap small hidden-phone"><?php echo $row->created_date; ?></td>
+<td class="center hidden-phone"><?php echo $row->id; ?></td>
 </tr>
+<?php endforeach; ?>
 			
 </tbody>
 </table>
