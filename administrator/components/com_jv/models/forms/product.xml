@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<fieldset addfieldpath="/administrator/components/com_categories/models/fields" >
-		<field name="title" type="text" label="COM_JV_PROJECT_NAME"
+		<field name="name_project" type="text" label="COM_JV_PROJECT_NAME"
 			description="JFIELD_TITLE_DESC"
 			class="input-xlarge input-large-text"
 			size="40"
 			required="true" />
 
-		<field name="alias" type="text" label="COM_JV_SHORT_DES_LABEL"
+		<field name="short_des" type="text" label="COM_JV_SHORT_DES_LABEL"
 			description="JFIELD_ALIAS_DESC"
 			class="input-xlarge input-large-text"
-			size="40" />
+			size="40" 
+			required="true"
+			/>
 
-		<field name="articletext" type="editor"
+		<field name="des" type="editor"
 			label="COM_CONTENT_FIELD_ARTICLETEXT_LABEL" description="COM_CONTENT_FIELD_ARTICLETEXT_DESC"
-			filter="JComponentHelper::filterText" buttons="true" />
+			filter="JComponentHelper::filterText" buttons="true" 
+			required="true"
+			/>
 
-		<field name="state" type="list" label="JSTATUS"
+		<field name="publish" type="list" label="JSTATUS"
 			description="JFIELD_PUBLISHED_DESC" class="chzn-color-state"
 			filter="intval" size="1" default="1"
 		>
@@ -27,45 +30,39 @@
 		</field>
 
 		<field name="catid" type="categoryedit"
-			label="JCATEGORY" description="JFIELD_CATEGORY_DESC"
-			
+			label="JCATEGORY" description="JFIELD_CATEGORY_DESC"		
 		>
 		</field>
-
-		<field name="tags"
-			type="text"
-			label="COM_JV_PRODUCT_PRICE"
-			description="PRICE_DESC"
-			class="span12"
-			multiple="true"
-		>
-		</field>	
-	</fieldset>
-
-	<fields name="images" label="COM_CONTENT_FIELD_IMAGE_OPTIONS">
+		<field name="price" type="text" label="COM_JV_PRICE_LABEL"
+			description="COM_JV_PRICE_DESC"
+			class="input-xlarge input-large-text"
+			size="40" 
+			required="true"
+			/>
 		<field
-			name="image_intro"
+			name="img_thumb"
 			type="media"
 			label="COM_JV_IMG_THUMB_LABEL"
-			description="COM_CONTENT_FIELD_INTRO_DESC" />
+			description="COM_CONTENT_FIELD_INTRO_DESC" 
+			required="true"
+			/>
 		
-		<field name="image_intro_alt"
+		<field name="img_thumb_alt"
 			type="text"
 			label="COM_JV_IMAGE_THUMB_ALT"
 			description="COM_CONTENT_FIELD_IMAGE_ALT_DESC"
 			size="20"/>
 		<field
-			name="image_fulltext"
+			name="img"
 			type="media"
 			label="COM_JV_IMG_LABEL"
-			description="COM_CONTENT_FIELD_FULL_DESC"/>
+			description="COM_CONTENT_FIELD_FULL_DESC"
+			required="true"
+			/>
 		
-		<field name="image_fulltext_alt"
+		<field name="img_alt"
 			type="text"
 			label="COM_JV_IMAGES_ALT"
 			description="COM_CONTENT_FIELD_IMAGE_ALT_DESC"
 			size="20"/>
-		
-	</fields>
-
 </form>

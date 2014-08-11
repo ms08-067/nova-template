@@ -3,17 +3,14 @@
  * com_jv
  */
 defined('_JEXEC') or die;
-
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
-
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
 
-$app		= JFactory::getApplication();
-$user		= JFactory::getUser();
+//echo "<pre>";print_r($this->products);
 ?>
-<link rel="stylesheet" href="/nova/media/jui/css/jquery.searchtools.css" type="text/css" />
-<script src="/nova/media/jui/js/jquery.searchtools.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="<?php echo JURI::root(); ?>media/jui/css/jquery.searchtools.css" type="text/css" />
+<script src="<?php echo JURI::root(); ?>media/jui/js/jquery.searchtools.min.js" type="text/javascript"></script>
 
 <form action="<?php echo JRoute::_('index.php?option=com_jv&controller=product'); ?>" method="post" name="adminForm" id="adminForm">
 
@@ -21,25 +18,22 @@ $user		= JFactory::getUser();
 	<div id="sidebar">
 	<div class="sidebar-nav">
 				<ul class="nav nav-list" id="submenu">
-							<li class="active">
-								<a href="index.php?option=com_content&amp;view=articles">Templates</a>
-							</li>
-							<li>
-								<a href="index.php?option=com_categories&amp;extension=com_content">Categories</a>
-							</li>
-							
-					</ul>
-							</div>
+					<li class="active">
+						<a href="index.php?option=com_jv&controller=products">Templates</a>
+					</li>
+					<li>
+						<a href="index.php?option=com_jv&controller=products">Categories</a>
+					</li>
+			   </ul>
+	 </div>
 </div>
-	</div>
+</div>
 	
 <div class="span10" id="j-main-container">
-		<div class="js-stools clearfix">
+<div class="js-stools clearfix">
 	<div class="clearfix">
 		<div class="js-stools-container-bar">
-			
-			<label class="element-invisible" for="filter_search">
-			Search		</label>
+			<label class="element-invisible" for="filter_search">Search</label>
 		<div class="btn-wrapper input-append">
 			<input type="text" placeholder="Search" value="" id="filter_search" name="filter[search]">			<button title="" class="btn hasTooltip" type="submit" data-original-title="Search">
 				<i class="icon-search"></i>

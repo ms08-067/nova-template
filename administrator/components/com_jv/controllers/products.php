@@ -28,38 +28,17 @@ class JvControllerProducts extends JControllerLegacy
 		parent::__construct($config);
 	}
 	
-	function save(){
-		
-		echo 123;exit;
-	}
-	
 	public function display($cachable = false, $urlparams = false) {		
-		
 		parent::display();
 	
 	}
 	
 	public function  add() {
 	
-		//JRequest::setVar( 'layout', 'edit'  );
-		JRequest::setVar( 'view'  , 'product');
-		parent::display();
+		$this->setRedirect( 'index.php?option=com_jv&controller=product');
 	}
-	public  function  cannel() {
 	
-		echo 123;exit;
-	}
-	/**
-	 * Proxy for getModel.
-	 *
-	 * @param   string	$name	The name of the model.
-	 * @param   string	$prefix	The prefix for the PHP class name.
-	 *
-	 * @return  JModel
-	 * @since   1.6
-	 */
-	
-	public function getModel($name = 'product', $prefix = 'ContentModel', $config = array('ignore_request' => true))
+	public function getModel($name = 'product', $prefix = 'JvModel', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 

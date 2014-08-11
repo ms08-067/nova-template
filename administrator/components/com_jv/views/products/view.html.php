@@ -16,6 +16,7 @@ defined('_JEXEC') or die;
  * @subpackage  com_jv
  * @since       1.6
  */
+
 class JvViewProducts extends JViewLegacy
 {
 	protected $items;
@@ -27,9 +28,14 @@ class JvViewProducts extends JViewLegacy
 
 	public function display($tpl = null)
 	{
-
+		$products = new JvModelProduct();
+		
+		$this->assignRef('products', $products->getData());
+		
 		$this->addToolbar();
+		
 		$this->sidebar = JHtmlSidebar::render();
+		
 		parent::display($tpl);
 	}
 	protected function addToolbar()
@@ -37,8 +43,7 @@ class JvViewProducts extends JViewLegacy
 			
 		$bar = JToolBar::getInstance('toolbar');
 		JToolbarHelper::title('JV Products List');
-		JToolbarHelper::addNew('product.add');
-		JToolbarHelper::save('products.save');
+		JToolbarHelper::addNew('add');
 		JToolbarHelper::deleteList('', 'remove', 'Delete');
 		
 	}
