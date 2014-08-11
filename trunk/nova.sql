@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2014 at 12:30 PM
--- Server version: 5.5.34
--- PHP Version: 5.4.22
+-- Generation Time: Aug 11, 2014 at 06:27 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -64,6 +64,8 @@ DROP TABLE IF EXISTS `d6k20_jv_product_categories`;
 CREATE TABLE IF NOT EXISTS `d6k20_jv_product_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
+  `published` int(3) DEFAULT '1',
+  `created_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
@@ -71,12 +73,12 @@ CREATE TABLE IF NOT EXISTS `d6k20_jv_product_categories` (
 -- Dumping data for table `d6k20_jv_product_categories`
 --
 
-INSERT INTO `d6k20_jv_product_categories` (`id`, `name`) VALUES
-(1, 'Templates Boostrap'),
-(2, 'Templates Admin'),
-(3, 'Templates Responsive'),
-(4, 'Extension Joomla'),
-(5, 'Templates Joomla');
+INSERT INTO `d6k20_jv_product_categories` (`id`, `name`, `published`, `created_date`) VALUES
+(1, 'Templates Boostrap', 1, NULL),
+(2, 'Templates Admin', 1, NULL),
+(3, 'Templates Responsive', 1, NULL),
+(4, 'Extension Joomla', 1, NULL),
+(5, 'Templates Joomla', 1, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
