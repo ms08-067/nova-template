@@ -24,8 +24,19 @@ class JvControllerProducts extends JControllerLegacy
 	function __construct($config = array())
 	{
 		
-		JRequest::setVar( 'view'  , 'products');
+		$view = JRequest::getVar("view");
+		
+		switch($view){
+			case 'categories':
+				JRequest::setVar( 'view'  , 'categories');
+				break;
+			default:
+				JRequest::setVar( 'view'  , 'products');
+				break;
+		}
+		
 		parent::__construct($config);
+		
 	}
 	
 	public function display($cachable = false, $urlparams = false) {		

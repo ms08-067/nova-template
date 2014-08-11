@@ -2,7 +2,7 @@
 defined('_JEXEC') or die();
 jimport('joomla.application.component.model');  
 
-class JvModelProduct extends JModelAdmin
+class JvModelCategories extends JModelAdmin
 {
     var $_data;
 	var $_id;
@@ -26,17 +26,7 @@ class JvModelProduct extends JModelAdmin
 		$this->setState('limitstart', $this->_limitstart);
 		
 	}
-	
-	public function getForm($data = array(), $loadData = true)
-	{
-		// Get the form.
-		$form = $this->loadForm('com_jv.product', 'product', array('control' => 'jform', 'load_data' => $loadData));
-		if (empty($form))
-		{
-			return false;
-		}
-		return $form;
-	}
+
 	function getData(){
 	
 		if (empty($this->_data)){

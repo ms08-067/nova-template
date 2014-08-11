@@ -1,4 +1,5 @@
 <?php
+
 /**
  * com_jv
  */
@@ -17,10 +18,10 @@ JHtml::_('formbehavior.chosen', 'select');
 <div id="sidebar">
 <div class="sidebar-nav">
 	<ul class="nav nav-list" id="submenu">
-		<li class="active">
+		<li>
 			<a href="index.php?option=com_jv&controller=products">Products</a>
 		</li>
-		<li>
+		<li class="active">
 			<a href="index.php?option=com_jv&controller=products&view=categories">Categories</a>
 		</li>
    </ul>
