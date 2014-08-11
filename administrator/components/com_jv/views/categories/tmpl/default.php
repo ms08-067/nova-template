@@ -168,24 +168,18 @@ JHtml::_('formbehavior.chosen', 'select');
 <input type="checkbox" onclick="Joomla.checkAll(this)" title="" class="hasTooltip" value="" name="checkall-toggle" data-original-title="Check All">						</th>
 
 
-
+<th width="10%" class="nowrap hidden-phone">
+<a title="" data-name="Access" data-direction="ASC" data-order="a.access" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Access&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
+Status</a>
+</th>
 <th>
 <a title="" data-name="Title" data-direction="ASC" data-order="a.title" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Title&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Project Name</a>
+Categories</a>
 </th>
 <th width="20%" class="nowrap hidden-phone">
 <a title="" data-name="Access" data-direction="ASC" data-order="a.access" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Access&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Categories</a>
+Product Count</a>
 </th>
-<th width="10%" class="nowrap hidden-phone">
-<a title="" data-name="Access" data-direction="ASC" data-order="a.access" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Access&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Publish</a>
-</th>
-<th width="10%" class="nowrap hidden-phone">
-<a title="" data-name="Author" data-direction="ASC" data-order="a.created_by" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Author&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Price</a>
-</th>
-
 <th width="10%" class="nowrap hidden-phone">
 <a title="" data-name="Date" data-direction="ASC" data-order="a.created" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Date&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
 Date</a>
@@ -201,7 +195,7 @@ ID<i class="icon-arrow-down-3"></i>
 
 			
 <tbody>
-<?php foreach($this->products as $rows => $row) : ?>
+<?php foreach($this->categories as $rows => $row) : ?>
 <tr sortable-group-id="10" class="row0">
 <td class="order nowrap center hidden-phone">
 <span title="" class="sortable-handler inactive tip-top hasTooltip" data-original-title="Please sort by order to enable reordering">
@@ -211,16 +205,22 @@ ID<i class="icon-arrow-down-3"></i>
 <td class="center hidden-phone">
 <input type="checkbox" onclick="Joomla.isChecked(this.checked);" value="23" name="cid[]" id="cb0">
 </td>
+
+<td><?php echo $row->publish ? "Published":"Unpublished"; ?></td>
+
 <td class="has-context">
 <div class="pull-left">
-<a href="index.php?option=com_jv&controller=product&id=23"><?php echo $row->name_project; ?></a><br/>
-<span class="small"><?php echo $row->short_des; ?></span>
+<a href="index.php?option=com_jv&controller=product&id=23"><?php echo $row->name; ?></a>
 </div>
 </td>
-<td><?php echo $row->categories;?></td>
-<td class="small hidden-phone"><?php echo $row->publish ? "Published":"Unpublished"; ?></td>
-<td class="small hidden-phone"><?php echo $row->price." $"; ?></td>
-<td class="nowrap small hidden-phone"><?php echo date("d-m-Y",strtotime($row->created_date)); ?></td>
+<td>
+<?php 
+echo JvHelper::getCountProductByIdCategory($row->id)->total;
+
+?>
+
+</td>
+<td class="nowrap small hidden-phone"><?php echo strtotime($row->created_date) ? date("d-m-Y",strtotime($row->created_date)) : "00-00-0000"; ?></td>
 <td class="center hidden-phone"><?php echo $row->id; ?></td>
 </tr>
 <?php endforeach; ?>
@@ -263,9 +263,9 @@ ID<i class="icon-arrow-down-3"></i>
 </select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_access_chzn"><a tabindex="-1" class="chzn-single"><span>- Keep original Access Levels</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
 				</div>
 			</div>
-							<div class="control-group span6">
-					<div class="controls">
-						<label for="batch-choose-action" id="batch-choose-action-lbl">Select Category for Move/Copy</label><div class="control-group" id="batch-choose-action"><select id="batch-category-id" class="inputbox chzn-done" name="batch[category_id]" style="display: none;"><option value="">Select</option><option value="2">Uncategorised</option>
+<div class="control-group span6">
+<div class="controls">
+<label for="batch-choose-action" id="batch-choose-action-lbl">Select Category for Move/Copy</label><div class="control-group" id="batch-choose-action"><select id="batch-category-id" class="inputbox chzn-done" name="batch[category_id]" style="display: none;"><option value="">Select</option><option value="2">Uncategorised</option>
 <option value="14">Document-Blog</option>
 <option value="8">- Java Development</option>
 <option value="9">- Android </option>

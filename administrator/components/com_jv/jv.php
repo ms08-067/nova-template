@@ -13,7 +13,7 @@ JLoader::register('JvModel', JPATH_COMPONENT_ADMINISTRATOR.DS.'classes'.DS.'mode
 JLoader::register('JvTableProduct', JPATH_COMPONENT_ADMINISTRATOR.DS.'tables'.DS.'product.php');
 JLoader::register('JvHelper', dirname(__FILE__) . DS . 'helpers' . DS . 'jv.php');
 JLoader::register('JvModelProduct', dirname(__FILE__) . DS . 'models' . DS . 'product.php');
-
+JLoader::register('JvModelCategories', dirname(__FILE__) . DS . 'models' . DS . 'categories.php');
 
 $controllerName = JRequest::getVar('controller');
 if ($controllerName == '') {

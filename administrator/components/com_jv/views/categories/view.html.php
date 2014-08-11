@@ -29,8 +29,8 @@ class JvViewCategories extends JViewLegacy
 	public function display($tpl = null)
 	{
 		
-		$products = new JvModelProduct();
-		$this->assignRef('products', $products->getData());
+		$categories = new JvModelCategories();
+		$this->assignRef('categories', $categories->getData());
 		$this->addToolbar();
 		$this->sidebar = JHtmlSidebar::render();
 		parent::display($tpl);

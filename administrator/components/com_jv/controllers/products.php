@@ -19,7 +19,6 @@ defined('_JEXEC') or die;
 class JvControllerProducts extends JControllerLegacy
 {
 	
-	
 	//protected $view;
 	function __construct($config = array())
 	{
