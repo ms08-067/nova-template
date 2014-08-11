@@ -18,7 +18,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <div class="sidebar-nav">
 	<ul class="nav nav-list" id="submenu">
 		<li class="active">
-			<a href="index.php?option=com_jv&controller=products">Templates</a>
+			<a href="index.php?option=com_jv&controller=products">Products</a>
 		</li>
 		<li>
 			<a href="index.php?option=com_jv&controller=products">Categories</a>
