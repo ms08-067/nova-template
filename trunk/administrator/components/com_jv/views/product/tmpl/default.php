@@ -76,11 +76,10 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <div class="controls">
 <select aria-required="true" required="" name="id_categories_product" id="id_categories_product"  class="">
-	<option value="1">- Templates Boostrap</option>
-	<option value="2">- Templates Admin</option>
-	<option value="3">- Templates Responsive</option>
-	<option value="4">- Extension Joomla</option>
-	<option value="5">- Templates Joomla</option>
+	<option value="0"> -- Select Templates --</option>
+	<?php foreach($this->categories as $k => $v): ?>
+	<option <?php echo ($v->id == $this->product->id_categories_product) ? "Selected" : ""; ?> value="<?php echo $v->id; ?>"><?php echo $v->name; ?></option>
+	<?php endforeach;?>
 </select>
 <?php //echo $this->form->getInput('catid'); ?>
 
@@ -95,8 +94,8 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <div class="controls">
 <select name="publish" id="publish">
-	<option value="1">Published</option>
-	<option value="0">Unpublished</option>
+	<option <?php echo $this->product ? "Selected" : ""; ?> value="1">Published</option>
+	<option <?php echo $this->product ? "Selected" : ""; ?> value="0">Unpublished</option>
 </select>
 
 </div>
@@ -138,11 +137,10 @@ JHtml::_('formbehavior.chosen', 'select');
 
 		<?php // Do not show the images and links options if the edit form is configured not to. ?>
 		<?php //if ($params->show_urls_images_backend == 1) : ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'images', JText::_('COM_JV_PRODUCT_IMAGES', true)); ?>
-			<div class="row-fluid form-horizontal-desktop">
-				<div class="span6">
-																
 
+<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'images', JText::_('COM_JV_PRODUCT_IMAGES', true)); ?>
+<div class="row-fluid form-horizontal-desktop">
+<div class="span6">
 <div class="control-group ">
 <div class="control-label"><label class="hasTooltip" id="img_thumb_lbl" >Images Thumb</label></div>
 

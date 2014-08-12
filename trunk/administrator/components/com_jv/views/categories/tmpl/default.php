@@ -12,8 +12,13 @@ JHtml::_('formbehavior.chosen', 'select');
 ?>
 <link rel="stylesheet" href="<?php echo JURI::root(); ?>media/jui/css/jquery.searchtools.css" type="text/css" />
 <script src="<?php echo JURI::root(); ?>media/jui/js/jquery.searchtools.min.js" type="text/javascript"></script>
-
-<form action="<?php echo JRoute::_('index.php?option=com_jv&controller=product'); ?>" method="post" name="adminForm" id="adminForm">
+<script type="text/javascript">
+Joomla.submitbutton = function(task)
+{
+	Joomla.submitform(task, document.getElementById('adminForm'));	
+}
+</script>
+<form action="<?php echo JRoute::_('index.php?option=com_jv&controller=categories'); ?>" method="post" name="adminForm" id="adminForm">
 <div class="span2" id="j-sidebar-container">
 <div id="sidebar">
 <div class="sidebar-nav">
@@ -22,7 +27,7 @@ JHtml::_('formbehavior.chosen', 'select');
 			<a href="index.php?option=com_jv&controller=products">Products</a>
 		</li>
 		<li class="active">
-			<a href="index.php?option=com_jv&controller=products&view=categories">Categories</a>
+			<a href="index.php?option=com_jv&controller=categories">Categories</a>
 		</li>
    </ul>
 </div>
@@ -165,7 +170,9 @@ JHtml::_('formbehavior.chosen', 'select');
 </a>
 </th>
 <th width="1%" class="hidden-phone">
-<input type="checkbox" onclick="Joomla.checkAll(this)" title="" class="hasTooltip" value="" name="checkall-toggle" data-original-title="Check All">						</th>
+
+<input type="checkbox" onclick="Joomla.checkAll(this)" title="" class="hasTooltip" value="" name="checkall-toggle" data-original-title="Check All">	
+</th>
 
 
 <th width="10%" class="nowrap hidden-phone">
@@ -203,14 +210,14 @@ ID<i class="icon-arrow-down-3"></i>
 </span>
 </td>
 <td class="center hidden-phone">
-<input type="checkbox" onclick="Joomla.isChecked(this.checked);" value="23" name="cid[]" id="cb0">
+<input type="checkbox" onclick="Joomla.isChecked(this.checked);" value="<?php echo $row->id; ?>" name="cid[]" id="cid<?phpecho $row->id;?>">
 </td>
 
-<td><?php echo $row->publish ? "Published":"Unpublished"; ?></td>
+<td><?php echo $row->published ? "Published":"Unpublished"; ?></td>
 
 <td class="has-context">
 <div class="pull-left">
-<a href="index.php?option=com_jv&controller=product&id=23"><?php echo $row->name; ?></a>
+<a href="index.php?option=com_jv&controller=categories&layout=edit&id=<?php echo $row->id;?>"><?php echo $row->name; ?></a>
 </div>
 </td>
 <td>
@@ -253,14 +260,15 @@ echo JvHelper::getCountProductByIdCategory($row->id)->total;
 		<div class="row-fluid">
 			<div class="control-group span6">
 				<div class="controls">
-					<label title="" class="modalTooltip" for="batch-access" id="batch-access-lbl" data-original-title="&lt;strong&gt;Set Access Level&lt;/strong&gt;&lt;br /&gt;Not making a selection will keep the original access levels when processing.">Set Access Level</label><select class="inputbox chzn-done" name="batch[assetgroup_id]" id="batch-access" style="display: none;">
+<label title="" class="modalTooltip" for="batch-access" id="batch-access-lbl" data-original-title="&lt;strong&gt;Set Access Level&lt;/strong&gt;&lt;br /&gt;Not making a selection will keep the original access levels when processing.">Set Access Level</label><select class="inputbox chzn-done" name="batch[assetgroup_id]" id="batch-access" style="display: none;">
 	<option value="">- Keep original Access Levels</option>
 	<option value="1">Public</option>
 	<option value="5">Guest</option>
 	<option value="6">Super Users</option>
 	<option value="2">Registered</option>
 	<option value="3">Special</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_access_chzn"><a tabindex="-1" class="chzn-single"><span>- Keep original Access Levels</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
+</select>
+<div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_access_chzn"><a tabindex="-1" class="chzn-single"><span>- Keep original Access Levels</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
 				</div>
 			</div>
 <div class="control-group span6">
@@ -285,18 +293,20 @@ echo JvHelper::getCountProductByIdCategory($row->id)->total;
 </div>
 </div>					</div>
 				</div>
-					</div>
-	</div>
-	<div class="modal-footer">
-		<button data-dismiss="modal" onclick="document.id('batch-category-id').value='';document.id('batch-access').value='';document.id('batch-language-id').value='';document.id('batch-tag-id)').value=''" type="button" class="btn">
-			Cancel		</button>
-		<button onclick="Joomla.submitbutton('article.batch');" type="submit" class="btn btn-primary">
+</div>
+</div>
+<div class="modal-footer">
+<button data-dismiss="modal" onclick="document.id('batch-category-id').value='';document.id('batch-access').value='';document.id('batch-language-id').value='';document.id('batch-tag-id)').value=''" type="button" class="btn">
+Cancel		</button>
+
+<button onclick="Joomla.submitbutton('article.batch');" type="submit" class="btn btn-primary">
 			Process		</button>
 	</div>
 </div>
 
-		<input type="hidden" value="" name="task">
-		<input type="hidden" value="" name="layout">
-		<input type="hidden" value="products" name="controller">
+<input type="hidden" value="" name="task">
+<input type="hidden" value="" name="layout">
+<input type="hidden" value="categories" name="controller">
+<input type="hidden" name="boxchecked" value="0" />
 </div>	
 </form>

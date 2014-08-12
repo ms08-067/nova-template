@@ -32,6 +32,7 @@ class JvModelCategories extends JModelAdmin
 		if (empty($this->_data)){
 			$query = $this->_buildQuery();
 			$this->_db->setQuery( $query, $this->_limitstart, $this->_limit );
+			//echo $query;
 			$this->_data = $this->_db->loadObjectList();
 		}
 		return $this->_data;
@@ -66,15 +67,11 @@ class JvModelCategories extends JModelAdmin
 		$search 			= JString::strtolower( $search );
 		$where = array();
 		
-		if ( $filter_state != -1 ){
-			$where[] = 'p.publish = '.$filter_state;
-		}
-		
+	
 		
 		$where 		= ( count( $where ) ? ' WHERE ' . implode( ' AND ', $where ) : '' );
 		
 		$query = ' SELECT c.* FROM #__jv_product_categories as c'
-		. $where
 		. $orderby;
 		
 		return $query;
@@ -85,9 +82,11 @@ class JvModelCategories extends JModelAdmin
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
-		$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id' );
-		$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', '' );
-		$orderby 	= ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
+		//$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id' );
+		//$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', '' );
+		//$orderby 	= ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
+		$orderby 	= ' ORDER BY id DESC';
+		//echo $orderby;
 		return $orderby;
 	}
     
@@ -96,7 +95,7 @@ class JvModelCategories extends JModelAdmin
 		if (count( $cid )){
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
-			$query = 'DELETE FROM #__jv_product'
+			$query = 'DELETE FROM #__jv_product_categories'
 				. ' WHERE id IN ( '.$cids.' )';
 			$this->_db->setQuery( $query );
 			if(!$this->_db->query()) {
@@ -113,7 +112,7 @@ class JvModelCategories extends JModelAdmin
 		{
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
-			$query = 'UPDATE #__jv_product'
+			$query = 'UPDATE #__jv_product_categories'
 				. ' SET published = '.(int) $publish
 				. ' WHERE id IN ( '.$cids.' )'
 			;
