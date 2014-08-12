@@ -13,13 +13,29 @@ class JvHelper
 		return $db->loadObject();
 	}
 	
-	public function getProduct($id){
+	public function getProduct($id = 0){
 		
 		$db = JFactory::getDbo();
-		$sql = "SELECT * FROM #__jv_product WHERE id = ".$id;
+		
+		if($id)
+			 $sql = "SELECT * FROM #__jv_product WHERE id = ".$id;
+		else $sql = "SELECT * FROM #__jv_product WHERE 1";
+		
 		$db->setQuery($sql);
-		return $db->loadObject();
+		if($id) return $db->loadObject();
+		else return $db->loadObjectList();
 	}
-	
+	public function getCategories($id = 0){
+		
+		$db = JFactory::getDbo();
+		if($id)
+			 $sql = "SELECT * FROM #__jv_product_categories WHERE id = ".$id;
+		else $sql = "SELECT * FROM #__jv_product_categories WHERE 1";
+		$db->setQuery($sql);
+		
+		if($id) return $db->loadObject();
+		else return $db->loadObjectList();
+		
+	}
 	
 }

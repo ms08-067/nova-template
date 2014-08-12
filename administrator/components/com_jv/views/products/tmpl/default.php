@@ -21,7 +21,7 @@ JHtml::_('formbehavior.chosen', 'select');
 			<a href="index.php?option=com_jv&controller=products">Products</a>
 		</li>
 		<li>
-			<a href="index.php?option=com_jv&controller=products&view=categories">Categories</a>
+			<a href="index.php?option=com_jv&controller=categories">Categories</a>
 		</li>
    </ul>
 </div>

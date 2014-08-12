@@ -20,10 +20,27 @@ class JvViewProduct extends JViewLegacy
 		$id	 	    = JRequest::getInt("id");
 		if($id){
 			
-			$this->assignRef('product', JvHelper::getProduct($id));
+			$product = JvHelper::getProduct($id);
+			if(!empty($product)){
+				
+				$this->form->setValue("name_project", "" , $product->name_project);
+				$this->form->setValue("short_des", "" ,  $product->short_des);
+				$this->form->setValue("des", "" , $product->des);
+				$this->form->setValue("price", "" , $product->price);
+				$this->form->setValue("img_thumb", "" , $product->img_thumb);
+				$this->form->setValue("img_thumb_alt", "" , $product->img_thumb_alt);
+				$this->form->setValue("img_alt", "" , $product->img_alt);
+				$this->form->setValue("img", "" , $product->img);
+				
+				$this->assignRef('product', $product);
+				
+			}
 		}
+		
+		$this->assignRef('categories', JvHelper::getCategories());
 		$this->addToolbar();
 		parent::display($tpl);
+		
 	}
 	
 	protected function addToolbar()

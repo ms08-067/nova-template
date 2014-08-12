@@ -28,20 +28,52 @@ class JvViewCategories extends JViewLegacy
 
 	public function display($tpl = null)
 	{
-		
 		$categories = new JvModelCategories();
 		$this->assignRef('categories', $categories->getData());
 		$this->addToolbar();
-		$this->sidebar = JHtmlSidebar::render();
+		$fnc = 'display'.ucfirst($this->getLayout());
+		//echo "<pre>";print_r($categories->getData());
+		if (is_callable(array(&$this, $fnc))){
+		
+			$this->$fnc($tpl);
+		}else{
+			parent::display($tpl);
+		}
+		
+		
+	}
+	public function displayEdit($tpl=NULL){
+		
+		$id	 = JRequest::getInt("id");
+		if($id){
+			$categories = JvHelper::getCategories($id);
+			$this->assignRef('categories', $categories);
+		}
 		parent::display($tpl);
 	}
+	
 	protected function addToolbar()
 	{
 		$bar = JToolBar::getInstance('toolbar');
-		JToolbarHelper::title('JV Products List');
-		JToolbarHelper::addNew('add');
-		JToolbarHelper::deleteList('', 'remove', 'Delete');
+		$id	 = JRequest::getInt("id");
+		JToolbarHelper::title(($id ? 'JV Edit Categories '.$id : 'JV New Categories'));
+		//var_dump($this->getLayout());
+		
+		switch($this->getLayout()){
+		
+			case 'edit':
+				JToolbarHelper::apply('apply');
+				JToolbarHelper::save('save');
+				JToolbarHelper::save2new('save2new');
+				JToolbarHelper::cancel('cancel');
+				break;
+			case 'default':
+				JToolbarHelper::addNew('add');
+				JToolbarHelper::deleteList('Are you sure you want to do this?', 'delete', 'Delete');
+				break;
+			
+		}
+		
 	}
-
-
+	
 }
