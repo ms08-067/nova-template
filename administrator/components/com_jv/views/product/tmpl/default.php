@@ -78,7 +78,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <select aria-required="true" required="" name="id_categories_product" id="id_categories_product"  class="">
 	<option value="0"> -- Select Templates --</option>
 	<?php foreach($this->categories as $k => $v): ?>
-	<option <?php echo ($v->id == $this->product->id_categories_product) ? "Selected" : ""; ?> value="<?php echo $v->id; ?>"><?php echo $v->name; ?></option>
+	<option <?php echo isset($this->product->id_categories_product) && ($v->id == $this->product->id_categories_product) ? "Selected" : ""; ?> value="<?php echo $v->id; ?>"><?php echo $v->name; ?></option>
 	<?php endforeach;?>
 </select>
 <?php //echo $this->form->getInput('catid'); ?>
@@ -94,8 +94,8 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <div class="controls">
 <select name="publish" id="publish">
-	<option <?php echo $this->product ? "Selected" : ""; ?> value="1">Published</option>
-	<option <?php echo $this->product ? "Selected" : ""; ?> value="0">Unpublished</option>
+	<option <?php echo isset($this->product) && $this->product ? "Selected" : ""; ?> value="1">Published</option>
+	<option <?php echo isset($this->product) && $this->product ? "Selected" : ""; ?> value="0">Unpublished</option>
 </select>
 
 </div>
@@ -121,22 +121,7 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 		<?php echo JHtml::_('bootstrap.endTab'); ?>
 
-		<?php // Do not show the publishing options if the edit form is configured not to. ?>
-		<?php if ($params->show_publishing_options == 1) : ?>
-			<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'publishing', JText::_('COM_CONTENT_FIELDSET_PUBLISHING', true)); ?>
-			<div class="row-fluid form-horizontal-desktop">
-				<div class="span6">
-					<?php echo JLayoutHelper::render('joomla.edit.publishingdata', $this); ?>
-				</div>
-				<div class="span6">
-					<?php echo JLayoutHelper::render('joomla.edit.metadata', $this); ?>
-				</div>
-			</div>
-			<?php echo JHtml::_('bootstrap.endTab'); ?>
-		<?php endif; ?>
-
-		<?php // Do not show the images and links options if the edit form is configured not to. ?>
-		<?php //if ($params->show_urls_images_backend == 1) : ?>
+		
 
 <?php echo JHtml::_('bootstrap.addTab', 'myTab', 'images', JText::_('COM_JV_PRODUCT_IMAGES', true)); ?>
 <div class="row-fluid form-horizontal-desktop">
