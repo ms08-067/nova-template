@@ -44,7 +44,7 @@ class JvViewProducts extends JViewLegacy
 		$bar = JToolBar::getInstance('toolbar');
 		JToolbarHelper::title('JV Products List');
 		JToolbarHelper::addNew('add');
-		JToolbarHelper::deleteList('', 'remove', 'Delete');
+		JToolbarHelper::deleteList('Are you sure you want to do this?', 'delete', 'Delete');
 		
 	}
 

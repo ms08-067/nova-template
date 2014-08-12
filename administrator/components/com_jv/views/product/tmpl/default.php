@@ -16,15 +16,6 @@ JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.keepalive');
 JHtml::_('formbehavior.chosen', 'select');
 
-$this->hiddenFieldsets = array();
-$this->hiddenFieldsets[0] = 'basic-limited';
-$this->configFieldsets = array();
-$this->configFieldsets[0] = 'editorConfig';
-
-
-$app = JFactory::getApplication();
-$input = $app->input;
-$assoc = JLanguageAssociations::isEnabled();
 
 ?>
 
@@ -43,7 +34,6 @@ $assoc = JLanguageAssociations::isEnabled();
 
 <form action="<?php echo JRoute::_('index.php?option=com_jv&controller=product'); ?>" method="post" name="adminForm" id="item-form" class="form-validate">
 
-<?php //echo "<pre>";print_r($this->form); ?>
 <div class="form-inline form-inline-header">
 
 <div class="control-group ">
@@ -54,7 +44,7 @@ $assoc = JLanguageAssociations::isEnabled();
 </div>
 
 <div class="control-group ">
-<div class="control-label"><label  class="hasTooltip" id="short_des_lbl">Short description</label></div>
+<div class="control-label"><label id="short_des_lbl">Short Description</label></div>
 <div class="controls">
 <?php echo $this->form->getInput('short_des'); ?>
 </div>
@@ -164,7 +154,7 @@ $assoc = JLanguageAssociations::isEnabled();
 											
 
 <div class="control-group ">
-<div class="control-label"><label  class="hasTooltip"  id="img_thumb_alt_lbl" >Alt images</label></div>
+<div class="control-label"><label  class="hasTooltip"  id="img_thumb_alt_lbl" >Alt images thumb</label></div>
 <div class="controls">
 <?php echo $this->form->getInput('img_thumb_alt'); ?>
 </div>
@@ -183,7 +173,7 @@ $assoc = JLanguageAssociations::isEnabled();
 
 <div class="control-group">
 <div class="control-label">
-<label class="hasTooltip" id="img_alt_lbl"  aria-invalid="false">Alt images</label>
+<label class="hasTooltip" id="img_alt_lbl"  aria-invalid="false">Alt images full</label>
 </div>
 <div class="controls">
 <?php echo $this->form->getInput('img_alt'); ?>

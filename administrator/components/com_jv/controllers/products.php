@@ -43,6 +43,14 @@ class JvControllerProducts extends JControllerLegacy
 	
 	}
 	
+	public function delete(){
+	
+		$post = JRequest::get('post');
+		$modelProducts = $this->getModel("product");
+		$modelProducts->delete($post['cid']);
+		$this->setRedirect( 'index.php?option=com_jv&controller=products',"You has been deleted product id ".implode(",",$post['cid']));
+	}
+	
 	public function  add() {
 	
 		$this->setRedirect( 'index.php?option=com_jv&controller=product');
