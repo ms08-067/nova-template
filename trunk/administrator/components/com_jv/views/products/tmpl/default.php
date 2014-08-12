@@ -49,10 +49,11 @@ JHtml::_('formbehavior.chosen', 'select');
 		</div>
 </div>
 <div class="js-stools-container-list hidden-phone hidden-tablet shown" style="">
-				<div class="ordering-select hidden-phone">
+
+<div class="ordering-select hidden-phone">
 				
-					<div class="js-stools-field-list">
-				<select onchange="this.form.submit();" class="input-mini chzn-done" name="list[limit]" id="list_limit" style="display: none;">
+<div class="js-stools-field-list">
+<select onchange="this.form.submit();" class="input-mini chzn-done" name="list[limit]" id="list_limit" style="display: none;">
 	<option selected="selected" value="5">5</option>
 	<option value="10">10</option>
 	<option value="15">15</option>
@@ -131,26 +132,6 @@ JHtml::_('formbehavior.chosen', 'select');
 	<option value="3">Special</option>
 </select>
 </div>
-
-<div class="js-stools-field-filter">
-<select onchange="this.form.submit();" name="filter[author_id]" id="filter_author_id" style="display: none;" class="chzn-done">
-	<option selected="selected" value="">- Select Author</option>
-	<option value="262">Hung Phan</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="filter_author_id_chzn"><a tabindex="-1" class="chzn-single"><span>- Select Author</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
-</div>
-
-<div class="js-stools-field-filter">
-<select onchange="this.form.submit();" name="filter[language]" id="filter_language" style="display: none;" class="chzn-done">
-	<option selected="selected" value="">- Select Language</option>
-	<option value="*">All</option>
-	<option value="en-GB">English (UK)</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="filter_language_chzn"><a tabindex="-1" class="chzn-single"><span>- Select Language</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
-			</div>
-<div class="js-stools-field-filter">
-				<select onchange="this.form.submit();" name="filter[tag]" id="filter_tag" style="display: none;" class="chzn-done">
-	<option selected="selected" value="">- Select Tag</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="filter_tag_chzn"><a tabindex="-1" class="chzn-single"><span>- Select Tag</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
-</div>
 </div>
 </div>					
 
@@ -164,7 +145,8 @@ JHtml::_('formbehavior.chosen', 'select');
 </a>
 </th>
 <th width="1%" class="hidden-phone">
-<input type="checkbox" onclick="Joomla.checkAll(this)" title="" class="hasTooltip" value="" name="checkall-toggle" data-original-title="Check All">						</th>
+<input type="checkbox" onclick="Joomla.checkAll(this)" class="hasTooltip" value="" name="checkall-toggle">
+</th>
 
 
 <th width="10%" class="nowrap hidden-phone">
