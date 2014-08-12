@@ -13,4 +13,13 @@ class JvHelper
 		return $db->loadObject();
 	}
 	
+	public function getProduct($id){
+		
+		$db = JFactory::getDbo();
+		$sql = "SELECT * FROM #__jv_product WHERE id = ".$id;
+		$db->setQuery($sql);
+		return $db->loadObject();
+	}
+	
+	
 }

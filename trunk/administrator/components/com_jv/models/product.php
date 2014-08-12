@@ -37,6 +37,20 @@ class JvModelProduct extends JModelAdmin
 		}
 		return $form;
 	}
+	/*
+	public function delete($cid = array()){
+		
+		if(count($cid)){
+		
+			for($i = 0; $i< count($cid); $i++ ) {
+				$query = 'DELETE FROM #__jv_product WHERE id = '.$cid[$i];
+				$this->_db->setQuery( $query );
+				$this->_db->query();
+			}
+		}
+		return true;
+	}
+	*/
 	function getData(){
 	
 		if (empty($this->_data)){
@@ -102,7 +116,7 @@ class JvModelProduct extends JModelAdmin
 	}
     
 	function delete($cid = array()){
-		$result = false;
+		
 		if (count( $cid )){
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
