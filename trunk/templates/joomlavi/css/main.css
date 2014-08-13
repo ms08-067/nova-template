@@ -48,7 +48,8 @@ body {
   font-size:12px;
   color:#333;
   font:13px/1.5 Helvetica,Arial,Sens-serif;
-  background: url("../images/bg_item.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  /*background: url("../images/bg_item.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+  background-color: #f5f5f5;
 }
 @media (min-width: 979px) {
 
@@ -143,7 +144,9 @@ a:focus {
   text-decoration:none;
   outline:0;
 }
-
+body > section#product {
+	padding: 0;
+}
 .dropdown-menu {
   margin-top:-1px;
   min-width:180px;
