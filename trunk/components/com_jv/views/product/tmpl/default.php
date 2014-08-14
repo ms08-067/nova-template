@@ -9,15 +9,15 @@ defined('_JEXEC') or die('Restricted access');
 <div class="well items-leading clearfix">
 <!------------------------------------------------------------------------------------------------------------->
 <div class="inner">
-                                <div class="image">
-                                    <a target="_blank" rel="nofollow" title="SmartAdmin - Responsive WebApp" href="http://wrapbootstrap.com/preview/WB0573SK0" class="screenshot"><img width="600" height="375" alt="SmartAdmin - Responsive WebApp" title="SmartAdmin - Responsive WebApp" src="//d85wutc1n854v.cloudfront.net/live/products/600x375/WB0573SK0.png?v=1.4.1" itemprop="image" id="thing_image"></a>
-                                    <div>
-                                        <a title="Live preview" target="_blank" rel="nofollow" href="http://wrapbootstrap.com/preview/WB0573SK0" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
-                                        <a rel="nofollow" title="Purchase now using PayPal" onclick="document.getElementById('order').submit(); return false;" href="#" class="btn">Purchase now »</a>
-                                    </div>
-                                </div>
-                                <div itemprop="description" id="description">
-                                    <h2>Announcements!</h2>
+<div class="image">
+	<a target="_blank" rel="nofollow" title="SmartAdmin - Responsive WebApp" href="http://wrapbootstrap.com/preview/WB0573SK0" class="screenshot"><img width="600" height="375" alt="SmartAdmin - Responsive WebApp" title="SmartAdmin - Responsive WebApp" src="//d85wutc1n854v.cloudfront.net/live/products/600x375/WB0573SK0.png?v=1.4.1" itemprop="image" id="thing_image"></a>
+	<div class="wrap_link_demo">
+		<a title="Live preview" target="_blank" rel="nofollow" href="http://wrapbootstrap.com/preview/WB0573SK0" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
+		<a rel="nofollow" title="Purchase now using PayPal" onclick="document.getElementById('order').submit(); return false;" href="#" class="btn">Purchase now »</a>
+	</div>
+</div>
+<div itemprop="description" id="description">
+<h2>Announcements!</h2>
 <ul>
 <li><strong>Please close the default WrapBootstrap iFrame when viewing from IE</strong></li>
 <li>Check out <a title="Bug Tracker" target="_blank" href="/out?u=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2FBUGTRACK%2Ftrack_%2F">SmartAdmin Bug Tracker</a> for all reported issues and wish lists</li>
@@ -27,8 +27,6 @@ defined('_JEXEC') or die('Restricted access');
 <h1>SmartAdmin - Responsive WebApp</h1>
 <p><strong>SmartAdmin WebApp</strong> - goes beyond the ordinary admin template. Its unique flat design and responsive layout is crafted one of a kind. SmartAdmin comes with 4 different versions: Pure HTML, AJAX Version, PHP, and AngularJS version. SmartAdmin also adds flavor to 40+ customized jquery plugins including <strong>5 unique plugins</strong> (<em>exclusively catered for SmartAdmin</em>). SmartAdmin Layout API lets you customize your project for almost any device - be it Mobile, Web or WebApp - SmartAdmin has you covered! </p>
 <p><img src="https://d1dlf4qvtlhqrp.cloudfront.net/slurp?i=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2Fpublishing-images%2Fmultiple-layout-compressed-new" alt="SmartAdmin Responsive WebApp"></p>
-<h2>What our customers are saying...</h2>
-<p><img src="https://d1dlf4qvtlhqrp.cloudfront.net/slurp?i=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2Fquotes.gif" alt="SmartAdmin Quotes"></p>
 <h2>Features include:</h2>
 <ul>
 <li><strong>Carefully</strong> hand coded from head to toe</li>
@@ -100,16 +98,15 @@ defined('_JEXEC') or die('Restricted access');
 &#8203;- CSS: Fixed minor CSS bugs </li>
 <li>Updated bootstrap core to latest version (3.2)</li>
 </ul>
-<p><a title="Bugtracker" target="_blank" href="/out?u=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2FBUGTRACK%2Ftrack_%2F">See the detailed change log</a> </p>
 
-                                </div>
-                                <h2 id="seller_items_header">More by <a href="/user/MyOrange">MyOrange</a></h2>
-                                <ul id="seller_items">
-                                <li><a title="Jarvis - Smart Admin Template" href="/theme/jarvis-smart-admin-template-WB09MR0M6"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB09MR0M6.jpg?v=2.0"></a></li>
-                                <li><a title="Peach Realestate - HTML" href="/theme/peach-realestate-html-WB03B6H4X"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB03B6H4X.jpg?v=1.0"></a></li>
-                                <li><a title="Peach Realestate - Wordpress" href="/theme/peach-realestate-wordpress-WB05296L0"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB05296L0.jpg?v=1.0.2"></a></li>
-                                <li class="last"><a title="SnapMarketing" href="/logo/snapmarketing-WB0813064"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0813064.jpg?v=1.0"></a></li>
-                                </ul>
+</div>
+<h2 id="seller_items_header">Product Related</h2>
+<ul id="seller_items">
+<li><a title="Jarvis - Smart Admin Template" href="/theme/jarvis-smart-admin-template-WB09MR0M6"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB09MR0M6.jpg?v=2.0"></a></li>
+<li><a title="Peach Realestate - HTML" href="/theme/peach-realestate-html-WB03B6H4X"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB03B6H4X.jpg?v=1.0"></a></li>
+<li><a title="Peach Realestate - Wordpress" href="/theme/peach-realestate-wordpress-WB05296L0"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB05296L0.jpg?v=1.0.2"></a></li>
+<li class="last"><a title="SnapMarketing" href="/logo/snapmarketing-WB0813064"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0813064.jpg?v=1.0"></a></li>
+</ul>
                             </div>
 <!-------------------------------------------------------------------------------------------------------------->				
 </div><!-- end items-leading -->
