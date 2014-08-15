@@ -118,25 +118,47 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="search">
 	<h2> Template boostrap 3</h2>
 </div>
-
-
-<div class="custom">
-	<div class="widget ads">
-<div class="row-fluid">
-<div class="span6 ads1"><a href="#"><img alt="" src="images/joomlavi/ad1.png"></a></div>
-<!--
-<div class="span6 ads2"><a title="http://matongrungnguyenchat.vietplace.net/" href="http://matongrungnguyenchat.vietplace.net/" target="_blank"><img src="images/joomlavi/ad1.gif" alt="" /></a></div>-->
-<div class="span6 ads2"><img alt="" src="images/joomlavi/ad2.png"></div>
+<div class="product_info">                       
+<form target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr" id="order">
+	
+	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" href="#" class="btn primary btn-xlarge" id="buynow"><span style="" itemprop="price" id="offer_price">$18</span></a>
+   
+</form>
+                        
+<div class="purchase_info">
+	<div class="purchases">
+		<span class="count five_digits">10259</span>
+		<span class="count_label"> Purchases</span>
+	</div>
 </div>
-<p class="ads_devision">&nbsp;</p>
-<div class="row-fluid">
-<div class="span6 ads1"><a href="#"><img alt="" src="images/joomlavi/ad3.png"></a></div>
-<div class="span6 ads2"><a href="#"><img alt="" src="images/joomlavi/ad4.png"></a></div>
-</div>
-</div></div>
 
-			</aside>
-			
+<div class="info_wrapper">
+<table class="attributes zebra-striped">
+<tbody>
+<tr class="first"><td class="key"><strong>Version:</strong></td><td class="value"><span itemprop="version" id="creativework_version">1.4.1</span></td></tr>
+<tr>
+<td class="key"><strong>Bootstrap:</strong></td>
+<td class="value">Compatible with 3.2.x</td>
+</tr>
+<tr>
+<td class="key"><strong>Categories:</strong></td>
+<td class="value">
+	<ul>
+	<li><a title="Admin &amp; Dashboards" href="/themes/admin"><span itemprop="category" id="offer_category">Admin &amp; Dashboards</span></a></li>
+	</ul>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<div class="info_wrapper">
+</div><br/>
+<p class="item_cs_header"><strong>Other Product</strong></p>
+<div class="item_cs"><a title="Clean Concept - Colorize Theme" href="/theme/clean-concept-colorize-theme-WB0R48JC2"><img width="252" height="158" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0R48JC2.jpg?v=1.0.1"></a></div>
+</div>
+
+</aside>			
 </div>
      
         

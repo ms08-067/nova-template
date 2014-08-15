@@ -66,7 +66,7 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 </div>
 </div>
-
+<input type="hidden" name="id" value="<?php echo $this->categories->id; ?>" />
 <input type="hidden" name="task" value="" />
 <?php echo JHtml::_('form.token'); ?>
 
