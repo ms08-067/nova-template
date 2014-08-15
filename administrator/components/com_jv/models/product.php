@@ -52,12 +52,13 @@ class JvModelProduct extends JModelAdmin
 	}
 	*/
 	function getData(){
-	
+		
 		if (empty($this->_data)){
 			$query = $this->_buildQuery();
 			$this->_db->setQuery( $query, $this->_limitstart, $this->_limit );
 			$this->_data = $this->_db->loadObjectList();
 		}
+		
 		return $this->_data;
 	}
 	
