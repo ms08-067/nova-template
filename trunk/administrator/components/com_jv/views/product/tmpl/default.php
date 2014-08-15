@@ -168,6 +168,8 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <?php echo JHtml::_('bootstrap.endTab'); ?>
 		<input type="hidden" name="task" value="" />
+		
+<input type="hidden" name="id" value="<?php echo $this->id; ?>" />		
 		<?php echo JHtml::_('form.token'); ?>
 	</div>
 </form>

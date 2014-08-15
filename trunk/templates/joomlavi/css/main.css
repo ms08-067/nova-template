@@ -14,29 +14,7 @@
   clear:both;
 }
 
-.btn {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #e6e6e6;
-    background-image: linear-gradient(#fff, #fff 25%, #e6e6e6);
-    background-repeat: no-repeat;
-    border-color: #ccc #ccc #bbb;
-    border-image: none;
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 13px;
-    line-height: normal;
-    padding: 5px 14px 6px;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    transition: all 0.1s linear 0s;
-}
+
 .btn:hover {
     background-position: 0 -15px;
     color: #333;
@@ -45,14 +23,7 @@
 .btn:focus {
     outline: 1px dotted #666;
 }
-.btn.primary {
-    background-color: #0064cd;
-    background-image: -moz-linear-gradient(center top , #049cdb, #0064cd);
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
+
 .btn.active, .btn:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
 }
@@ -675,6 +646,102 @@ header .dropdown-menu:before {
   display:inline-block;
 }
 
+.btn-purchase:hover {
+    color: #fff;
+}
+.btn-purchase:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 0 6px #ddd;
+    color: #fff;
+}
+.btn-purchase.active, .btn-purchase:active {
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #fff;
+}
+.btn-purchase span {
+    background: url("//d85wutc1n854v.cloudfront.net/live/imgs/buynow.png") no-repeat scroll right center transparent;
+    padding-right: 110px;
+}
+.btn-xlarge {
+    border-radius: 4px;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: normal;
+    padding: 8px 10px 6px 0;
+    text-align: center;
+    width: 246px;
+}
+
+.btn-xlarge span {
+    background: url("//d85wutc1n854v.cloudfront.net/live/imgs/buynow.png") no-repeat scroll right center transparent;
+    padding-right: 110px;
+	padding-top: 4px;
+}
+.btn-xlarge {
+    border-radius: 4px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: normal;
+    padding: 16px 0;
+    text-align: center;
+    width: 218px;
+}
+.attributes {
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+}
+.attributes td {
+    background-color: #fafafa;
+    border: 1px solid #ebebeb;
+    color: #222;
+    padding: 6px 5px 6px 10px;
+}
+.attributes tr.alt td {
+    background-color: #f6f6f6;
+}
+.attributes tr.first td {
+    border-top: 1px solid #ddd;
+}
+.attributes tr:last-child td {
+    border-bottom: medium none;
+}
+.attributes td.key {
+    border-left: medium none;
+    font-weight: bold;
+    white-space: nowrap;
+	width: 30%;
+}
+.attributes td.key a {
+    text-decoration: none;
+}
+.attributes td.value {
+    border-right: medium none;
+}
+.attributes ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.attributes ul li {
+    color: #222;
+    margin: 0 0 2px;
+}
+.attributes ul li:last-child {
+    margin: 0;
+}
+
+
+
+
+.btn.primary {
+    background-color: #0064cd;
+    background-image: -moz-linear-gradient(center top , #049cdb, #0064cd);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 #bottom {
   background:#232323;
   color:#6f6f6f;

@@ -1,8 +1,7 @@
 <?php
-
 /**
  * com_jv
- */
+*/
 defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('behavior.multiselect');
@@ -52,14 +51,14 @@ Joomla.submitbutton = function(task)
 			</div>
 				<div class="btn-wrapper">
 			<button title="" class="btn hasTooltip js-stools-btn-clear" type="button" data-original-title="Clear">
-				Clear			</button>
+				Clear</button>
 		</div>
 </div>
 <div class="js-stools-container-list hidden-phone hidden-tablet shown" style="">
-				<div class="ordering-select hidden-phone">
-				
-					<div class="js-stools-field-list">
-				<select onchange="this.form.submit();" class="input-mini chzn-done" name="list[limit]" id="list_limit" style="display: none;">
+
+<div class="ordering-select hidden-phone">
+<div class="js-stools-field-list">
+<select onchange="this.form.submit();" class="input-mini chzn-done" name="list[limit]" id="list_limit" style="display: none;">
 	<option selected="selected" value="5">5</option>
 	<option value="10">10</option>
 	<option value="15">15</option>
@@ -70,10 +69,10 @@ Joomla.submitbutton = function(task)
 	<option value="100">100</option>
 	<option value="0">All</option>
 </select>
-			</div>
-			</div>
-		</div>
-	</div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- Filters div -->
 <div class="js-stools-container-filters hidden-phone clearfix" style="">
@@ -266,7 +265,6 @@ Cancel		</button>
 			Process		</button>
 	</div>
 </div>
-
 <input type="hidden" value="" name="task">
 <input type="hidden" value="" name="layout">
 <input type="hidden" value="categories" name="controller">

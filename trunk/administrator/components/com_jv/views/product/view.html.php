@@ -18,6 +18,7 @@ class JvViewProduct extends JViewLegacy
 		$this->form	= $this->get('Form');
 		
 		$id	 	    = JRequest::getInt("id");
+		
 		if($id){
 			
 			$product = JvHelper::getProduct($id);
@@ -38,6 +39,7 @@ class JvViewProduct extends JViewLegacy
 		}
 		
 		$this->assignRef('categories', JvHelper::getCategories());
+		$this->assignRef('id', $id);
 		$this->addToolbar();
 		parent::display($tpl);
 		

@@ -30,8 +30,6 @@ class JvControllerProduct extends JControllerForm
 	public function save(){
 	
 		$post = JRequest::get('post');
-		$id = "";
-		
 		if(count($post)){
 			$model = $this->getModel("Product");
 			$post['created_date'] = date("Y-m-d H:i:s");
@@ -43,26 +41,55 @@ class JvControllerProduct extends JControllerForm
 			$post['img_thumb_alt'] = $post['jform']['img_thumb_alt'];
 			$post['img'] = $post['jform']['img'];
 			$post['img_alt'] = $post['jform']['img_alt'];
-			//echo "<pre>";print_r($post);
-			$id = $model->store($post,"product");
-			//var_dump($id);
 			
+			if($post["id"]){
+				$db = JFactory::getDbo();
+				$obj = new stdClass();
+				$obj->id = $post["id"];
+				$obj->img_thumb = $post["img_thumb"];
+				$obj->img_thumb_alt = $post["img_thumb_alt"];
+				$obj->img = $post["img"];
+				$obj->img_alt = $post["img_alt"];
+				$obj->short_des = $post["short_des"];
+				$obj->des = $post["des"];
+				$obj->publish = $post["publish"];
+				$obj->created_date = $post["created_date"];
+				$obj->price = $post["price"];
+				$obj->id_categories_product = $post["id_categories_product"];
+				
+				$db->updateObject('#__jv_product', $obj,'id');
+			}
+			else {
+				$id = $model->store($post,"product");
+			}
 		}
 		switch($this->getTask()){
 			case 'apply':
-				if(!empty($id)){
-					$this->setRedirect( 'index.php?option=com_jv&controller=product',"Save Successful ID ".$id);
+				if($post['id']){
+					$this->setRedirect( "index.php?option=com_jv&controller=product&id=".$post['id'],"Save Successful ID ".$id);
 				}
 				else {
-					$this->setRedirect( 'index.php?option=com_jv&controller=product',"Save Error ");
+					if($id){
+						
+						$this->setRedirect( "index.php?option=com_jv&controller=product&id=".$id,"Save Successful ID ".$id);
+					}
+					else {
+						$this->setRedirect( "index.php?option=com_jv&controller=product&id=".$id,"Save Error ");
+					}
 				}
 				break;
 			default:
-				if(!empty($id)){
-					$this->setRedirect( 'index.php?option=com_jv&controller=products',"Save Successful ID ".$id);
+				if($post['id']){
+					
+					$this->setRedirect( "index.php?option=com_jv&controller=products","Save Successful ID ".$id);
 				}
 				else {
-					$this->setRedirect( 'index.php?option=com_jv&controller=products',"Save Error ");
+					if($id){
+						$this->setRedirect( 'index.php?option=com_jv&controller=products',"Save Successful ID ".$id);
+					}
+					else {
+						$this->setRedirect( 'index.php?option=com_jv&controller=products',"Save Error ");
+					}
 				}
 				break;
 		}

@@ -186,7 +186,7 @@ defined('_JEXEC') or die('Restricted access');
     </div>
 </section>
 
-<section class="main" id="bottom">
+<section class="main" id="bottom" >
     <!--Container-->
     <div class="container">
 

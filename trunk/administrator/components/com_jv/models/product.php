@@ -109,9 +109,9 @@ class JvModelProduct extends JModelAdmin
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
-		$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id' );
-		$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', '' );
-		$orderby 	= ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
+		//$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id' );
+		//$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', '' );
+		$orderby 	= ' ORDER BY id DESC';
 		return $orderby;
 	}
     

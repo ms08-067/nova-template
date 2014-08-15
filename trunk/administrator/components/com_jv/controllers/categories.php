@@ -39,26 +39,58 @@ class JvControllerCategories extends JControllerLegacy
 	
 		$post = JRequest::get("post");
 		if(count($post)){
+
 			$model = $this->getModel("Categories");
 			$post['created_date'] = date("Y-m-d H:i:s");
-			$id = $model->store($post,"categories");
-			$this->setRedirect( 'index.php?option=com_jv&controller=categories&layout=edit&id='.$id,"Save Successful ID ".$id);
+			if($post["id"]){
+				
+				$db = JFactory::getDbo();
+				$obj = new stdClass();
+				$obj->id = $post["id"];
+				$obj->name = $post["name"];
+				$obj->published = $post["published"];
+				$obj->created_date = $post["created_date"];
+				$db->updateObject('#__jv_product_categories', $obj,'id');
+				$this->setRedirect( 'index.php?option=com_jv&controller=categories&layout=edit&id='.$post["id"],"Save Successful ID ".$post["id"]);
+			
+			}
+			else {
+			
+				$id = $model->store($post,"categories");
+				$this->setRedirect( 'index.php?option=com_jv&controller=categories&layout=edit&id='.$id,"Save Successful ID ".$id);
+			}
+			
+		
 		}
 		return true;
 	}
+	
 	public function save(){
-		
+	
 		$post = JRequest::get("post");
 		if(count($post)){
+		
 			$model = $this->getModel("Categories");
 			$post['created_date'] = date("Y-m-d H:i:s");
-			$id = $model->store($post,"categories");
-			$this->setRedirect( 'index.php?option=com_jv&controller=categories',"Save Successful ID ".$id);
+			if($post["id"]){
+				$db = JFactory::getDbo();
+				$obj = new stdClass();
+				$obj->id = $post["id"];
+				$obj->name = $post["name"];
+				$obj->published = $post["published"];
+				$obj->created_date = $post["created_date"];
+				$db->updateObject('#__jv_product_categories', $obj,'id');
+				$this->setRedirect( 'index.php?option=com_jv&controller=categories',"Save Successful ID ".$post["id"]);
+			}
+			else {
+				$id = $model->store($post,"categories");
+				$this->setRedirect( 'index.php?option=com_jv&controller=categories',"Save Successful ID ".$id);
+			}
 		}
 		return true;
 	}
+	
 	public function  add() {
-		//echo 1234;exit;
 		$this->setRedirect( 'index.php?option=com_jv&controller=categories&layout=edit');
 	}
 	
