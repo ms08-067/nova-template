@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 
 <section id="portfolio" class="container main">    
 			<div class="row gallery col-4">
-<?php foreach ($this->products as $rows => $row) :?>
+<?php $i=0; foreach ($this->products as $rows => $row) : $i++;?>
 			<?php if(!empty($row->img_thumb)):?>
 			<div class="span4">
                 <div class="preview">
@@ -21,10 +21,10 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1">
+                        <a href="#">
 						View Detail
 						</a>
-						<a target="_blank" href="http://joomlavi.net/demo/v1">
+						<a href="#">
 						Live Preview
 						
 						</a>                                
@@ -37,7 +37,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="modal-1" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
-                        <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
+                        <img src="<?php echo $row->img;?>" alt=" " width="100%" style="max-height:400px">
                     </div>
                 </div>                 
             </div>
