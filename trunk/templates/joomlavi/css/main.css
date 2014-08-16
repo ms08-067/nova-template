@@ -58,7 +58,7 @@ border: 1px solid #d6d6d6;
     box-shadow: 0 0 3px #ddd;
     display: block;
     padding: 8px;
-    width: 600px;
+    width: 92%;
 }
 .blog-meta {
 	border-bottom: 1px solid #EEEEEE;
@@ -135,13 +135,14 @@ body h4 {
 }
 #seller_items li {
     background-color: #f4f4f4;
+	text-align: center;
     border: 1px solid #ddd;
     border-radius: 2px;
     float: left;
-    height: 85px;
     margin-right: 16px;
     padding: 2px;
-    width: 136px;
+    width: 24%;
+	height: auto;
 	list-style: none;
 }
 .btn.btn-transparent {
@@ -736,12 +737,23 @@ header .dropdown-menu:before {
 
 
 .btn.primary {
-    background-color: #0064cd;
-    background-image: -moz-linear-gradient(center top , #049cdb, #0064cd);
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color:#0064cd;
+	background-repeat:repeat-x;
+	background-image:-khtml-gradient(linear,left top,left bottom,from(#049cdb),to(#0064cd));
+	background-image:-moz-linear-gradient(top,#049cdb,#0064cd);
+	background-image:-ms-linear-gradient(top,#049cdb,#0064cd);
+	background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#049cdb),color-stop(100%,#0064cd));
+	background-image:-webkit-linear-gradient(top,#049cdb,#0064cd);
+	background-image:-o-linear-gradient(top,#049cdb,#0064cd);
+	background-image:linear-gradient(top,#049cdb,#0064cd);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb',endColorstr='#0064cd',GradientType=0);
+	border-color:#0064cd #0064cd #003f81;
+	border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25)
+	
+	
+	
 }
 #bottom {
   background:#232323;

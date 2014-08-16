@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 <?php if(!empty($this->product->img)): ?>
 <div class="image">
 <a target="_blank" rel="nofollow" title="SmartAdmin - Responsive WebApp" href="http://wrapbootstrap.com/preview/WB0573SK0" class="screenshot">
-<img id="thing_image" width="600" height="375" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
+<img id="thing_image" width="100%" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
 </a>
 <div class="wrap_link_demo">
 	<a title="Live preview" rel="nofollow" href="javascript:void(0)" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
@@ -41,7 +41,7 @@ if(!empty($product_related[$i]->img)) {
 ?>
 <li>
 <a title="<?php echo $product_related[$i]->name_project; ?>" href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$product_related[$i]->id); ?>">
-<img width="136" height="85" src="<?php echo $product_related[$i]->img; ?>"></a>
+<img style="width: 90%;" src="<?php echo $product_related[$i]->img; ?>"></a>
 </li>
 <?php 
 }
