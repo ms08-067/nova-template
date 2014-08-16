@@ -99,7 +99,7 @@ endfor; ?>
 <div class="info_wrapper">
 </div><br/>
 <p class="item_cs_header"><strong>Other Product</strong></p>
-<div class="item_cs"><a title="Clean Concept - Colorize Theme" href="#">
+<div class="item_cs"><a title="Clean Concept - Colorize Theme" href="javascript:void(0)">
 <img width="252" height="158" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0R48JC2.jpg?v=1.0.1"></a></div>
 </div>
 
