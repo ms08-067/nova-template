@@ -1,6 +1,7 @@
 ﻿<?php
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+//echo "<pre>";print_r($this->product);
 ?>
 <section id="product" class="container main">    
 <div class="row gallery col-4">
@@ -9,105 +10,47 @@ defined('_JEXEC') or die('Restricted access');
 <div class="well items-leading clearfix">
 <!------------------------------------------------------------------------------------------------------------->
 <div class="inner">
+<?php if(!empty($this->product->img)): ?>
 <div class="image">
-	<a target="_blank" rel="nofollow" title="SmartAdmin - Responsive WebApp" href="http://wrapbootstrap.com/preview/WB0573SK0" class="screenshot"><img width="600" height="375" alt="SmartAdmin - Responsive WebApp" title="SmartAdmin - Responsive WebApp" src="//d85wutc1n854v.cloudfront.net/live/products/600x375/WB0573SK0.png?v=1.4.1" itemprop="image" id="thing_image"></a>
-	<div class="wrap_link_demo">
-		<a title="Live preview" target="_blank" rel="nofollow" href="http://wrapbootstrap.com/preview/WB0573SK0" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
-		<a rel="nofollow" title="Purchase now using PayPal" onclick="document.getElementById('order').submit(); return false;" href="#" class="btn">Purchase now »</a>
-	</div>
+<a target="_blank" rel="nofollow" title="SmartAdmin - Responsive WebApp" href="http://wrapbootstrap.com/preview/WB0573SK0" class="screenshot">
+<img id="thing_image" width="600" height="375" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
+</a>
+<div class="wrap_link_demo">
+	<a title="Live preview" rel="nofollow" href="javascript:void(0)" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
+	<a rel="nofollow" title="Purchase now using PayPal" href="javascript::void(0)" class="btn">Purchase now »</a>
+<!--onclick="document.getElementById('order').submit(); return false;" --> 
 </div>
-<div itemprop="description" id="description">
-<h2>Announcements!</h2>
-<ul>
-<li><strong>Please close the default WrapBootstrap iFrame when viewing from IE</strong></li>
-<li>Check out <a title="Bug Tracker" target="_blank" href="/out?u=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2FBUGTRACK%2Ftrack_%2F">SmartAdmin Bug Tracker</a> for all reported issues and wish lists</li>
-<li>Version 1.4 now comes with Pure HTML Version, <a title="PHP Version" target="_blank" href="/out?u=http%3A%2F%2Fmyorange.ca%2Fthemes%2Fpreview%2Fsmartadmin%2F1.4%2Fphpversion%2F">Advanced PHP Version</a> with custom functions and <a title="AngularJS" target="_blank" href="/out?u=http%3A%2F%2F192.241.236.31%2Fthemes%2Fpreview%2Fsmartadmin%2F1.4%2Fangularjs%2F">AngularJS Version</a> (to help you get started)! </li>
-</ul>
-<p>If you have already purchased SmartAdmin you can redownload all future updates, at no extra cost, by visiting this link: <a target="_blank" href="https://wrapbootstrap.com/support/download-resender">https://wrapbootstrap.com/support/download-resender</a></p>
-<h1>SmartAdmin - Responsive WebApp</h1>
-<p><strong>SmartAdmin WebApp</strong> - goes beyond the ordinary admin template. Its unique flat design and responsive layout is crafted one of a kind. SmartAdmin comes with 4 different versions: Pure HTML, AJAX Version, PHP, and AngularJS version. SmartAdmin also adds flavor to 40+ customized jquery plugins including <strong>5 unique plugins</strong> (<em>exclusively catered for SmartAdmin</em>). SmartAdmin Layout API lets you customize your project for almost any device - be it Mobile, Web or WebApp - SmartAdmin has you covered! </p>
-<p><img src="https://d1dlf4qvtlhqrp.cloudfront.net/slurp?i=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2Fpublishing-images%2Fmultiple-layout-compressed-new" alt="SmartAdmin Responsive WebApp"></p>
-<h2>Features include:</h2>
-<ul>
-<li><strong>Carefully</strong> hand coded from head to toe</li>
-<li>Contains <strong>neatly organized</strong> and commended HTML, JS and LESS files (unminified CSS files available)</li>
-<li>Built with <strong>bootstrap 3.2</strong> (contains LESS files for the Custom BS Build)</li>
-<li><strong>Retina</strong> Graphs and Icons</li>
-<li>w3 valid cross browser compatible HTML5 markup</li>
-<li>Unique, never seen before, <strong>localStorage Widgets</strong> (<em>Jarvis Widget 2.0</em>) with custom controls for the users (now includes a robust API)</li>
-<li><strong>6 Level responsive navigation</strong></li>
-<li>Scales to almost <strong>any size</strong> (Fluid/Responsive/Boxed and Container)</li>
-<li>Two different navigation options (horizontal or vertical - no DOM changes required to switch between the two)</li>
-<li>CSS3 <strong>Animated</strong></li>
-<li><strong>Modern</strong> Form Elements (jQuery select2, colorpicker, datepicker, validation, iDevice buttons and wizard)</li>
-<li><strong>Professional Design</strong> and <strong>Branding</strong> (includes matching email templates [non-Bootstrap])</li>
-<li>Unique menu API that can be collapsed, or hidden (show on hover). Menu also adapts on mobile phones very swiftly.</li>
-<li>Unique <strong>Google Map Skins</strong> (7 in total)</li>
-<li>Google like Gallery with <strong>data-attribute descriptions</strong></li>
-<li><strong>Smart Alert</strong> and <strong>Smart Notification</strong> with sound</li>
-<li>Dynamic Data Table with <strong>export to PDF/Excel</strong></li>
-<li><strong>Smart Form elements</strong> (built on top of bootstrap library for robust form development)</li>
-<li><strong>AJAX pages</strong> (pages are pulled in and scripts are loaded on request per page)</li>
-<li>Also contains a Clean HTML Version, <a title="PHP Version" target="_blank" href="/out?u=http%3A%2F%2Fmyorange.ca%2Fthemes%2Fpreview%2Fsmartadmin%2F1.4%2Fphpversion%2F">Advanced PHP Version</a>, and <a title="AngularJS" target="_blank" href="/out?u=http%3A%2F%2F192.241.236.31%2Fthemes%2Fpreview%2Fsmartadmin%2F1.4%2Fangularjs%2F">AngularJS Version</a> with Grunt Tasks</li>
-<li><a title="Documentation Demo" target="_blank" href="/out?u=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2FBUGTRACK%2Ftrack_%2Fdocumentation%2Findex.html">Detailed Documentation</a> </li>
-</ul>
-<h3>Change colors using LESS / SASS variables or use included themes</h3>
-<p><img src="https://d1dlf4qvtlhqrp.cloudfront.net/slurp?i=http%3A%2F%2F192.241.236.31%2Fsmartadmin%2Fpublishing-images%2Fsmcolors-compressed.png" alt="SmartAdmin Responsive WebApp"></p>
-<h2>Supported resolutions</h2>
-<p><img src="https://d1dlf4qvtlhqrp.cloudfront.net/slurp?i=http%3A%2F%2Fwww.myorange.ca%2Ftheme%2Fjarvisadmin%2Fpublish-images%2Ftable.png" alt="SmartAdmin Responsive WebApp"></p>
-<h2>Special Features:</h2>
-<ul>
-<li>Functional Inbox page (all you will need to do is code the backend)</li>
-<li>Sparkline, Easy Pie Charts and various <em>important</em> form elements are controlled by data-*attributes </li>
-<li>Fully functional Calendar with Add event with color, description and icon</li>
-<li>Lighter pages (page scripts/plugins are loaded with a lazy load technique via ajax)</li>
-<li>Breadcrumbs are built automatically</li>
-<li>Various button types and colors</li>
-<li>Custom tree view</li>
-<li>Jquery UI Compatible</li>
-</ul>
-<h3>Layout API</h3>
-<ul>
-<li>Collapse Navigation (show on hover)</li>
-<li>Fixed header, ribbon and navigation</li>
-<li>Minified navigation - minifies the navigation to show only icons, reveals children on parent hover.</li>
-<li>metro type shortcut dropdown (click the username to show)</li>
-</ul>
-<h3>Will be included in the future:</h3>
-<ul>
-<li>More color options / themes - <strong><em>Now Available</em></strong></li>
-<li>Profile Page <strong><em>Now Available</em></strong></li>
-<li>Media CSS files for printing - <strong><em>Now Available</em></strong></li>
-<li>Forum Layout <strong><em>Now Available</em></strong></li>
-<li>Editable Tables <strong><em>Now Available</em></strong></li>
-<li>Pure HTML page without ajax - <strong><em>Now Available</em></strong></li>
-<li>Detailed Documentation <strong><em>Now Available</em></strong></li>
-<li>Modular LESS Files - <strong><em>Now Available</em></strong></li>
-<li>And many more features to discover</li>
-</ul>
-<p><strong><em>Be smart in 2014 and go with SmartAdmin. It's Okay to be Smart!</em></strong></p>
-<h3>Patch 1.4.1 (27/06/2014) - see docs for upgrade instructions</h3>
-<ul>
-<li>Update plugins: pace.js, select2, bootstrap, progressbar, summernote</li>
-<li>Added SASS Files (in addition to LESS files)</li>
-<li>Responsive Datatables</li>
-<li>Google Voice Command implementation</li>
-<li>JS: Fixed memory leaks for a number of DOM elements</li>
-<li>JS: Added a new file app.config.js (all app configurations has been moved here for easy access)</li>
-<li>JS: Restructured app.js for HTML/AJAX/PHP
-&#8203;- CSS: Fixed minor CSS bugs </li>
-<li>Updated bootstrap core to latest version (3.2)</li>
+</div>
+<?php endif;?>
+
+<div id="description">
+<hr />
+	<?php echo $this->product->des; ?>
+</div>
+<?php 
+	$product_related = JvHelper::getProductRelated($this->product->id_categories_product,$this->product->id);
+	//echo "<pre>";print_r($product_related);exit;
+	if(count($product_related)):
+?>
+
+<h2 id="seller_items_header">Product Related</h2>
+
+<ul id="seller_items">
+<?php for($i = 0; $i < 4; $i++):
+if(!empty($product_related[$i]->img)) {  
+?>
+<li>
+<a title="<?php echo $product_related[$i]->name_project; ?>" href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$product_related[$i]->id); ?>">
+<img width="136" height="85" src="<?php echo $product_related[$i]->img; ?>"></a>
+</li>
+<?php 
+}
+endfor; ?>
 </ul>
 
+<?php endif; ?>
+
 </div>
-<h2 id="seller_items_header">Product Related</h2>
-<ul id="seller_items">
-<li><a title="Jarvis - Smart Admin Template" href="/theme/jarvis-smart-admin-template-WB09MR0M6"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB09MR0M6.jpg?v=2.0"></a></li>
-<li><a title="Peach Realestate - HTML" href="/theme/peach-realestate-html-WB03B6H4X"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB03B6H4X.jpg?v=1.0"></a></li>
-<li><a title="Peach Realestate - Wordpress" href="/theme/peach-realestate-wordpress-WB05296L0"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB05296L0.jpg?v=1.0.2"></a></li>
-<li class="last"><a title="SnapMarketing" href="/logo/snapmarketing-WB0813064"><img width="136" height="85" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0813064.jpg?v=1.0"></a></li>
-</ul>
-                            </div>
 <!-------------------------------------------------------------------------------------------------------------->				
 </div><!-- end items-leading -->
 </div>
@@ -115,10 +58,11 @@ defined('_JEXEC') or die('Restricted access');
 			
             <!--Item 3-->
 <aside class="span4">
-				<div class="search">
-	<h2> Template boostrap 3</h2>
+<div class="search">
+	<h2><?php echo $this->product->name_project; ?></h2>
 </div>
-<div class="product_info">                       
+<div class="product_info">
+<!--                       
 <form target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr" id="order">
 	
 	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" href="#" class="btn primary btn-xlarge" id="buynow"><span style="" itemprop="price" id="offer_price">$18</span></a>
@@ -131,7 +75,7 @@ defined('_JEXEC') or die('Restricted access');
 		<span class="count_label"> Purchases</span>
 	</div>
 </div>
-
+-->
 <div class="info_wrapper">
 <table class="attributes zebra-striped">
 <tbody>
@@ -144,7 +88,7 @@ defined('_JEXEC') or die('Restricted access');
 <td class="key"><strong>Categories:</strong></td>
 <td class="value">
 	<ul>
-	<li><a title="Admin &amp; Dashboards" href="/themes/admin"><span itemprop="category" id="offer_category">Admin &amp; Dashboards</span></a></li>
+	<li><a title="<?php echo JvHelper::getCategories($this->product->id_categories_product)->name; ?>" href="javascript:void(0)"><span id="offer_category"><?php echo JvHelper::getCategories($this->product->id_categories_product)->name; ?></span></a></li>
 	</ul>
 </td>
 </tr>
@@ -155,7 +99,8 @@ defined('_JEXEC') or die('Restricted access');
 <div class="info_wrapper">
 </div><br/>
 <p class="item_cs_header"><strong>Other Product</strong></p>
-<div class="item_cs"><a title="Clean Concept - Colorize Theme" href="/theme/clean-concept-colorize-theme-WB0R48JC2"><img width="252" height="158" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0R48JC2.jpg?v=1.0.1"></a></div>
+<div class="item_cs"><a title="Clean Concept - Colorize Theme" href="#">
+<img width="252" height="158" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0R48JC2.jpg?v=1.0.1"></a></div>
 </div>
 
 </aside>			

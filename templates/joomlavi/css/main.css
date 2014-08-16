@@ -13,8 +13,9 @@
 .clearfix:after {
   clear:both;
 }
-
-
+#description {
+    margin-top: 20px;
+}
 .btn:hover {
     background-position: 0 -15px;
     color: #333;
