@@ -93,7 +93,10 @@
   .hidden-phone {
     display: none !important;
   }
-  
+  .item_cs {
+		text-align: center;
+		margin-bottom: 20px;
+	}
 	body>section {
 	  padding: 16px 0 0px !important;
 	}
