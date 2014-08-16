@@ -14,35 +14,35 @@ defined('_JEXEC') or die('Restricted access');
 <section id="portfolio" class="container main">    
 			<div class="row gallery col-4">
 <?php $i=0; foreach ($this->products as $rows => $row) : $i++;?>
-			<?php if(!empty($row->img_thumb)):?>
-			<div class="span4">
-                <div class="preview">
-                    <img style="width: 100%" alt=" " src="<?php echo $row->img_thumb;?>">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a href="#">
-						View Detail
-						</a>
-						<a href="#">
-						Live Preview
-						
-						</a>                                
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>SFB Research & Trainning</h5>
-                    <small>Template html - Slice as bootstrap 3 - Templates responsive</small>
-                </div>
-                <div id="modal-1" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="<?php echo $row->img;?>" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>                 
-            </div>
-            <?php endif;?>
-            <!--/Item 1--> 
+<?php if(!empty($row->img_thumb)):?>
+<div class="span4">
+	<div class="preview">
+		<img style="width: 100%" alt=" " src="<?php echo $row->img_thumb;?>">
+		<div class="overlay">
+		</div>
+		<div class="links">
+			<a href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$row->id); ?>">
+			View Detail
+			</a>
+			<a href="#">
+			Live Preview
+			</a>                                
+		</div>
+	</div>
+	<div class="desc">
+		<h5><?php echo $row->name_project; ?></h5>
+		<small><?php echo $row->short_des; ?></small>
+	</div>
+	<div id="modal-1" class="modal hide fade">
+		<a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+		<div class="modal-body">
+			<img src="<?php echo $row->img;?>" alt=" " width="100%" style="max-height:400px">
+		</div>
+	</div>                 
+</div>
+<?php endif;?>
+
+<!--/Item 1--> 
 
  <?php endforeach;?>                     
 		</div>

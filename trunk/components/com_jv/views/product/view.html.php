@@ -16,8 +16,21 @@ class JvViewProduct extends JViewLegacy
 	function display($tpl = null)
 	{
 	
-		$this->msg = $this->get('Msg');
-		parent::display($tpl);
+		$id	 	    = JRequest::getInt("id");
+		
+		if($id){
+		
+			$product = JvHelper::getProduct($id);
+			$this->assignRef('product', $product);
+			parent::display($tpl);
+		}
+		else {
+			
+			$app =& JFactory::getApplication();
+			$app->redirect('index.php?option=com_jv&view=products&Itemid=108');
+			
+		}
+		
 	}
 	
 	

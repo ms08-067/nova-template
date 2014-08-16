@@ -17,8 +17,6 @@ class JvViewProducts extends JViewLegacy
 	{
 		$products = new JvModelProduct();
 		$this->assignRef('products', $products->getData());
-		
-		$this->msg = $this->get('Msg');
 		parent::display($tpl);
 	}
 	

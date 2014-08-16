@@ -37,5 +37,14 @@ class JvHelper
 		else return $db->loadObjectList();
 		
 	}
+	public function getProductRelated($id_categories,$id_product){
+		
+		$db = JFactory::getDbo();
+		$sql = "SELECT * FROM #__jv_product WHERE id_categories_product = ".$id_categories. " AND id <>".$id_product." ORDER BY id DESC ";
+		$db->setQuery($sql);
+		return $db->loadObjectList();
+		
+	}
+	
 	
 }
