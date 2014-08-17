@@ -24,7 +24,7 @@ defined('_JEXEC') or die('Restricted access');
 			<a href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$row->id); ?>">
 			View Detail
 			</a>
-			<a href="#">
+			<a href="<?php echo JRoute::_('http://joomlavi.net/demo/cus'.$row->id); ?>" target="_blank">
 			Live Preview
 			</a>                                
 		</div>
@@ -88,9 +88,7 @@ defined('_JEXEC') or die('Restricted access');
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Copyright</a></li>
                         <li><a href="#">We are hiring</a></li>
-                        <li><a href="#">Clients</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>  
@@ -102,7 +100,6 @@ defined('_JEXEC') or die('Restricted access');
                 <h4>ARCHIVES</h4>
                 <div>
                     <ul class="arrow">
-                        <li><a href="#">December 2012 (1)</a></li>
                         <li><a href="#">November 2012 (5)</a></li>
                         <li><a href="#">October 2012 (8)</a></li>
                         <li><a href="#">September 2012 (10)</a></li>
@@ -113,12 +110,6 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </div>
             <!--End Archives-->
-
-            <div class="span3">
-                
-
-        </div>
-
     </div>
     <!--/row-fluid-->
 </div>

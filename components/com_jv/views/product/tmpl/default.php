@@ -16,7 +16,7 @@ defined('_JEXEC') or die('Restricted access');
 <img id="thing_image" width="100%" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
 </a>
 <div class="wrap_link_demo">
-	<a title="Live preview" rel="nofollow" href="javascript:void(0)" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
+	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_('http://joomlavi.net/demo/cus'.$this->product->id); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
 	<a rel="nofollow" title="Purchase now using PayPal" href="javascript::void(0)" class="btn">Purchase now »</a>
 <!--onclick="document.getElementById('order').submit(); return false;" --> 
 </div>
@@ -147,9 +147,7 @@ endfor; ?>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Copyright</a></li>
                         <li><a href="#">We are hiring</a></li>
-                        <li><a href="#">Clients</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </div>  
@@ -161,7 +159,6 @@ endfor; ?>
                 <h4>ARCHIVES</h4>
                 <div>
                     <ul class="arrow">
-                        <li><a href="#">December 2012 (1)</a></li>
                         <li><a href="#">November 2012 (5)</a></li>
                         <li><a href="#">October 2012 (8)</a></li>
                         <li><a href="#">September 2012 (10)</a></li>
@@ -172,12 +169,6 @@ endfor; ?>
                 </div>
             </div>
             <!--End Archives-->
-
-            <div class="span3">
-                
-
-        </div>
-
     </div>
     <!--/row-fluid-->
 </div>

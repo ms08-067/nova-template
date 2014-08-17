@@ -159,43 +159,43 @@
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    width: 1170px;
+    width: 1140px;
   }
   .span12 {
-    width: 1170px;
+    width: 1120px;
   }
   .span11 {
-    width: 1070px;
+    width: 1025px;
   }
   .span10 {
-    width: 970px;
+    width: 930px;
   }
   .span9 {
-    width: 870px;
+    width: 835px;
   }
   .span8 {
-    width: 770px;
+    width: 740px;
   }
   .span7 {
-    width: 670px;
+    width: 645px;
   }
   .span6 {
-    width: 570px;
+    width: 550px;
   }
   .span5 {
-    width: 470px;
+    width: 455px;
   }
   .span4 {
-    width: 370px;
+    width: 360px;
   }
   .span3 {
-    width: 270px;
+    width: 265px;
   }
   .span2 {
     width: 170px;
   }
   .span1 {
-    width: 70px;
+    width: 75px;
   }
   .offset12 {
     margin-left: 1230px;
