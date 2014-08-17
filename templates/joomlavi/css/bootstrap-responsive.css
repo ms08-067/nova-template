@@ -155,6 +155,12 @@
     min-height: 1px;
     margin-left: 30px;
   }
+  #footer .container,#bottom .container {
+		width: 1170px;
+  }
+#tweets, #archives {
+	padding-left: 20px;
+}	
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
@@ -831,7 +837,11 @@
   body {
    padding-to: 0px;
   }
-  
+  body > section#product{
+	margin-top: -20px;
+  }
+  .row-fluid ul {margin-bottom: 10px !important;}
+  #bottom h4 {margin-bottom: 4px !important;}
   .container-fluid {
     padding: 0;
   }
@@ -923,6 +933,14 @@
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
+  .btn {
+	padding: 4px;
+  }
+  .gallery .preview .links > a {
+	height: 38px !important;
+	line-height: 40px !important;
+	width: 108px !important;
+  }
   .page-header h1 small {
     display: block;
     line-height: 20px;
@@ -977,7 +995,9 @@
   body {
     padding-top: 0;
   }
-  
+  .title {
+	  margin-top: -19px;
+	}
   .page-header h2 {
 	font-size: 18px !important;margin-top: 14px;
     line-height: 28px;

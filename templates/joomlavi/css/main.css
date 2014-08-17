@@ -79,13 +79,6 @@ section.services {
 }
 #bottom .container {
 	background: none repeat scroll 0 0 #232323;
-	width: 1170px;
-}
-#footer .container {
-	width: 1170px;
-}
-#tweets, #archives {
-	padding-left: 20px;
 }
 .row-fluid ul { padding-left: 10px !important;}
 .input-block-level {
@@ -1185,7 +1178,7 @@ ul.gallery.col-4 li {
   height: 55px;
   position:absolute;
   top:50%;
-  left: 12%;
+  left: 9%;
   margin-top:-28px;
   
   opacity:0;
