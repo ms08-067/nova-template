@@ -84,6 +84,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 
 				<jdoc:include type="message" />
 				<jdoc:include type="component" />
+				<jdoc:include type="modules" name="jvinfo" />
 			</div> 
 			<aside class="span4">
 				<jdoc:include type="modules" name="right" style="none" />
@@ -94,6 +95,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 	<?php } else { ?>
 		<jdoc:include type="message" />
 		<jdoc:include type="component" />
+		<jdoc:include type="modules" name="jvinfo" />
 	<?php } ?>
     
 <!--Footer-->

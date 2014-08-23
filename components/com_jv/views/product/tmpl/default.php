@@ -17,8 +17,7 @@ defined('_JEXEC') or die('Restricted access');
 </a>
 <div class="wrap_link_demo">
 	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_('http://joomlavi.net/demo/cus'.$this->product->id); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
-	<a rel="nofollow" title="Purchase now using PayPal" href="javascript::void(0)" class="btn">Purchase now »</a>
-<!--onclick="document.getElementById('order').submit(); return false;" --> 
+	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" title="Purchase now using PayPal" href="#" class="btn">Purchase now »</a>
 </div>
 </div>
 <?php endif;?>
@@ -29,7 +28,6 @@ defined('_JEXEC') or die('Restricted access');
 </div>
 <?php 
 	$product_related = JvHelper::getProductRelated($this->product->id_categories_product,$this->product->id);
-	//echo "<pre>";print_r($product_related);exit;
 	if(count($product_related)):
 ?>
 
@@ -47,35 +45,18 @@ if(!empty($product_related[$i]->img)) {
 }
 endfor; ?>
 </ul>
-
 <?php endif; ?>
-
 </div>
 <!-------------------------------------------------------------------------------------------------------------->				
 </div><!-- end items-leading -->
 </div>
-</div>
-			
-            <!--Item 3-->
+</div><!--Item 3-->
 <aside class="span4">
 <div class="search">
 	<h2><?php echo $this->product->name_project; ?></h2>
 </div>
-<div class="product_info">
-<!--                       
-<form target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr" id="order">
-	
-	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" href="#" class="btn primary btn-xlarge" id="buynow"><span style="" itemprop="price" id="offer_price">$18</span></a>
-   
-</form>
-                        
-<div class="purchase_info">
-	<div class="purchases">
-		<span class="count five_digits">10259</span>
-		<span class="count_label"> Purchases</span>
-	</div>
-</div>
--->
+<div class="product_info">                    
+<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" href="#" class="btn primary btn-xlarge" id="buynow"><span id="offer_price">$<?php echo $this->product->price;?></span></a>                       
 <div class="info_wrapper">
 <table class="attributes zebra-striped">
 <tbody>
@@ -104,75 +85,22 @@ endfor; ?>
 </div>
 
 </aside>			
-</div>
-     
-        
+</div>        
 </section>
-<section class="main" id="bottom">
-    <!--Container-->
-    <div class="container">
 
-        <!--row-fluids-->
-        <div class="row-fluid">
-
-            <!--Contact Form-->
-            <div class="span4">
-                <h4>ADDRESS</h4>
-                <ul class="unstyled address">
-                    <li>
-                        <i class="icon-home"></i><strong>Address:</strong> 32/35 Bui Dinh Tuy street,12 Ward,Binh Thanh District,HCM city,Vietnam country
-                    </li>
-                    <li>
-                        <i class="icon-envelope"></i>
-                        <strong>Email: </strong><a href="">hunguit@yahoo.com</a>
-                    </li>
-                    <li>
-                        <i class="icon-globe"></i>
-                        <strong>Website:</strong><a href="">www.joomlavi.net</a>
-                    </li>
-                    <li>
-                        <i class="icon-phone"></i>
-                        <strong>Tel:</strong> (+84) 982.043.592
-                    </li>
-                </ul>
-            </div>
-            <!--End Contact Form-->
-
-            <!--Important Links-->
-            <div class="span4" id="tweets">
-                <h4>OUR COMPANY</h4>
-                <div>
-                    <ul class="arrow">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">We are hiring</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>  
-            </div>
-            <!--Important Links-->
-
-            <!--Archives-->
-            <div class="span4" id="archives">
-                <h4>ARCHIVES</h4>
-                <div>
-                    <ul class="arrow">
-                        <li><a href="#">November 2012 (5)</a></li>
-                        <li><a href="#">October 2012 (8)</a></li>
-                        <li><a href="#">September 2012 (10)</a></li>
-                        <li><a href="#">August 2012 (29)</a></li>
-                        <li><a href="#">July 2012 (1)</a></li>
-                        <li><a href="#">June 2012 (31)</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--End Archives-->
-    </div>
-    <!--/row-fluid-->
-</div>
-<!--/container-->
-
-</section>	
+<form id="order" target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr" class="paypal-button" >
+<div class="hide" id="errorBox"></div>
+<input type="hidden" name="button" value="buynow">
+<input type="hidden" name="item_name" value="<?php echo $this->product->name_project;?>">
+<input type="hidden" name="quantity" value="1">
+<input type="hidden" name="amount" value="<?php echo $this->product->price;?>">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="shipping" value="0">
+<input type="hidden" name="tax" value="0">
+<input type="hidden" name="notify_url" value="http://joomlavi.net/products.html">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="R738Z27BNXEYJ">
+<input type="hidden" name="bn" value="JavaScriptButton_buynow">
+<input type="hidden" name="env" value="www">
+</form>
 	

@@ -687,8 +687,9 @@ header .dropdown-menu:before {
     font-size: 28px;
     font-weight: bold;
     line-height: normal;
-    padding: 16px 0;
+    padding: 10px 0;
     text-align: center;
+	margin-bottom: 15px;
     width: 218px;
 }
 .attributes {
@@ -1174,13 +1175,13 @@ ul.gallery.col-4 li {
 }
 
 .gallery  .preview .links {
-  width:290px;
+  width:266px;
   height: 55px;
   position:absolute;
   top:50%;
-  left: 9%;
+  left: 50%;
   margin-top:-28px;
-  
+  margin-left: -133px;
   opacity:0;
   filter:alpha(opacity=0);
   -webkit-transform:translate(0,-50px);

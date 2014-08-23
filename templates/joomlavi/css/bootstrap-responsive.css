@@ -936,11 +936,12 @@
   .btn {
 	padding: 4px;
   }
-  .gallery .preview .links > a {
+  /*.gallery .preview .links > a {
 	height: 38px !important;
 	line-height: 40px !important;
 	width: 108px !important;
-  }
+	margin-left: -54px !important;
+  }*/
   .page-header h1 small {
     display: block;
     line-height: 20px;
