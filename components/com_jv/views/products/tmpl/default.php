@@ -32,13 +32,10 @@ defined('_JEXEC') or die('Restricted access');
 	<div class="desc">
 		<h5><?php echo $row->name_project; ?></h5>
 		<small><?php echo $row->short_des; ?></small>
+		<div class="price">$<?php echo $row->price; ?></div>
 	</div>
-	<div id="modal-1" class="modal hide fade">
-		<a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-		<div class="modal-body">
-			<img src="<?php echo $row->img;?>" alt=" " width="100%" style="max-height:400px">
-		</div>
-	</div>                 
+	<!---->
+	                
 </div>
 <?php endif;?>
 <!--/Item 1--> 

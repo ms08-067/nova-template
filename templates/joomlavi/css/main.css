@@ -11,7 +11,6 @@
 }
 
 .message {
-
 background-color: #c3d2e5;
 border-radius: 4px;
 color: #0055bb;
@@ -1040,10 +1039,30 @@ input[type="color"]:focus,
 .input-block-level {
   min-height:50px;
 }
-
+.gallery .desc h5{
+	width: 80%;
+}
 .gallery .desc {
-	
-	margin: 15px;	
+	margin: 15px
+	/*margin: 15px 0 15px 15px;
+	width: 80%;
+	float: left;*/
+}
+
+.price {
+	background: none repeat scroll 0 0 #563d7c;
+    border-radius: 4px;
+    color: #fff;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 0px;
+    margin-top: -22px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    padding-top: 4px;
+	width: 42px;
+    /*width: 15%;*/
 }
 
 textarea#message {
