@@ -29,6 +29,8 @@ class JvTableProduct extends JTable
 	var $count_buy;
 	var $price ;
 	var $id_categories_product ;
+	var $version ;
+	var $notice ;
 	public function __construct(&$db)
 	{
 		parent::__construct('#__jv_product', 'id', $db);

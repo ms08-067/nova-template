@@ -18,6 +18,11 @@
 			filter="JComponentHelper::filterText" buttons="true" 
 			required="true"
 			/>
+		<field name="notice" type="editor"
+			label="COM_CONTENT_FIELD_ARTICLETEXT_LABEL" description="COM_CONTENT_FIELD_ARTICLETEXT_DESC"
+			buttons="true" 
+			required="true"
+			/>	
 
 		<field name="publish" type="list" label="JSTATUS"
 			description="JFIELD_PUBLISHED_DESC" class="chzn-color-state"
@@ -39,6 +44,12 @@
 			size="40" 
 			required="true"
 			/>
+		<field name="version" type="text" label="COM_JV_VERSION_LABEL"
+		description="COM_JV_VERSION_DESC"
+		class="input-xlarge input-large-text"
+		size="40" 
+		required="true"
+		/>
 		<field
 			name="img_thumb"
 			type="media"

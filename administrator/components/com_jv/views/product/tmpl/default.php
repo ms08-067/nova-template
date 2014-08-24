@@ -50,10 +50,8 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 </div>
 </div>
-
-
-	<div class="form-horizontal">
-		<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'general')); ?>
+<div class="form-horizontal">
+<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'general')); ?>
 
 		<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'general', JText::_('COM_JV_PRODUCT_CONTENT', true)); ?>
 		<div class="row-fluid">
@@ -113,47 +111,47 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 
 </div>
+<div class="control-group ">
 
+<div class="control-label">
+<label id="price_lbl" >Version</label>
+</div>
+
+<div class="controls">
+<?php echo $this->form->getInput('version'); ?>
+</div>
+
+</div>
 
 </fieldset>
 </div>
 			
 </div>
-		<?php echo JHtml::_('bootstrap.endTab'); ?>
-
-		
+<?php echo JHtml::_('bootstrap.endTab'); ?>
 
 <?php echo JHtml::_('bootstrap.addTab', 'myTab', 'images', JText::_('COM_JV_PRODUCT_IMAGES', true)); ?>
 <div class="row-fluid form-horizontal-desktop">
 <div class="span6">
 <div class="control-group ">
 <div class="control-label"><label class="hasTooltip" id="img_thumb_lbl" >Images Thumb</label></div>
-
 <div class="controls">
 <?php echo $this->form->getInput('img_thumb'); ?>
-
 </div>
 </div>
-											
-
 <div class="control-group ">
 <div class="control-label"><label  class="hasTooltip"  id="img_thumb_alt_lbl" >Alt images thumb</label></div>
 <div class="controls">
 <?php echo $this->form->getInput('img_thumb_alt'); ?>
 </div>
 </div>
-											
-
 <div class="control-group ">
 <div class="control-label">
 <label class="hasTooltip"  id="jform_images_image_fulltext-lbl"  aria-invalid="false">Images</label>
 </div>
-
 <div class="controls">
 <?php echo $this->form->getInput('img'); ?>
 </div>
 </div>
-
 <div class="control-group">
 <div class="control-label">
 <label class="hasTooltip" id="img_alt_lbl"  aria-invalid="false">Alt images full</label>
@@ -163,13 +161,22 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 </div>
 </div>
+</div>
+<?php echo JHtml::_('bootstrap.endTab'); ?>
+
+<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'Notice', JText::_('COM_JV_PRODUCT_NOTICE', true)); ?>
+<div class="row-fluid form-horizontal-desktop">
+<div class="span10">
+
+<?php echo $this->form->getInput('notice'); ?>
 
 </div>
-
+</div>
 <?php echo JHtml::_('bootstrap.endTab'); ?>
-		<input type="hidden" name="task" value="" />
-		
+
+<input type="hidden" name="task" value="" />		
 <input type="hidden" name="id" value="<?php echo $this->id; ?>" />		
-		<?php echo JHtml::_('form.token'); ?>
-	</div>
+<?php echo JHtml::_('form.token'); ?>
+</div>
+
 </form>

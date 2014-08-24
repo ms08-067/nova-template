@@ -27,7 +27,9 @@ class JvViewProduct extends JViewLegacy
 				$this->form->setValue("name_project", "" , $product->name_project);
 				$this->form->setValue("short_des", "" ,  $product->short_des);
 				$this->form->setValue("des", "" , $product->des);
+				$this->form->setValue("notice", "" , $product->notice);
 				$this->form->setValue("price", "" , $product->price);
+				$this->form->setValue("version", "" , $product->version);
 				$this->form->setValue("img_thumb", "" , $product->img_thumb);
 				$this->form->setValue("img_thumb_alt", "" , $product->img_thumb_alt);
 				$this->form->setValue("img_alt", "" , $product->img_alt);
