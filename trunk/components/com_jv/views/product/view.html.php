@@ -10,29 +10,39 @@ jimport('joomla.application.component.view');
  */
 class JvViewProduct extends JViewLegacy
 {
-	// Overwriting JView display method
-	
-	
 	function display($tpl = null)
 	{
-	
 		$id	 	    = JRequest::getInt("id");
-		
 		if($id){
+			$product = JvHelper::getProduct($id);
+			$this->assignRef('product', $product);
+			$fnc = 'display'.ucfirst($this->getLayout());		
+			if (is_callable(array(&$this, $fnc))){
+				$this->$fnc($tpl);
+			}else{
+				parent::display($tpl);
+			}
+		}
+		else {
+			$app =& JFactory::getApplication();
+			$app->redirect('index.php?option=com_jv&view=products&Itemid=108');
+		}
 		
+	}
+	public function displayNotice($tpl=NULL){
+	
+		$id	 = JRequest::getInt("id");
+		if($id){
 			$product = JvHelper::getProduct($id);
 			$this->assignRef('product', $product);
 			parent::display($tpl);
 		}
 		else {
-			
 			$app =& JFactory::getApplication();
 			$app->redirect('index.php?option=com_jv&view=products&Itemid=108');
-			
 		}
 		
 	}
-	
 	
 	
 }

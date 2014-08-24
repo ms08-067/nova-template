@@ -60,7 +60,8 @@ endfor; ?>
 <div class="info_wrapper">
 <table class="attributes zebra-striped">
 <tbody>
-<tr class="first"><td class="key"><strong>Version:</strong></td><td class="value"><span itemprop="version" id="creativework_version">1.4.1</span></td></tr>
+<tr class="first"><td class="key"><strong>Version:</strong></td>
+<td class="value"><span  id="creativework_version"><?php echo empty($this->product->version) ? "1.0": $this->product->version; ?></span></td></tr>
 <tr>
 <td class="key"><strong>Bootstrap:</strong></td>
 <td class="value">Compatible with 3.2.x</td>
@@ -97,7 +98,7 @@ endfor; ?>
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="shipping" value="0">
 <input type="hidden" name="tax" value="0">
-<input type="hidden" name="notify_url" value="http://joomlavi.net/products.html">
+<input type="hidden" name="notify_url" value="<?php echo JRoute::_('http://joomlavi.net/index.php?option=com_jv&view=product&Itemid=108&layout=notice&id='.$this->product->id); ?>">
 <input type="hidden" name="cmd" value="_xclick">
 <input type="hidden" name="business" value="R738Z27BNXEYJ">
 <input type="hidden" name="bn" value="JavaScriptButton_buynow">

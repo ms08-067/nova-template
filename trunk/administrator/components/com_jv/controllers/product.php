@@ -36,7 +36,9 @@ class JvControllerProduct extends JControllerForm
 			$post['name_project'] = $post['jform']['name_project'];
 			$post['short_des'] = $post['jform']['short_des'];
 			$post['des'] = $post['jform']['des'];
+			$post['notice'] = $post['jform']['notice'];
 			$post['price'] = $post['jform']['price'];
+			$post['version'] = $post['jform']['version'];
 			$post['img_thumb'] = $post['jform']['img_thumb'];
 			$post['img_thumb_alt'] = $post['jform']['img_thumb_alt'];
 			$post['img'] = $post['jform']['img'];
@@ -52,9 +54,11 @@ class JvControllerProduct extends JControllerForm
 				$obj->img_alt = $post["img_alt"];
 				$obj->short_des = $post["short_des"];
 				$obj->des = $post["des"];
+				$obj->notice = $post["notice"];
 				$obj->publish = $post["publish"];
 				$obj->created_date = $post["created_date"];
 				$obj->price = $post["price"];
+				$obj->version = $post["version"];
 				$obj->id_categories_product = $post["id_categories_product"];
 				
 				$db->updateObject('#__jv_product', $obj,'id');
