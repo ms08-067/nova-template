@@ -48,6 +48,7 @@ class JvControllerProduct extends JControllerForm
 				$db = JFactory::getDbo();
 				$obj = new stdClass();
 				$obj->id = $post["id"];
+				$obj->name_project = $post["name_project"];
 				$obj->img_thumb = $post["img_thumb"];
 				$obj->img_thumb_alt = $post["img_thumb_alt"];
 				$obj->img = $post["img"];
