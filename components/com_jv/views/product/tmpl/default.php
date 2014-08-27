@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 <div class="inner">
 <?php if(!empty($this->product->img)): ?>
 <div class="image">
-<a target="_blank" rel="nofollow" title="SmartAdmin - Responsive WebApp" href="http://wrapbootstrap.com/preview/WB0573SK0" class="screenshot">
+<a onclick="document.getElementById('order').submit(); return false;" target="_blank" rel="nofollow" href="#" class="screenshot">
 <img id="thing_image" width="100%" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
 </a>
 <div class="wrap_link_demo">
