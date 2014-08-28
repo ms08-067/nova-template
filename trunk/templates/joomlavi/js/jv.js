@@ -2,7 +2,7 @@
 $("#showmore").click(function(){ 
 var rel = $("#showmore").attr("rel");
 $.ajax({
-	url: encodeURIComponent("http://localhost/nova/index.php?option=com_jv&task=getMoreProduct"),
+	url: "http://localhost/nova/index.php?option=com_jv&task=getMoreProduct",
 	type: "POST",
 	data: "page="+rel,
 	success: function (res) {

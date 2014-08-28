@@ -138,7 +138,7 @@
 
 @media (min-width: 1200px) {
   .row {
-    margin-left: -30px;
+    
     *zoom: 1;
   }
   .row:before,
@@ -153,13 +153,16 @@
   [class*="span"] {
     float: left;
     min-height: 1px;
-    margin-left: 30px;
+    margin-left: 12px;
   }
   #footer .container,#bottom .container {
 		width: 1170px;
   }
 #tweets, #archives {
 	padding-left: 20px;
+}
+#portfolio{
+width: 1104px !important;
 }	
   .container,
   .navbar-static-top .container,
