@@ -11,15 +11,16 @@ jimport('joomla.application.component.view');
 class JvViewProducts extends JViewLegacy
 {
 	// Overwriting JView display method
-	
-	
 	function display($tpl = null)
 	{
+		
 		$products = new JvModelProduct();
+		$products->_limit = 6;
+		$products->_limitstart = 0;
+		
 		$this->assignRef('products', $products->getData());
+		
 		parent::display($tpl);
 	}
-	
-	
 	
 }
