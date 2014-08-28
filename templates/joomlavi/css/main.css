@@ -210,7 +210,7 @@ body > section#product {
 }
 
 body>section {
-  padding: 0px 0px 20px;
+  padding: 0px 0px 0px;
 }
 
 body>section#slide-show {
@@ -222,11 +222,14 @@ body>section#slide-show {
     margin-bottom: 0;
     margin-right: 9px;
 }
+#portfolio {
+	margin-top: -10px;
+}
 .c_hotline img {
 
     height: 30px;
     margin-right: 2px !important;
-    margin-top: 11px;
+    margin-top: 4px;
 }
 .mail {
 margin-left: 5px;
@@ -244,7 +247,7 @@ margin-left: 5px;
     font-family: "Fjalla One";
     font-size: 14px;
     font-weight: bold;
-    margin-top: 18px;
+    margin-top: 9px;
     text-transform: uppercase;
     width: 234px;
 }
@@ -298,7 +301,7 @@ margin-left: 5px;
 	margin-bottom: 22px;
 }
 #portfolio .span4{
-	margin-bottom: 22px;
+	margin-bottom: 12px;
 	padding-top: 1px;
 	box-shadow: 0 0 8px #E2E2E2;
 	/*border: 1px solid #EFEFEF;*/
@@ -324,7 +327,10 @@ margin-left: 5px;
   margin-bottom:10px;
 }
 #about-us {
-	padding-top: 14px;
+	padding-top: 10px;
+}
+#product {
+	margin-top: -12px;
 }
 .progress,
 .progress .bar {
@@ -433,8 +439,8 @@ header #logo {
 }
 header #logo {
 background: url("../images/logo.png") no-repeat scroll 0 50% rgba(0, 0, 0, 0);
-height: 73px;
-width: 206px;
+height: 60px;
+width: 155px;
 padding-top: 6px;
 }
 
@@ -451,8 +457,8 @@ header.navbar .nav>li {
 }
 
 header.navbar .nav>li>a {
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:2px;
+  padding-bottom:8px;
   color:#333;
   font-family:"Fjalla One";
   font-size:14px;

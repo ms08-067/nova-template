@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 //echo "<pre>";print_r($this->product);
 ?>
 <section id="product" class="container main">    
-<div class="row gallery col-4">
+<div class="row gallery col-4 row-fluid">
 <div class="span8">
 <div itemtype="http://schema.org/Blog" itemscope="" class="blog">
 <div class="well items-leading clearfix">
@@ -63,8 +63,8 @@ endfor; ?>
 <tr class="first"><td class="key"><strong>Version:</strong></td>
 <td class="value"><span  id="creativework_version"><?php echo empty($this->product->version) ? "1.0": $this->product->version; ?></span></td></tr>
 <tr>
-<td class="key"><strong>Bootstrap:</strong></td>
-<td class="value">Compatible with 3.2.x</td>
+<td class="key"><strong>Short des:</strong></td>
+<td class="value"><?php echo $this->product->short_des; ?></td>
 </tr>
 <tr>
 <td class="key"><strong>Categories:</strong></td>

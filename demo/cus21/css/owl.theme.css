@@ -75,5 +75,5 @@
 /* preloading images */
 .owl-item.loading{
 	min-height: 150px;
-	background: url(AjaxLoader.gif) no-repeat center center
+	background: url(AjaxLoader.gif)/*tpa=http://templateocean.com/wrapbootstrap/zerif-html/v1.1/css/AjaxLoader.gif*/ no-repeat center center
 }
