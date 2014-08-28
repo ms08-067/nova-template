@@ -10,9 +10,8 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </div>
 </section>
-
 <section id="portfolio" class="container main">    
-			<div class="row gallery col-4">
+<div id="plist" class="row gallery col-4">
 <?php $i=0; foreach ($this->products as $rows => $row) : $i++;?>
 <?php if(!empty($row->img_thumb)):?>
 <div class="span4">
@@ -39,6 +38,8 @@ defined('_JEXEC') or die('Restricted access');
 </div>
 <?php endif;?>
 <!--/Item 1--> 
-<?php endforeach;?>                     
+<?php endforeach;?> 
+
 </div>
+<div class="divshowmore"><a id="showmore" rel="3" class="more-jobs-link span4" href="javascript::void(0);">Show More</a></div>
 </section>

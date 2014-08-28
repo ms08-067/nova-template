@@ -118,7 +118,6 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     </div>
 </footer>
 <!--/Footer-->
-
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -135,10 +134,9 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <script src="<?php echo $temp_path; ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-typeahead.js"></script>
-	<script>
-		$(document).ready(function(){
-			//alert($(window).height());
-		});
-	</script>
+	<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>-->
+	
+	<script src="<?php echo $temp_path; ?>/js/jv.js"></script>
   </body>
 </html>

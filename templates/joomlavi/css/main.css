@@ -1290,3 +1290,22 @@ ul.faq li>div h3 {
   margin-top:150px;
   margin-bottom:150px;
 }
+a.more-jobs-link:visited, a.more-jobs-link {
+    background: none repeat scroll 0 0 #f9f9f9;
+    border: 1px solid #e9eae9;
+    border-radius: 5px;
+    color: #2e292a;
+    display: block;
+    line-height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    transition: border-color 0.4s ease 0s;
+    float: none;
+	
+}
+
+.divshowmore{
+	width: 100%;
+	min-height: 40px;
+}
