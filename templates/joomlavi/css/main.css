@@ -58,7 +58,9 @@ padding-top: 14px;
     background: url("//d85wutc1n854v.cloudfront.net/live/imgs/display_small.png") no-repeat scroll left center transparent;
     padding-left: 22px;
 }
-
+#product .well {
+	/*background: url("//d85wutc1n854v.cloudfront.net/live/imgs/darkgrain.png") repeat scroll 0 0 #eee;*/
+}
 
 .image{
 margin-left: auto;
