@@ -1,0 +1,75 @@
+/* ##### COUNTERS ##### */
+
+.counter-item {
+    min-height: 263px;
+}
+
+.counter-item > i {
+    color: #3996cc;
+}
+
+.counter-item > .inner-content {
+    padding-top: 10px;
+}
+
+.counter-item > .inner-content .number {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.counter-item > p {
+    color: #3996cc;
+    font-size: 35px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.counter-item.not-right-column.top-column {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 1023px) {
+    .counter-item.not-right-column.top-column {
+        padding-bottom: 0px;
+    }
+}
+
+.counter-item.not-right-column {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 767px) {
+    .counter-item.not-right-column {
+        padding-bottom: 0px;
+    }
+}
+
+.counter-item.bubble .inner-content {
+    position: relative;
+    background-color: #3996cc;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.counter-item.bubble .inner-content:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(183, 173, 164, 0);
+    border-top-color: #3996cc;
+    border-width: 20px;
+    margin-left: -20px;
+}
+
+.counter-item.bubble > p {
+    color: #fff;
+    border-bottom: 1px solid #3996cc;
+    padding-bottom: 10px;
+}
