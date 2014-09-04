@@ -16,7 +16,6 @@ JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.keepalive');
 JHtml::_('formbehavior.chosen', 'select');
 
-
 ?>
 
 <script type="text/javascript">
@@ -92,8 +91,8 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <div class="controls">
 <select name="publish" id="publish">
-	<option <?php echo isset($this->product) && $this->product == 1 ? "Selected" : ""; ?> value="1">Published</option>
-	<option <?php echo isset($this->product) && $this->product == 0 ? "Selected" : ""; ?> value="0">Unpublished</option>
+	<option <?php echo isset($this->product) && $this->product->publish == 1 ? "Selected" : ""; ?> value="1">Published</option>
+	<option <?php echo isset($this->product) && $this->product->publish == 0 ? "Selected" : ""; ?> value="0">Unpublished</option>
 </select>
 
 </div>
@@ -161,6 +160,16 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 </div>
 </div>
+
+<div class="control-group">
+<div class="control-label">
+<label class="hasTooltip" id="link_item"  aria-invalid="false">Link Items</label>
+</div>
+<div class="controls">
+<?php echo $this->form->getInput('link_item'); ?>
+</div>
+</div>
+
 </div>
 <?php echo JHtml::_('bootstrap.endTab'); ?>
 

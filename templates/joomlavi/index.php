@@ -8,40 +8,23 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 	<?php $this->setMetaData('generator','Joomlavi | Joomla templates, Joomla extensions, JV Framework'); ?>
 	<jdoc:include type="head" />    
     <!-- Le styles -->
     <link href="<?php echo $temp_path; ?>/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo $temp_path; ?>/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="<?php echo $temp_path; ?>/css/main.css" rel="stylesheet">
-    <link href="<?php echo $temp_path; ?>/css/font-awesome.min.css" rel="stylesheet">
-	
-	
+    <link href="<?php echo $temp_path; ?>/css/font-awesome.min.css" rel="stylesheet">	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="<?php echo $temp_path; ?>/js/html5shiv.js"></script>
     <![endif]-->
-
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $temp_path; ?>/images/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $temp_path; ?>/images/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $temp_path; ?>/images/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="<?php echo $temp_path; ?>/images/apple-touch-icon-57-precomposed.png">
 	<link rel="shortcut icon" href="<?php echo $temp_path; ?>/images/favicon.png">
-	
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-32806964-1']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-	
   </head>
 
   <body>
@@ -103,7 +86,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <div class="container">
         <div class="row-fluid">
             <div class="span12 cp">
-                &copy; 2014 Joomlavi. All Rights Reserved.
+                &copy; 2014 Mwebs. All Rights Reserved.
            
                 <ul class="social pull-right">
                     <li><a target="_blank" href="https://www.facebook.com/Joomlavi.net"><i class="icon-facebook"></i></a></li>
@@ -138,5 +121,15 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>-->
 	
 	<script src="<?php echo $temp_path; ?>/js/jv.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-54348730-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
   </body>
 </html>

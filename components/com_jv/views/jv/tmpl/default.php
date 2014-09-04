@@ -49,36 +49,36 @@ defined('_JEXEC') or die('Restricted access');
                     <div class="accordion-group">
                       <div class="accordion-heading">
                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                          Professional Web Design
+                          Web Design - Web Development
                       </a>
                   </div>
                   <div id="collapseOne" class="accordion-body collapse">
                     <div class="accordion-inner">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua.
+                      Develop website as requirement of customer, website custom as require, develop extension of web as modules, templates, plugin of all open source PHP
                   </div>
               </div>
           </div>
           <div class="accordion-group">
               <div class="accordion-heading">
                 <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  Premium Wordpress Themes
+                  Android Aplication Development
               </a>
           </div>
           <div id="collapseTwo" class="accordion-body collapse">
             <div class="accordion-inner">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              We can help build the application on Android Plaforms use native api or develop app on Cordova-phonegap library.
           </div>
       </div>
   </div>
   <div class="accordion-group">
       <div class="accordion-heading">
         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-          PSD2XHTML Conversion
+          Templates Website
       </a>
   </div>
   <div id="collapseThree" class="accordion-body collapse">
     <div class="accordion-inner">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       We have store templates has been build with many sample beautiful, it's help customer develop website quickly and lowest cost 
   </div>
 </div>
 </div>
@@ -176,7 +176,7 @@ defined('_JEXEC') or die('Restricted access');
 						We offer website templates has been built with many sample beautiful,  
 						optimally  when view on  computer, tablet, mobile. 
 						Those templates are built correct standard of web modern, make it convenient for users as well as admin. 
-						Help to them to build a website in a short time, but the lowest cost
+						Help to your company build the website in a short time, but the lowest cost
 						</p>
                     </div>
                 </div>

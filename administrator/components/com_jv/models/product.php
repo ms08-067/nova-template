@@ -10,7 +10,7 @@ class JvModelProduct extends JModelAdmin
 	var $_pagination = null;
 	var $_limit = null;
 	var $_limitstart = null;
-	
+	public $filter_state;
 	function __construct(){
 	
 		parent::__construct();
@@ -24,6 +24,7 @@ class JvModelProduct extends JModelAdmin
 		$this->_limitstart = $mainframe->getUserStateFromRequest( $context.$view.'limitstart', 'limitstart', 0 );
 		$this->setState('limit', $this->_limit);
 		$this->setState('limitstart', $this->_limitstart);
+		$filter_state = $this->filter_state;
 		
 	}
 	
@@ -51,10 +52,11 @@ class JvModelProduct extends JModelAdmin
 		return true;
 	}
 	*/
-	function getData(){
+	function getData($publish = 0){
 		
 		if (empty($this->_data)){
-			$query = $this->_buildQuery();
+			$query = $this->_buildQuery($publish);
+			//return $query."<hr/>".$this->_limitstart;
 			$this->_db->setQuery( $query, $this->_limitstart, $this->_limit );
 			$this->_data = $this->_db->loadObjectList();
 		}
@@ -64,7 +66,7 @@ class JvModelProduct extends JModelAdmin
 	
 	function getTotal(){
 		if (empty($this->_total)){
-			$query = $this->_buildQuery();
+			$query = $this->_buildQuery($publish = 0);
 			$this->_total = $this->_getListCount($query);
 		}
 		return $this->_total;
@@ -78,26 +80,22 @@ class JvModelProduct extends JModelAdmin
 		}
 		return $this->_pagination;
 	}
-	function _buildQuery(){
+	function _buildQuery($publish = 0){
 		
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
 		$orderby 			= $this->_buildContentOrderBy();
-		$search 			= $mainframe->getUserStateFromRequest( $context.$view.'search','search','','string');
-		$filter_state 		= $mainframe->getUserStateFromRequest( $context.$view.'published','published',-1,'int');
-		$filter_user 		= $mainframe->getUserStateFromRequest( $context.$view.'created_id','created_id',-1,'int');
-		
-		$search 			= JString::strtolower( $search );
+		/*$filter_state 		= $mainframe->getUserStateFromRequest( $context.$view.'published','published',-1,'int');
 		$where = array();
 		
 		if ( $filter_state != -1 ){
 			$where[] = 'p.publish = '.$filter_state;
 		}
-		
-		
 		$where 		= ( count( $where ) ? ' WHERE ' . implode( ' AND ', $where ) : '' );
-		
+		*/
+		//var_dump($publish);
+		if($publish) $where = " WHERE p.publish = 1 ";
 		$query = ' SELECT p.*,c.name AS categories FROM #__jv_product as p LEFT JOIN #__jv_product_categories AS c ON p.id_categories_product = c.id'
 		. $where
 		. $orderby;

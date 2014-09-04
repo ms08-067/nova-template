@@ -939,6 +939,7 @@ width: 1104px !important;
   .btn {
 	padding: 4px;
   }
+ 
   /*.gallery .preview .links > a {
 	height: 38px !important;
 	line-height: 40px !important;
@@ -999,6 +1000,15 @@ width: 1104px !important;
   body {
     padding-top: 0;
   }
+   #seller_items li {
+	margin-right: 12px !important;
+	margin-bottom: 12px;
+	width: 42% !important;
+  }
+  .row-fluid ul {
+	margin-left: 0px !important;
+  }
+  
   .title {
 	  margin-top: -19px;
 	}

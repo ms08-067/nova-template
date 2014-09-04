@@ -6,7 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 <section id="product" class="container main">    
 <div class="row gallery col-4 row-fluid">
 <div class="span8">
-<div itemtype="http://schema.org/Blog" itemscope="" class="blog">
+<div class="blog">
 <div class="well items-leading clearfix">
 <!------------------------------------------------------------------------------------------------------------->
 <div class="inner">
@@ -16,7 +16,7 @@ defined('_JEXEC') or die('Restricted access');
 <img id="thing_image" width="100%" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
 </a>
 <div class="wrap_link_demo">
-	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_('http://joomlavi.net/demo/cus'.$this->product->id); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
+	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_('http://www.mwebs.vn/demo/cus'.$this->product->id); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
 	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" title="Purchase now using PayPal" href="#" class="btn">Purchase now »</a>
 </div>
 </div>
@@ -81,8 +81,8 @@ endfor; ?>
 <div class="info_wrapper">
 </div><br/>
 <p class="item_cs_header"><strong>Other Product</strong></p>
-<div class="item_cs"><a title="Clean Concept - Colorize Theme" href="javascript:void(0)">
-<img width="252" height="158" src="//d85wutc1n854v.cloudfront.net/live/products/icons/WB0R48JC2.jpg?v=1.0.1"></a></div>
+<div class="item_cs"><a title="<?php echo JvHelper::getProductBeside($this->product->id_categories_product,$this->product->id)->name_project; ?>" href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.JvHelper::getProductBeside($this->product->id_categories_product,$this->product->id)->id); ?>">
+<img width="300" src="<?php echo JvHelper::getProductBeside($this->product->id_categories_product,$this->product->id)->img_thumb; ?>"></a></div>
 </div>
 
 </aside>			
@@ -98,7 +98,7 @@ endfor; ?>
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="shipping" value="0">
 <input type="hidden" name="tax" value="0">
-<input type="hidden" name="notify_url" value="<?php echo JRoute::_('http://joomlavi.net/index.php?option=com_jv&view=product&Itemid=108&layout=notice&id='.$this->product->id); ?>">
+<input type="hidden" name="notify_url" value="<?php echo JRoute::_('http://www.mwebs.vn/index.php?option=com_jv&view=product&Itemid=108&layout=notice&id='.$this->product->id); ?>">
 <input type="hidden" name="cmd" value="_xclick">
 <input type="hidden" name="business" value="R738Z27BNXEYJ">
 <input type="hidden" name="bn" value="JavaScriptButton_buynow">
