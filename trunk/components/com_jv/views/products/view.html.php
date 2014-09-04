@@ -17,8 +17,7 @@ class JvViewProducts extends JViewLegacy
 		$products = new JvModelProduct();
 		$products->_limit = 6;
 		$products->_limitstart = 0;
-		
-		$this->assignRef('products', $products->getData());
+		$this->assignRef('products', $products->getData($publish = 1));
 		
 		parent::display($tpl);
 	}

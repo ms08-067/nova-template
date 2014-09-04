@@ -19,6 +19,7 @@ function getMoreProduct()
 		$products->_limit = 3;
 		$products->_limitstart = ($limitstart - 1)*3;
 		$listProduct = $products->getData();
+		//echo $listProduct;exit;
 		if(count($listProduct)){
 			$i=0;$arr = array(); 
 			foreach ($listProduct as $rows => $row) : 
@@ -33,7 +34,7 @@ function getMoreProduct()
 								<a href="'.JRoute::_("index.php?option=com_jv&view=product&Itemid=108&id=".$row->id).'">
 								View Detail
 								</a>
-								<a href="'.JRoute::_("http://joomlavi.net/demo/cus".$row->id).'" target="_blank">
+								<a href="'.JRoute::_("http://www.mwebs.vn/demo/cus".$row->id).'" target="_blank">
 								Live Preview
 								</a>                                
 							</div>

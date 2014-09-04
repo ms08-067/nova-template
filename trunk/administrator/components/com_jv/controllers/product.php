@@ -43,6 +43,7 @@ class JvControllerProduct extends JControllerForm
 			$post['img_thumb_alt'] = $post['jform']['img_thumb_alt'];
 			$post['img'] = $post['jform']['img'];
 			$post['img_alt'] = $post['jform']['img_alt'];
+			$post['link_item'] = $post['jform']['link_item'];
 			
 			if($post["id"]){
 				$db = JFactory::getDbo();
@@ -53,6 +54,8 @@ class JvControllerProduct extends JControllerForm
 				$obj->img_thumb_alt = $post["img_thumb_alt"];
 				$obj->img = $post["img"];
 				$obj->img_alt = $post["img_alt"];
+				$obj->link_item = $post["link_item"];
+				
 				$obj->short_des = $post["short_des"];
 				$obj->des = $post["des"];
 				$obj->notice = $post["notice"];

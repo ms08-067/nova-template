@@ -21,6 +21,7 @@ class JvTableProduct extends JTable
 	var $img_thumb_alt ;
 	var $img ;
 	var $img_alt ;
+	var $link_item ;
 	var $name_project ;
 	var $short_des ;
 	var $des ;

@@ -74,6 +74,20 @@
 		<field name="img_alt"
 			type="text"
 			label="COM_JV_IMAGES_ALT"
-			description="COM_CONTENT_FIELD_IMAGE_ALT_DESC"
+			description="COM_JV_IMAGES_ALT_DESC"
 			size="20"/>
+			
+		<!--<field name="folder_item"
+			type="text"
+			label="COM_JV_FOLDER_ITEM"
+			description="COM_JV_FOLDER_ITEM_DESC"
+			size="20"/>-->
+			
+		<field name="link_item"
+			type="text"
+			class="input-xxlarge"
+			label="COM_JV_LINK_ITEM"
+			description="COM_JV_LINK_ITEM_DESC"
+			size="40"/>
+			
 </form>

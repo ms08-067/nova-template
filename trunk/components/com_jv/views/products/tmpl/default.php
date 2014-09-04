@@ -23,7 +23,7 @@ defined('_JEXEC') or die('Restricted access');
 			<a href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$row->id); ?>">
 			View Detail
 			</a>
-			<a href="<?php echo JRoute::_('http://joomlavi.net/demo/cus'.$row->id); ?>" target="_blank">
+			<a href="<?php echo JRoute::_('http://www.mwebs.vn/demo/cus'.$row->id); ?>" target="_blank">
 			Live Preview
 			</a>                                
 		</div>
@@ -41,5 +41,5 @@ defined('_JEXEC') or die('Restricted access');
 <?php endforeach;?> 
 
 </div>
-<div class="divshowmore"><a id="showmore" rel="3" class="more-jobs-link span4" href="javascript:void(0);">Show More</a></div>
+<div class="divshowmore"><a id="showmore" rel="5" class="more-jobs-link span4" href="javascript:void(0);">Show More</a></div>
 </section>

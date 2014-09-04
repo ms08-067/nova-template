@@ -34,6 +34,7 @@ class JvViewProduct extends JViewLegacy
 				$this->form->setValue("img_thumb_alt", "" , $product->img_thumb_alt);
 				$this->form->setValue("img_alt", "" , $product->img_alt);
 				$this->form->setValue("img", "" , $product->img);
+				$this->form->setValue("link_item", "" , $product->link_item);
 				
 				$this->assignRef('product', $product);
 				
