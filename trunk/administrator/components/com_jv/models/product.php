@@ -11,6 +11,7 @@ class JvModelProduct extends JModelAdmin
 	var $_limit = null;
 	var $_limitstart = null;
 	public $filter_state;
+	
 	function __construct(){
 	
 		parent::__construct();
@@ -23,6 +24,7 @@ class JvModelProduct extends JModelAdmin
 		$this->_limit = $mainframe->getUserStateFromRequest( $context.$view.'limit', 'limit', $mainframe->getCfg('list_limit'), 0);
 		$this->_limitstart = $mainframe->getUserStateFromRequest( $context.$view.'limitstart', 'limitstart', 0 );
 		$this->setState('limit', $this->_limit);
+		//var_dump($this->_limit);
 		$this->setState('limitstart', $this->_limitstart);
 		$filter_state = $this->filter_state;
 		
@@ -30,7 +32,6 @@ class JvModelProduct extends JModelAdmin
 	
 	public function getForm($data = array(), $loadData = true)
 	{
-		// Get the form.
 		$form = $this->loadForm('com_jv.product', 'product', array('control' => 'jform', 'load_data' => $loadData));
 		if (empty($form))
 		{
@@ -38,63 +39,41 @@ class JvModelProduct extends JModelAdmin
 		}
 		return $form;
 	}
-	/*
-	public function delete($cid = array()){
-		
-		if(count($cid)){
-		
-			for($i = 0; $i< count($cid); $i++ ) {
-				$query = 'DELETE FROM #__jv_product WHERE id = '.$cid[$i];
-				$this->_db->setQuery( $query );
-				$this->_db->query();
-			}
-		}
-		return true;
-	}
-	*/
-	function getData($publish = 0){
-		
-		if (empty($this->_data)){
-			$query = $this->_buildQuery($publish);
-			//return $query."<hr/>".$this->_limitstart;
-			$this->_db->setQuery( $query, $this->_limitstart, $this->_limit );
-			$this->_data = $this->_db->loadObjectList();
-		}
-		
-		return $this->_data;
-	}
 	
-	function getTotal(){
+	public function getTotal($publish = 0){
+		
 		if (empty($this->_total)){
-			$query = $this->_buildQuery($publish = 0);
+			$query = $this->_buildQuery($publish);
 			$this->_total = $this->_getListCount($query);
 		}
 		return $this->_total;
 	}
 	
-	function getPagination(){
+	public function getPagination($publish = 0){
+	
 		if (empty($this->_pagination))
 		{
 			jimport('joomla.html.pagination');
-			$this->_pagination = new JPagination( $this->getTotal(), $this->_limitstart, $this->_limit );
+			$this->_pagination = new JPagination( $this->getTotal($publish), $this->_limitstart, $this->_limit );
 		}
 		return $this->_pagination;
 	}
+	
+	function getData($publish = 0){
+		if (empty($this->_data)){
+			$query = $this->_buildQuery($publish);
+			$this->_db->setQuery( $query, $this->_limitstart, $this->_limit );
+			$this->_data = $this->_db->loadObjectList();
+		}
+		return $this->_data;
+	}
+	
 	function _buildQuery($publish = 0){
-		
+	
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
 		$orderby 			= $this->_buildContentOrderBy();
-		/*$filter_state 		= $mainframe->getUserStateFromRequest( $context.$view.'published','published',-1,'int');
-		$where = array();
-		
-		if ( $filter_state != -1 ){
-			$where[] = 'p.publish = '.$filter_state;
-		}
-		$where 		= ( count( $where ) ? ' WHERE ' . implode( ' AND ', $where ) : '' );
-		*/
-		//var_dump($publish);
 		if($publish) $where = " WHERE p.publish = 1 ";
 		$query = ' SELECT p.*,c.name AS categories FROM #__jv_product as p LEFT JOIN #__jv_product_categories AS c ON p.id_categories_product = c.id'
 		. $where
@@ -104,18 +83,14 @@ class JvModelProduct extends JModelAdmin
 	}
 	
 	function _buildContentOrderBy(){
-		
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
-		//$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id' );
-		//$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', '' );
 		$orderby 	= ' ORDER BY id DESC';
 		return $orderby;
 	}
-    
+	
 	function delete($cid = array()){
-		
 		if (count( $cid )){
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
@@ -129,7 +104,7 @@ class JvModelProduct extends JModelAdmin
 		}
 		return true;
 	}
- 
+	
 	function publish($cid = array(), $publish = 1){
 		$user 	=& JFactory::getUser();
 		if (count( $cid ))
@@ -148,8 +123,7 @@ class JvModelProduct extends JModelAdmin
 		}
 		return true;
 	}
-    
-     //save to table $nametable
+	
     function store($post,$tablename){
         
     	$product = JTable::getInstance($tablename, 'JvTable');
@@ -162,7 +136,7 @@ class JvModelProduct extends JModelAdmin
 			return 0;
 		}
   	}
-  	
+	
   	function getItem($id){
 	
   		$query = 'SELECT * FROM #__jv_product WHERE id = '.$id;
@@ -170,14 +144,5 @@ class JvModelProduct extends JModelAdmin
 		return $this->_db->loadObject();
   	
 	}
-	
-  	function getPaging( $total, $limitstart, $limit )
-   	{
-      	// Lets load the content if it doesn't already exist
-      	jimport('joomla.html.pagination');
-        $this->_pagination = new JPagination( $total, $limitstart, $limit );
-         
-      	return $this->_pagination;
-    }
     
 }

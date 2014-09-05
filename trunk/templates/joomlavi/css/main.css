@@ -92,7 +92,11 @@ section.services {
 #bottom .container {
 	background: none repeat scroll 0 0 #232323;
 }
-.row-fluid ul { padding-left: 10px !important;}
+#bottom .row-fluid ul { 
+
+	padding-left: 10px !important;
+	
+}
 .input-block-level {
   display:block;
   width:100%;
@@ -1312,8 +1316,14 @@ a.more-jobs-link:visited, a.more-jobs-link {
     float: none;
 	
 }
-
+.divshowmore .pagination {
+  text-align: center;
+}
 .divshowmore{
+
 	width: 100%;
 	min-height: 40px;
+	margin-top: 15px;
+    margin-bottom: 20px;
+	
 }

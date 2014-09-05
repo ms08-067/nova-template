@@ -5,268 +5,91 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 <url>
-  <loc>http://joomlavi.net/</loc>
-  <lastmod>2014-06-26T07:34:50+00:00</lastmod>
+  <loc>http://mwebs.vn/</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/about.html</loc>
-  <lastmod>2014-06-26T07:34:51+00:00</lastmod>
+  <loc>http://mwebs.vn/news.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android.html</loc>
-  <lastmod>2014-06-26T07:34:51+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/cordova.html</loc>
-  <lastmod>2014-06-26T07:34:52+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/phonegap.html</loc>
-  <lastmod>2014-06-26T07:34:52+00:00</lastmod>
+  <loc>http://mwebs.vn/sencha.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/sencha.html</loc>
-  <lastmod>2014-06-26T07:34:53+00:00</lastmod>
+  <loc>http://mwebs.vn/products.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/php-development.html</loc>
-  <lastmod>2014-06-26T07:34:53+00:00</lastmod>
+  <loc>http://mwebs.vn/intro.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/web-templates.html</loc>
-  <lastmod>2014-06-26T07:34:54+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/4-creating-a-phonegap-application-for-android-platform.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/phonegap/4-creating-a-phonegap-application-for-android-platform.html</loc>
-  <lastmod>2014-06-26T07:34:54+00:00</lastmod>
+  <loc>http://mwebs.vn/news/9-android.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android/17-how-to-create-a-custom-navigation-drawer-in-android.html</loc>
-  <lastmod>2014-06-26T07:34:56+00:00</lastmod>
+  <loc>http://mwebs.vn/blog-item.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/sencha/5-setup-environment-work-of-sencha-touch.html</loc>
-  <lastmod>2014-06-26T07:34:58+00:00</lastmod>
+  <loc>http://mwebs.vn/sencha/5-setup-environment-work-of-sencha-touch.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android/16-java-article-2.html</loc>
-  <lastmod>2014-06-26T07:34:59+00:00</lastmod>
+  <loc>http://mwebs.vn/news/12-sencha.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/13-php-development/6-php-article-1.html</loc>
-  <lastmod>2014-06-26T07:35:00+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/2-the-import-android-support-cannot-be-resolved.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/cordova/3-cordova-article-1.html</loc>
-  <lastmod>2014-06-26T07:35:00+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/3-error-initializing-cordova-class-not-found.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android/2-android-article-one.html</loc>
-  <lastmod>2014-06-26T07:35:00+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/17-how-to-create-a-custom-navigation-drawer-in-android.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=3</loc>
-  <lastmod>2014-06-26T07:35:01+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/16-java-article-2.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=6</loc>
-  <lastmod>2014-06-26T07:35:03+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/6-setup-maven-on-window.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=9</loc>
-  <lastmod>2014-06-26T07:35:04+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/12-java-article-6.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=12</loc>
-  <lastmod>2014-06-26T07:35:05+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/18-java-article-1.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=15</loc>
-  <lastmod>2014-06-26T07:35:06+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/19-java-article-2.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=18</loc>
-  <lastmod>2014-06-26T07:35:07+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/20-java-article-3.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/?start=21</loc>
-  <lastmod>2014-06-26T07:35:08+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/21-java-article-4.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android/12-java-article-6.html</loc>
-  <lastmod>2014-06-26T07:35:09+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/22-java-article-5.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android/13-java-article-5.html</loc>
-  <lastmod>2014-06-26T07:35:09+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/13-java-article-5.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android/14-java-article-4.html</loc>
-  <lastmod>2014-06-26T07:35:10+00:00</lastmod>
+  <loc>http://mwebs.vn/apps/</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android.html?start=2</loc>
-  <lastmod>2014-06-26T07:35:11+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/15-java-article-3.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android.html?start=4</loc>
-  <lastmod>2014-06-26T07:35:11+00:00</lastmod>
+  <loc>http://mwebs.vn/news/10-cordova-phonegap.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/android.html?start=6</loc>
-  <lastmod>2014-06-26T07:35:11+00:00</lastmod>
+  <loc>http://mwebs.vn/android-tutorial/14-java-article-4.html</loc>
 </url>
 <url>
-  <loc>http://joomlavi.net/cordova/18-java-article-1.html</loc>
-  <lastmod>2014-06-26T07:35:12+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova/19-java-article-2.html</loc>
-  <lastmod>2014-06-26T07:35:13+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova/20-java-article-3.html</loc>
-  <lastmod>2014-06-26T07:35:13+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova/21-java-article-4.html</loc>
-  <lastmod>2014-06-26T07:35:13+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova/22-java-article-5.html</loc>
-  <lastmod>2014-06-26T07:35:14+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova.html?start=2</loc>
-  <lastmod>2014-06-26T07:35:14+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova.html?start=4</loc>
-  <lastmod>2014-06-26T07:35:15+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova.html?start=6</loc>
-  <lastmod>2014-06-26T07:35:22+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/component/mailto/?tmpl=component&amp;template=joomlavi&amp;link=f5fcab8f2b1139400002bfa24a14727f1c8602c5</loc>
-  <lastmod>2014-06-26T07:35:28+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/v2/</loc>
-  <lastmod>2014-06-02T10:50:02+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/android/15-java-article-3.html</loc>
-  <lastmod>2014-06-26T07:35:37+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/13-php-development.html</loc>
-  <lastmod>2014-06-26T07:35:38+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development/1-java-article-1.html</loc>
-  <lastmod>2014-06-26T07:35:40+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development/7-java-article-2.html</loc>
-  <lastmod>2014-06-26T07:35:40+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development/8-java-article-3.html</loc>
-  <lastmod>2014-06-26T07:35:41+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/?limitstart=0</loc>
-  <lastmod>2014-06-26T07:35:41+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development/9-java-article-4.html</loc>
-  <lastmod>2014-06-26T07:35:43+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development/10-java-article-5.html</loc>
-  <lastmod>2014-06-26T07:35:43+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development/11-java-article-6.html</loc>
-  <lastmod>2014-06-26T07:35:44+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova/23-java-article-6.html</loc>
-  <lastmod>2014-06-26T07:35:44+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/android.html?limitstart=0</loc>
-  <lastmod>2014-06-26T07:35:45+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/cordova.html?limitstart=0</loc>
-  <lastmod>2014-06-26T07:35:45+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/thi-cong-cong-trinh.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/home-2/3-to-chuc-su-kien.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/gioi-thieu.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/joomlaorg.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/lien-he.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/thiet-ke-den-led.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/in-an.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/?start=4</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/home-2.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/gioi-thieu-cong-ty.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/san-pham.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/home-6.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/home-7.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development.html</loc>
-  <lastmod>2014-06-26T07:35:52+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/gioi-thieu/82-gioi-thieu-ve-chung-toi/72-gioi-thieu-cong-ty.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/?limitstart=0</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/demo/niemtinmoi/gioi-thieu-cong-ty/82-gioi-thieu-ve-chung-toi/72-gioi-thieu-cong-ty.html</loc>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development.html?start=3</loc>
-  <lastmod>2014-06-26T07:35:55+00:00</lastmod>
-</url>
-<url>
-  <loc>http://joomlavi.net/8-java-development.html?limitstart=0</loc>
-  <lastmod>2014-06-26T07:35:55+00:00</lastmod>
+  <loc>http://mwebs.vn/cordova-phonegap/23-java-article-6.html</loc>
 </url>
 </urlset>

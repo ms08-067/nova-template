@@ -41,5 +41,13 @@ defined('_JEXEC') or die('Restricted access');
 <?php endforeach;?> 
 
 </div>
-<div class="divshowmore"><a id="showmore" rel="5" class="more-jobs-link span4" href="javascript:void(0);">Show More</a></div>
+<div class="divshowmore">
+<!--<a id="showmore" rel="5" class="more-jobs-link span4" href="javascript:void(0);">Show More</a> -->
+<?php 
+//echo "<pre>";print_r($this->pagination);
+echo $this->pagination->getListFooter(); 
+?>	
+
+
+</div>
 </section>

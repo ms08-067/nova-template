@@ -1,4 +1,5 @@
 //Pagination Ajax
+/*
 $("#showmore").click(function(){ 
 var rel = $("#showmore").attr("rel");
 $.ajax({
@@ -21,3 +22,4 @@ $.ajax({
 });  
 
 });
+*/
