@@ -15,11 +15,17 @@ class JvViewProducts extends JViewLegacy
 	{
 		
 		$products = new JvModelProduct();
-		$products->_limit = 6;
-		$products->_limitstart = 0;
-		$this->assignRef('products', $products->getData($publish = 1));
+		$products->_limit = 5;
+		$products->_limitstart = JRequest::getInt("limitstart");		
+		
+		//$limitstart = JRequest::getInt("limitstart");
+		//var_dump($limitstart);
+		
+		$this->assignRef('products',   $products->getData($publish = 1));
+		$this->assignRef('pagination', $products->getPagination($publish = 1));
 		
 		parent::display($tpl);
+		
 	}
 	
 }

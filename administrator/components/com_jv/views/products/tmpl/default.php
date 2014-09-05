@@ -51,18 +51,18 @@ JHtml::_('formbehavior.chosen', 'select');
 <div class="js-stools-container-list hidden-phone hidden-tablet shown" style="">
 
 <div class="ordering-select hidden-phone">
-				
+Total: <?php echo $this->pagination->total; ?>				
 <div class="js-stools-field-list">
-<select onchange="this.form.submit();" class="input-mini chzn-done" name="list[limit]" id="list_limit" style="display: none;">
-	<option selected="selected" value="5">5</option>
-	<option value="10">10</option>
-	<option value="15">15</option>
-	<option value="20">20</option>
-	<option value="25">25</option>
-	<option value="30">30</option>
-	<option value="50">50</option>
-	<option value="100">100</option>
-	<option value="0">All</option>
+<select onchange="submitform(this.value);" class="input-mini chzn-done" name="limit" id="limit">
+	<option <?php echo ($this->limit == 5) ? "selected" : "" ; ?> value="5">5</option>
+	<option <?php echo ($this->limit == 10) ? "selected" : "" ; ?> value="10">10</option>
+	<option <?php echo ($this->limit == 15) ? "selected" : "" ; ?> value="15">15</option>
+	<option <?php echo ($this->limit == 20) ? "selected" : "" ; ?> value="20">20</option>
+	<option <?php echo ($this->limit == 25) ? "selected" : "" ; ?> value="25">25</option>
+	<option <?php echo ($this->limit == 30) ? "selected" : "" ; ?> value="30">30</option>
+	<option <?php echo ($this->limit == 50) ? "selected" : "" ; ?> value="50">50</option>
+	<option <?php echo ($this->limit == 100) ? "selected" : "" ; ?> value="100">100</option>
+	<option <?php echo ($this->limit == 0) ? "selected" : "" ; ?> value="0">All</option>
 </select>
 			</div>
 			</div>
@@ -140,9 +140,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <thead>
 <tr>
 <th width="1%" class="nowrap center hidden-phone">
-<a title="" data-name="" data-direction="ASC" data-order="a.ordering" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Ordering&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-<i class="icon-menu-2"></i>
-</a>
+Order
 </th>
 <th width="1%" class="hidden-phone">
 <input type="checkbox" onclick="Joomla.checkAll(this)" class="hasTooltip" value="" name="checkall-toggle">
@@ -182,12 +180,10 @@ ID<i class="icon-arrow-down-3"></i>
 
 			
 <tbody>
-<?php foreach($this->products as $rows => $row) : ?>
+<?php $i=0; foreach($this->products as $rows => $row) : $i++;?>
 <tr sortable-group-id="10" class="row0">
 <td class="order nowrap center hidden-phone">
-<span title="" class="sortable-handler inactive tip-top hasTooltip" data-original-title="Please sort by order to enable reordering">
-<i class="icon-menu"></i>
-</span>
+<?php echo $i;?>
 </td>
 
 <td class="center hidden-phone">
@@ -210,80 +206,22 @@ ID<i class="icon-arrow-down-3"></i>
 			
 </tbody>
 </table>
+<?php 
+//echo "<pre>";print_r($this->pagination);
+echo $this->pagination->getListFooter(); ?>
+<input type="hidden" value="" name="task">
+<input type="hidden" name="boxchecked" value="0" />
+<input type="hidden" value="" name="task">
+<input type="hidden" value="" name="layout">
+<input type="hidden" value="products" name="controller">
 
-<div class="pagination pagination-toolbar">
-<ul class="pagination-list"><li class="disabled"><a><i class="icon-first"></i></a></li><li class="disabled"><a><i class="icon-previous"></i></a></li><li class="active hidden-phone"><a>1</a></li><li class="hidden-phone"><a onclick="document.adminForm.limitstart.value=5; Joomla.submitform();return false;" href="#">2</a></li><li class="hidden-phone"><a onclick="document.adminForm.limitstart.value=10; Joomla.submitform();return false;" href="#">3</a></li><li class="hidden-phone"><a onclick="document.adminForm.limitstart.value=15; Joomla.submitform();return false;" href="#">4</a></li><li class="hidden-phone"><a onclick="document.adminForm.limitstart.value=20; Joomla.submitform();return false;" href="#">...</a></li><li><a onclick="document.adminForm.limitstart.value=5; Joomla.submitform();return false;" href="#" title="" class="hasTooltip" data-original-title="Next"><i class="icon-next"></i></a></li><li><a onclick="document.adminForm.limitstart.value=20; Joomla.submitform();return false;" href="#" title="" class="hasTooltip" data-original-title="End"><i class="icon-last"></i></a></li></ul>
-<input type="hidden" value="0" name="limitstart">
-</div>
-
-<div id="collapseModal" class="modal hide fade">
-	<div class="modal-header">
-		<button data-dismiss="modal" class="close" type="button">×</button>
-		<h3>Batch process the selected articles</h3>
-	</div>
-	<div class="modal-body modal-batch">
-		<p>If a category is selected for move/copy, any actions selected will be applied to the copied or moved articles. Otherwise, all actions are applied to the selected articles.</p>
-		<div class="row-fluid">
-			<div class="control-group span6">
-				<div class="controls">
-					<label title="" class="modalTooltip" for="batch-tag-id" id="batch-tag-lbl" data-original-title="&lt;strong&gt;Add Tag&lt;/strong&gt;&lt;br /&gt;Add a tag to selected items.">Add Tag</label><select id="batch-tag-id" class="inputbox chzn-done" name="batch[tag]" style="display: none;"><option value="">- Keep original Tags -</option></select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_tag_id_chzn"><a tabindex="-1" class="chzn-single"><span>- Keep original Tags -</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>				</div>
-			</div>
-			<div class="control-group span6">
-				<div class="controls">
-					<label title="" class="modalTooltip" for="batch-language-id" id="batch-language-lbl" data-original-title="&lt;strong&gt;Set Language&lt;/strong&gt;&lt;br /&gt;Not making a selection will keep the original language when processing.">Set Language</label><select id="batch-language-id" class="inputbox chzn-done" name="batch[language_id]" style="display: none;"><option value="">- Keep original Language -</option><option value="*">All</option>
-<option value="en-GB">English (UK)</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_language_id_chzn"><a tabindex="-1" class="chzn-single"><span>- Keep original Language -</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>				</div>
-			</div>
-		</div>
-		<div class="row-fluid">
-			<div class="control-group span6">
-				<div class="controls">
-					<label title="" class="modalTooltip" for="batch-access" id="batch-access-lbl" data-original-title="&lt;strong&gt;Set Access Level&lt;/strong&gt;&lt;br /&gt;Not making a selection will keep the original access levels when processing.">Set Access Level</label><select class="inputbox chzn-done" name="batch[assetgroup_id]" id="batch-access" style="display: none;">
-	<option value="">- Keep original Access Levels</option>
-	<option value="1">Public</option>
-	<option value="5">Guest</option>
-	<option value="6">Super Users</option>
-	<option value="2">Registered</option>
-	<option value="3">Special</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_access_chzn"><a tabindex="-1" class="chzn-single"><span>- Keep original Access Levels</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div>
-				</div>
-			</div>
-
-<div class="control-group span6">
-<div class="controls">
-<label for="batch-choose-action" id="batch-choose-action-lbl">Select Category for Move/Copy</label><div class="control-group" id="batch-choose-action"><select id="batch-category-id" class="inputbox chzn-done" name="batch[category_id]" style="display: none;"><option value="">Select</option><option value="2">Uncategorised</option>
-<option value="14">Document-Blog</option>
-<option value="8">- Java Development</option>
-<option value="9">- Android </option>
-<option value="10">- Cordova/Phonegap</option>
-<option value="11">- Phonegap</option>
-<option value="12">- Sencha</option>
-<option value="13">- PHP Development</option>
-</select><div class="chzn-container chzn-container-single chzn-container-single-nosearch" style="width: 220px;" title="" id="batch_category_id_chzn"><a tabindex="-1" class="chzn-single"><span>Select</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chzn-results"></ul></div></div></div><div class="control-group radio" id="batch-move-copy"><div class="controls">
-
-<label class="radio" id="batch[move_copy]c-lbl" for="batch[move_copy]c">
-	
-<input type="radio" value="c" id="batch[move_copy]c" name="batch[move_copy]">Copy
-</label>
-	<label class="radio" id="batch[move_copy]m-lbl" for="batch[move_copy]m">
-	
-	<input type="radio" checked="checked" value="m" id="batch[move_copy]m" name="batch[move_copy]">Move
-	</label>
-</div>
-</div>					</div>
-				</div>
-					</div>
-	</div>
-	<div class="modal-footer">
-		<button data-dismiss="modal" onclick="document.id('batch-category-id').value='';document.id('batch-access').value='';document.id('batch-language-id').value='';document.id('batch-tag-id)').value=''" type="button" class="btn">
-			Cancel		</button>
-		<button onclick="Joomla.submitbutton('article.batch');" type="submit" class="btn btn-primary">
-			Process		</button>
-	</div>
-</div>
-		<input type="hidden" name="boxchecked" value="0" />
-		<input type="hidden" value="" name="task">
-		<input type="hidden" value="" name="layout">
-		<input type="hidden" value="products" name="controller">
 </div>	
 </form>
+<script>
+function submitform(v){
+	jQuery("input[name ='limitstart']").val(0);
+	jQuery("#limit").val(v);
+	Joomla.submitform();
+	return true;
+}
+</script>
