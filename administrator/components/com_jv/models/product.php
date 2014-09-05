@@ -24,7 +24,6 @@ class JvModelProduct extends JModelAdmin
 		$this->_limit = $mainframe->getUserStateFromRequest( $context.$view.'limit', 'limit', $mainframe->getCfg('list_limit'), 0);
 		$this->_limitstart = $mainframe->getUserStateFromRequest( $context.$view.'limitstart', 'limitstart', 0 );
 		$this->setState('limit', $this->_limit);
-		//var_dump($this->_limit);
 		$this->setState('limitstart', $this->_limitstart);
 		$filter_state = $this->filter_state;
 		
@@ -73,22 +72,17 @@ class JvModelProduct extends JModelAdmin
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
-		$orderby 			= $this->_buildContentOrderBy();
+		$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id');
+		$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', 'DESC' );
+		$orderby 	= ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
+		
 		if($publish) $where = " WHERE p.publish = 1 ";
 		$query = ' SELECT p.*,c.name AS categories FROM #__jv_product as p LEFT JOIN #__jv_product_categories AS c ON p.id_categories_product = c.id'
 		. $where
-		. $orderby;
+		. ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
 		
 		return $query;
-	}
-	
-	function _buildContentOrderBy(){
-		$mainframe = &JFactory::getApplication();
-		$context = JRequest::getCmd('option');
-		$view = JRequest::getCmd('view');
-		$orderby 	= ' ORDER BY id DESC';
-		return $orderby;
-	}
+	}	
 	
 	function delete($cid = array()){
 		if (count( $cid )){

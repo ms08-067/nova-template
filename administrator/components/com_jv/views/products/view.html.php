@@ -21,17 +21,22 @@ class JvViewProducts extends JViewLegacy
 
 	public function display($tpl = null)
 	{
+		
+		$mainframe = &JFactory::getApplication();
+		
+		$filter_order      = $mainframe->getUserStateFromRequest( $context.$view.'filter_order','filter_order','id' );
+		$filter_order_Dir  = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir','filter_order_Dir', '' );
+		$lists['order'] 		= $filter_order;
+		$lists['order_Dir'] 	= $filter_order_Dir;
+		
 		$products = new JvModelProduct();
 		$limit = JRequest::getInt("limit");
 		$products->_limit = ($limit <= 0) ? 10 : $limit;
-		//echo "<pre>";print_r($products->getData($publish = 0));
 		$this->assignRef('products', $products->getData($publish = 0));
 		$this->assignRef('pagination', $products->getPagination($publish = 0));
-		
 		$this->assignRef('limit', $products->_limit);
-		
+		$this->assignRef('lists', $lists);
 		$this->addToolbar();
-		
 		$this->sidebar = JHtmlSidebar::render();
 		
 		parent::display($tpl);
