@@ -1,13 +1,18 @@
 <?php
+
 /**
  * com_jv
+ * @ Hung Phan
  */
+ 
 defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
 
-//echo "<pre>";print_r($this->products);
+$listOrder	= $this->lists['order'];
+$listDirn	= $this->lists['order_Dir'];
+
 ?>
 <link rel="stylesheet" href="<?php echo JURI::root(); ?>media/jui/css/jquery.searchtools.css" type="text/css" />
 <script src="<?php echo JURI::root(); ?>media/jui/js/jquery.searchtools.min.js" type="text/javascript"></script>
@@ -145,34 +150,23 @@ Order
 <th width="1%" class="hidden-phone">
 <input type="checkbox" onclick="Joomla.checkAll(this)" class="hasTooltip" value="" name="checkall-toggle">
 </th>
-
-
-<th width="10%" class="nowrap hidden-phone">
-<a title="" data-name="Access" data-direction="ASC" data-order="a.access" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Access&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Status</a>
+<th width="4%" class="nowrap hidden-phone">
+<?php echo JHTML::_('grid.sort',  'Status', 'p.publish', $listDirn, $listOrder ); ?>
 </th>
 <th>
-<a title="" data-name="Title" data-direction="ASC" data-order="a.title" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Title&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Project Name</a>
+<?php echo JHTML::_('grid.sort',  'Project Name', 'p.name_project', $listDirn, $listOrder ); ?>
 </th>
 <th width="20%" class="nowrap hidden-phone">
-<a title="" data-name="Access" data-direction="ASC" data-order="a.access" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Access&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Categories</a>
+<?php echo JHTML::_('grid.sort',  'Categorie', 'p.id_categories_product', $listDirn, $listOrder ); ?>
 </th>
-
 <th width="10%" class="nowrap hidden-phone">
-<a title="" data-name="Author" data-direction="ASC" data-order="a.created_by" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Author&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Price</a>
+<?php echo JHTML::_('grid.sort',  'Price', 'p.price', $listDirn, $listOrder ); ?>
 </th>
-
 <th width="10%" class="nowrap hidden-phone">
-<a title="" data-name="Date" data-direction="ASC" data-order="a.created" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;Date&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-Date</a>
+<?php echo JHTML::_('grid.sort',  'Date', 'p.created_date', $listDirn, $listOrder ); ?>
 </th>
 <th width="1%" class="nowrap hidden-phone">
-<a title="" data-name="ID" data-direction="ASC" data-order="a.id" class="js-stools-column-order hasTooltip" onclick="return false;" href="#" data-original-title="&lt;strong&gt;ID&lt;/strong&gt;&lt;br /&gt;Click to sort by this column">
-ID<i class="icon-arrow-down-3"></i>
-</a>
+<?php echo JHTML::_('grid.sort',  'ID', 'p.id', $listDirn, $listOrder ); ?>
 </th>
 </tr>
 
@@ -180,9 +174,15 @@ ID<i class="icon-arrow-down-3"></i>
 
 			
 <tbody>
-<?php $i=0; foreach($this->products as $rows => $row) : $i++;?>
+<?php $i=0; foreach($this->products as $rows => $row) : $i++;
+$published 	= JHTML::_('grid.published', $row->publish, $i,"tick1.png" );
+?>
 <tr sortable-group-id="10" class="row0">
 <td class="order nowrap center hidden-phone">
+<span title="" class="sortable-handler inactive tip-top hasTooltip" data-original-title="Please sort by order to enable reordering">
+<i class="icon-menu"></i>
+</span>
+
 <?php echo $i;?>
 </td>
 
@@ -190,7 +190,7 @@ ID<i class="icon-arrow-down-3"></i>
 <input type="checkbox" onclick="Joomla.isChecked(this.checked);" value="<?php echo $row->id; ?>" name="cid[]" id="cb0">
 </td>
 
-<td class="hidden-phone"><?php echo $row->publish ? "Published":"Unpublished"; ?></td>
+<td class="hidden-phone"><?php echo $published; ?></td>
 <td class="has-context">
 <div class="pull-left">
 <a href="index.php?option=com_jv&controller=product&id=<?php echo $row->id; ?>"><?php echo $row->name_project; ?></a><br/>
@@ -206,9 +206,11 @@ ID<i class="icon-arrow-down-3"></i>
 			
 </tbody>
 </table>
-<?php 
-//echo "<pre>";print_r($this->pagination);
-echo $this->pagination->getListFooter(); ?>
+
+<?php echo $this->pagination->getListFooter(); ?>
+
+<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>" />
+<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />
 <input type="hidden" value="" name="task">
 <input type="hidden" name="boxchecked" value="0" />
 <input type="hidden" value="" name="task">
