@@ -24,7 +24,7 @@ class JvControllerProducts extends JControllerLegacy
 	{
 		
 		$view = JRequest::getVar("view");
-		
+		//echo "<pre>";print_r(JRequest::get("post"));
 		switch($view){
 			case 'categories':
 				JRequest::setVar( 'view'  , 'categories');
@@ -47,10 +47,43 @@ class JvControllerProducts extends JControllerLegacy
 	
 		$post = JRequest::get('post');
 		$modelProducts = $this->getModel("product");
-		$modelProducts->delete($post['cid']);
-		$this->setRedirect( 'index.php?option=com_jv&controller=products',"You has been deleted product id ".implode(",",$post['cid']));
+		if( count($post['cid']) &&  count($post['cid']) <= 2 ){
+			$modelProducts->delete($post['cid']);
+			$this->setRedirect( 'index.php?option=com_jv&controller=products',"You has been deleted product id ".implode(",",$post['cid']));
+		}
+		else if(count(($post['cid'])) > 2) {
+			$this->setRedirect( 'index.php?option=com_jv&controller=products',"Deny  product total delete than two. ID  ".implode(",",$post['cid']),"Warning");
+		}
+		return true;
 	}
+	public function publish() {
 	
+		$post = JRequest::get('post');
+		if(count($post["cid"])) {
+		
+			$modelProducts = $this->getModel("product");
+			$modelProducts->publish($post['cid']);
+			$this->setRedirect( 'index.php?option=com_jv&controller=products',"Updated successful for ID ".implode(",",$post['cid']));
+		}
+		else {
+		
+			$this->setRedirect( 'index.php?option=com_jv&controller=products',"Please chose item");
+		}
+	}
+	public function unpublish() {
+	
+		$post = JRequest::get('post');
+		if(count($post["cid"])) {
+		
+			$modelProducts = $this->getModel("product");
+			$modelProducts->publish($post['cid'],$publish = 0);
+			$this->setRedirect( 'index.php?option=com_jv&controller=products',"Updated successful for ID ".implode(",",$post['cid']));
+		}
+		else {
+		
+			$this->setRedirect( 'index.php?option=com_jv&controller=products',"Please chose item");
+		}
+	}
 	public function  add() {
 	
 		$this->setRedirect( 'index.php?option=com_jv&controller=product');

@@ -4,19 +4,49 @@
  * com_jv
  * @ Hung Phan
  */
- 
 defined('_JEXEC') or die;
-JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
-
+JHTML::_('behavior.formvalidation');
+JHTML::_('behavior.tooltip');
 $listOrder	= $this->lists['order'];
 $listDirn	= $this->lists['order_Dir'];
-
+jimport( 'joomla.html.html.grid' );
 ?>
 <link rel="stylesheet" href="<?php echo JURI::root(); ?>media/jui/css/jquery.searchtools.css" type="text/css" />
 <script src="<?php echo JURI::root(); ?>media/jui/js/jquery.searchtools.min.js" type="text/javascript"></script>
 
+
+
+<script type="text/javascript">
+Joomla.submitbutton = function(task)
+{
+	if(task == "delete" && (document.adminForm.boxchecked.value > 2)) {
+		alert("Deny deleted total product than two");return false;
+	}
+	else if(document.formvalidator.isValid(document.id('adminForm'))){
+		jQuery("#task").val(task);
+		Joomla.submitform(task, document.getElementById('adminForm'));
+	}
+}
+
+function listItemTask(id, task){
+
+	var d=document.adminForm,c,e,a=d[id];
+	a.checked=true;
+	d.boxchecked.value=1;
+	jQuery("#task").val(task);
+	Joomla.submitform(task, document.getElementById('adminForm'));
+	
+}
+
+function submitform(v){
+	jQuery("input[name ='limitstart']").val(0);
+	jQuery("#limit").val(v);
+	Joomla.submitform();
+	return true;
+}	
+</script>
 <form action="<?php echo JRoute::_('index.php?option=com_jv&controller=products'); ?>" method="post" name="adminForm" id="adminForm">
 <div class="span2" id="j-sidebar-container">
 <div id="sidebar">
@@ -175,7 +205,6 @@ Order
 			
 <tbody>
 <?php $i=0; foreach($this->products as $rows => $row) : $i++;
-$published 	= JHTML::_('grid.published', $row->publish, $i,"tick1.png" );
 ?>
 <tr sortable-group-id="10" class="row0">
 <td class="order nowrap center hidden-phone">
@@ -187,10 +216,14 @@ $published 	= JHTML::_('grid.published', $row->publish, $i,"tick1.png" );
 </td>
 
 <td class="center hidden-phone">
-<input type="checkbox" onclick="Joomla.isChecked(this.checked);" value="<?php echo $row->id; ?>" name="cid[]" id="cb0">
+
+<?php echo JHtml::_('grid.id', $i, $row->id); ?>
+
 </td>
 
-<td class="hidden-phone"><?php echo $published; ?></td>
+<td class="hidden-phone">
+<?php echo JHtml::_('jgrid.published', $row->publish, $i, '', $canChange = true, 'cb'); ?>
+</td>
 <td class="has-context">
 <div class="pull-left">
 <a href="index.php?option=com_jv&controller=product&id=<?php echo $row->id; ?>"><?php echo $row->name_project; ?></a><br/>
@@ -213,17 +246,9 @@ $published 	= JHTML::_('grid.published', $row->publish, $i,"tick1.png" );
 <input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />
 <input type="hidden" value="" name="task">
 <input type="hidden" name="boxchecked" value="0" />
-<input type="hidden" value="" name="task">
+<input type="hidden" value="" name="task" id="task">
 <input type="hidden" value="" name="layout">
 <input type="hidden" value="products" name="controller">
-
+<?php echo JHTML::_( 'form.token' ); ?>
 </div>	
 </form>
-<script>
-function submitform(v){
-	jQuery("input[name ='limitstart']").val(0);
-	jQuery("#limit").val(v);
-	Joomla.submitform();
-	return true;
-}
-</script>
