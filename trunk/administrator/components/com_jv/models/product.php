@@ -100,13 +100,13 @@ class JvModelProduct extends JModelAdmin
 	}
 	
 	function publish($cid = array(), $publish = 1){
-		$user 	=& JFactory::getUser();
+	
 		if (count( $cid ))
 		{
 			JArrayHelper::toInteger($cid);
 			$cids = implode( ',', $cid );
 			$query = 'UPDATE #__jv_product'
-				. ' SET published = '.(int) $publish
+				. ' SET publish = '.(int) $publish
 				. ' WHERE id IN ( '.$cids.' )'
 			;
 			$this->_db->setQuery( $query );
