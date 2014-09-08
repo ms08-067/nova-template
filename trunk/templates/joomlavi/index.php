@@ -131,5 +131,13 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 	  ga('send', 'pageview');
 
 	</script>
+	<script>
+		
+		
+		
+			//alert($(window).height());
+		
+		
+	</script>
   </body>
 </html>

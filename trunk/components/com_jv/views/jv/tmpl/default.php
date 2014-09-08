@@ -3,7 +3,8 @@
 defined('_JEXEC') or die('Restricted access');
 ?>
 
-    <section id="about-us" class="container main">
+<!--<div class="jvwrapper"> -->
+    <section id="about-us" class="container jv">
         <div class="row-fluid">
             <div class="span6">
                 <h2>What we do</h2>
@@ -12,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 				We understand design trend, web standards and offer to  technology solutions to marketing, business and application management, make more business  efficiency  to your company. 
 				This is  some of main service:
 				</p>
-                <ul>
+                <ul id="f">
                 	<li>Web Design - Web Development</li>
                     <li>Android Aplication Development</li>                  
                     <li>Templates Website</li>
@@ -185,3 +186,4 @@ defined('_JEXEC') or die('Restricted access');
 
     </div>
 </section>
+<!--</div><!--end div.jvwrapper-->

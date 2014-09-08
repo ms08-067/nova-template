@@ -13,7 +13,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.caption');
 ?>
-<div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
+<div class="blog<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 		<div class="page-header">
 			<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
@@ -53,8 +53,7 @@ JHtml::_('behavior.caption');
 	<?php if (!empty($this->lead_items)) : ?>
 		<div class="well items-leading clearfix">
 			<?php foreach ($this->lead_items as &$item) : ?>
-				<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
-					itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+				<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
 					<?php
 					$this->item = & $item;
 					echo $this->loadTemplate('item');
@@ -78,8 +77,7 @@ JHtml::_('behavior.caption');
 				<div class="well items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> clearfix">
 			<?php endif; ?>
 			<div class="span<?php echo round((12 / $this->columns)); ?>">
-				<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
-					itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+				<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
 					<?php
 					$this->item = & $item;
 					echo $this->loadTemplate('item');

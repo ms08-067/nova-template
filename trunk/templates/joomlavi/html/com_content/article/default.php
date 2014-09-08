@@ -90,11 +90,24 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-	<div class="blog-meta clearfix">
+
+<?php 
+$output = new stdClass;
+$itemURL = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
+
+$websiteURL = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != "off") ? "https://".$_SERVER['HTTP_HOST'] : "http://".$_SERVER['HTTP_HOST'];
+
+$output->itemURL = $websiteURL.$itemURL;
+$output->disqusIdentifier = substr(md5("mwebs"), 0, 10).'_id'.$this->item->id; 
+
+?>
+<div class="blog-meta clearfix">
 	<p class="pull-left">
 	  <i class="icon-user"></i> By <a href=""><?php echo $this->item->author ?></a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="index.php?option=com_content&view=category&layout=blog&id=<?php echo $this->item->catid;?>"><?php echo $this->item->category_title; ?></a> |</span> <i class="icon-calendar"></i> <?php echo date("M jS, Y",strtotime($this->item->publish_up));?>
   </p>
-  <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
+  <p class="pull-right"><i class="icon-comment pull"></i> 
+  <a data-disqus-identifier="<?php echo $output->disqusIdentifier;?>" href="<?php echo $output->itemURL; ?>#disqus_thread"></a>
+ </p>
 </div>
 	
 

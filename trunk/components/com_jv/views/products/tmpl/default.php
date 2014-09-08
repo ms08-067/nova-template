@@ -14,11 +14,12 @@ defined('_JEXEC') or die('Restricted access');
 <div id="plist" class="row gallery col-4">
 <?php $i=0; foreach ($this->products as $rows => $row) : $i++;?>
 <?php if(!empty($row->img_thumb)):?>
+
 <div class="span4">
 	<div class="preview">
+		<!--<a href="<?php //echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$row->id); ?>">-->
 		<img style="width: 100%" alt=" " src="<?php echo $row->img_thumb;?>">
-		<div class="overlay">
-		</div>
+		<!--</a>-->
 		<div class="links">
 			<a href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$row->id); ?>">
 			View Detail
