@@ -23,7 +23,16 @@ JHtml::_('behavior.framework');
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
 <?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
+<?php 
+$output = new stdClass;
+$itemURL = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
 
+$websiteURL = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != "off") ? "https://".$_SERVER['HTTP_HOST'] : "http://".$_SERVER['HTTP_HOST'];
+
+$output->itemURL = $websiteURL.$itemURL;
+$output->disqusIdentifier = substr(md5("mwebs"), 0, 10).'_id'.$this->item->id; 
+
+?>
 <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
 
@@ -32,8 +41,10 @@ JHtml::_('behavior.framework');
 	<p class="pull-left">
 	  <i class="icon-user"></i> By <a href=""><?php echo $this->item->author ?></a> | <span class="pull_cate"><i class="icon-folder-close"></i> Category <a href="index.php?option=com_content&view=category&layout=blog&id=<?php echo $this->item->catid;?>"><?php echo $this->item->category_title; ?></a> |</span> <i class="icon-calendar"></i> <?php echo date("M jS, Y",strtotime($this->item->publish_up));?>
   </p>
-  <p class="pull-right"><i class="icon-comment pull"></i> <a href="blog-item.html#comments">3 Comments</a></p>
+  <p class="pull-right"><i class="icon-comment pull"></i> 
+  <a data-disqus-identifier="<?php echo $output->disqusIdentifier;?>" href="<?php echo $output->itemURL; ?>#disqus_thread"></a></p>
 </div>
+
 <?php endif; ?>
 
 <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>

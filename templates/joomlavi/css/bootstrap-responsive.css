@@ -64,8 +64,21 @@
 .visible-desktop {
   display: inherit !important;
 }
-
+@media (min-width: 480px) and (max-width: 1024px) {
+.gallery .desc {
+	height: 50px;
+}
+.attributes td.key {
+padding-left: 0px;
+}
+}
 @media (min-width: 768px) and (max-width: 979px) {
+  #portfolio {
+		margin-top: 15px !important;
+  }	
+  .blog {
+	min-height: 730px;
+   }
   .hidden-desktop {
     display: inherit !important;
   }
@@ -993,22 +1006,21 @@ width: 1104px !important;
     position: static;
   }
 }
-@media (max-width: 461px) {
-	.pull_cate {display:none;}
-}
 @media (max-width: 979px) {
   body {
     padding-top: 0;
   }
+  .pull_cate {display:none;}
    #seller_items li {
 	margin-right: 12px !important;
 	margin-bottom: 12px;
 	width: 42% !important;
   }
+  /*
   .row-fluid ul {
 	margin-left: 0px !important;
   }
-  
+  */
   .title {
 	  margin-top: -19px;
 	}

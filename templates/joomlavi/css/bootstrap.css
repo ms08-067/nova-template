@@ -68,7 +68,7 @@ audio:not([controls]) {
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
 }
 
 a:focus {
@@ -329,7 +329,7 @@ a:focus {
 }
 
 .span4 {
-  width: 300px;
+  width: 296px;
 }
 
 .span3 {
@@ -462,7 +462,7 @@ a:focus {
 .ads .row-fluid .span6 {
    
     float: left !important;
-    width: 50% !important;
+    width: 48% !important;
 	
 }
 .ads .row-fluid .ads1 {
@@ -878,7 +878,9 @@ ol {
   padding: 0;
   margin: 0 0 10px 25px;
 }
-
+ul#f{
+  margin: 0 0 10px 25px !important;
+}
 ul ul,
 ul ol,
 ol ol,
