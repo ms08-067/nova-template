@@ -42,6 +42,7 @@ class JvControllerProduct extends JControllerForm
 		
 			$model = $this->getModel("Product");
 			$post['created_date'] = date("Y-m-d H:i:s");
+			$post['update_date'] = date("Y-m-d H:i:s");
 			$post['name_project'] = $post['jform']['name_project'];
 			$post['short_des'] = $post['jform']['short_des'];
 			$post['des'] = $post['jform']['des'];
@@ -74,7 +75,7 @@ class JvControllerProduct extends JControllerForm
 				$obj->des = $post["des"];
 				$obj->notice = $post["notice"];
 				$obj->publish = $post["publish"];
-				$obj->created_date = $post["created_date"];
+				$obj->update_date = $post["update_date"];
 				$obj->price = $post["price"];
 				$obj->version = $post["version"];
 				$obj->id_categories_product = $post["id_categories_product"];

@@ -186,6 +186,9 @@ Order
 <th>
 <?php echo JHTML::_('grid.sort',  'Project Name', 'p.name_project', $listDirn, $listOrder ); ?>
 </th>
+<th width="10%">
+<?php echo JHTML::_('grid.sort',  'Items', 'p.folder_item', $listDirn, $listOrder ); ?>
+</th>
 <th width="20%" class="nowrap hidden-phone">
 <?php echo JHTML::_('grid.sort',  'Categorie', 'p.id_categories_product', $listDirn, $listOrder ); ?>
 </th>
@@ -194,6 +197,9 @@ Order
 </th>
 <th width="10%" class="nowrap hidden-phone">
 <?php echo JHTML::_('grid.sort',  'Date', 'p.created_date', $listDirn, $listOrder ); ?>
+</th>
+<th width="10%" class="nowrap hidden-phone">
+<?php echo JHTML::_('grid.sort',  'Last Update', 'p.update_date', $listDirn, $listOrder ); ?>
 </th>
 <th width="1%" class="nowrap hidden-phone">
 <?php echo JHTML::_('grid.sort',  'ID', 'p.id', $listDirn, $listOrder ); ?>
@@ -211,14 +217,10 @@ Order
 <span title="" class="sortable-handler inactive tip-top hasTooltip" data-original-title="Please sort by order to enable reordering">
 <i class="icon-menu"></i>
 </span>
-
 <?php echo $i;?>
 </td>
-
 <td class="center hidden-phone">
-
 <?php echo JHtml::_('grid.id', $i, $row->id); ?>
-
 </td>
 
 <td class="hidden-phone">
@@ -230,9 +232,16 @@ Order
 <span class="small"><?php echo $row->short_des; ?></span>
 </div>
 </td>
+<td>
+<a href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($row->folder_item) ? "cus".$row->id : $row->folder_item)); ?>" target="_blank">
+<?php echo empty($row->folder_item) ? "cus".$row->id : $row->folder_item; ?>
+</a>
+</td>
 <td><?php echo $row->categories;?></td>
 <td class="small hidden-phone"><?php echo $row->price." $"; ?></td>
+
 <td class="nowrap small hidden-phone"><?php echo date("d-m-Y",strtotime($row->created_date)); ?></td>
+<td class="nowrap small hidden-phone"><?php echo empty($row->update_date) ? "": date("d-m-Y H:i:s",strtotime($row->update_date)); ?></td>
 <td class="center hidden-phone"><?php echo $row->id; ?></td>
 </tr>
 <?php endforeach; ?>

@@ -66,6 +66,12 @@ endfor; ?>
 <td class="key"><strong>Short des:</strong></td>
 <td class="value"><?php echo $this->product->short_des; ?></td>
 </tr>
+<?php if(!empty($this->product->update_date)): ?>
+<tr>
+<td class="key"><strong>Last Updated:</strong></td>
+<td class="value"><?php echo date("m-d-Y",strtotime($this->product->update_date)); ?></td>
+</tr>
+<?php endif;?>
 <tr>
 <td class="key"><strong>Categories:</strong></td>
 <td class="value">
