@@ -9,6 +9,8 @@
   content:"";
   line-height:0;
 }
+#about-us {min-height: 510px;}
+.jv {min-height: 200px !important;}
 .blog {min-height: 550px;}
 .message {
 background-color: #c3d2e5;

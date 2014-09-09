@@ -60,7 +60,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 	
 	<?php if ($this->countModules('right')) { ?>
 	
-    <section id="about-us" class="container main">
+    <section id="about-us" class="container">
 		<div class="row-fluid">
             
             <div class="span8">
