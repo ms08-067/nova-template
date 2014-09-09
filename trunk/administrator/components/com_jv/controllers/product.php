@@ -27,10 +27,19 @@ class JvControllerProduct extends JControllerForm
 		$this->setRedirect( 'index.php?option=com_jv&controller=products');
 	}//End function cancel
 	
+	function mt_rand_str ($l, $c = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ') {
+		
+		for ($s = '', $cl = strlen($c)-1, $i = 0; $i < $l; $s .= $c[mt_rand(0, $cl)], ++$i);
+		return $s;
+	}
+	
+	//echo mt_rand_str(8);
+	
 	public function save(){
 	
 		$post = JRequest::get('post');
 		if(count($post)){
+		
 			$model = $this->getModel("Product");
 			$post['created_date'] = date("Y-m-d H:i:s");
 			$post['name_project'] = $post['jform']['name_project'];
@@ -44,8 +53,10 @@ class JvControllerProduct extends JControllerForm
 			$post['img'] = $post['jform']['img'];
 			$post['img_alt'] = $post['jform']['img_alt'];
 			$post['link_item'] = $post['jform']['link_item'];
+			$post['folder_item'] = $post['jform']['folder_item'];
 			
 			if($post["id"]){
+			
 				$db = JFactory::getDbo();
 				$obj = new stdClass();
 				$obj->id = $post["id"];
@@ -55,6 +66,9 @@ class JvControllerProduct extends JControllerForm
 				$obj->img = $post["img"];
 				$obj->img_alt = $post["img_alt"];
 				$obj->link_item = $post["link_item"];
+				
+				if(empty($post['folder_item'])) $obj->folder_item = $this->mt_rand_str(8);
+				else $obj->folder_item = $post["folder_item"];
 				
 				$obj->short_des = $post["short_des"];
 				$obj->des = $post["des"];
@@ -68,7 +82,9 @@ class JvControllerProduct extends JControllerForm
 				$db->updateObject('#__jv_product', $obj,'id');
 			}
 			else {
+				$post["folder_item"] = $this->mt_rand_str(8);
 				$id = $model->store($post,"product");
+				
 			}
 		}
 		switch($this->getTask()){

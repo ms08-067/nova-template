@@ -77,11 +77,13 @@
 			description="COM_JV_IMAGES_ALT_DESC"
 			size="20"/>
 			
-		<!--<field name="folder_item"
+		<field name="folder_item"
 			type="text"
 			label="COM_JV_FOLDER_ITEM"
+			readonly="true"
+			class="readonly"
 			description="COM_JV_FOLDER_ITEM_DESC"
-			size="20"/>-->
+			size="20"/>
 			
 		<field name="link_item"
 			type="text"
