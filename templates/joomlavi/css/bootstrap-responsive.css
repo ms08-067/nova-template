@@ -77,7 +77,7 @@ padding-left: 0px;
 		margin-top: 15px !important;
   }	
   .blog {
-	min-height: 730px;
+	min-height: 730px !important;
    }
   .hidden-desktop {
     display: inherit !important;

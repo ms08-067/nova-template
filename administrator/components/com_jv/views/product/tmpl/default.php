@@ -127,7 +127,7 @@ JHtml::_('formbehavior.chosen', 'select');
 
 <?php echo JHtml::_('bootstrap.addTab', 'myTab', 'images', JText::_('COM_JV_PRODUCT_IMAGES', true)); ?>
 <div class="row-fluid form-horizontal-desktop">
-<div class="span6">
+<div class="span5">
 <div class="control-group ">
 <div class="control-label"><label class="hasTooltip" id="img_thumb_lbl" >Images Thumb</label></div>
 <div class="controls">
@@ -158,6 +158,7 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 </div>
 
+<div class="span7">
 <div class="control-group">
 <div class="control-label">
 <label class="hasTooltip" id="link_item"  aria-invalid="false">Link Items</label>
@@ -165,6 +166,17 @@ JHtml::_('formbehavior.chosen', 'select');
 <div class="controls">
 <?php echo $this->form->getInput('link_item'); ?>
 </div>
+</div>
+
+<div class="control-group">
+<div class="control-label">
+<label class="hasTooltip" id="folder_item"  aria-invalid="false">Folder Items</label>
+</div>
+<div class="controls">
+<?php echo $this->form->getInput('folder_item'); ?>
+</div>
+</div>
+
 </div>
 
 </div>

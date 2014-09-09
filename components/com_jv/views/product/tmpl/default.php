@@ -16,7 +16,7 @@ defined('_JEXEC') or die('Restricted access');
 <img id="thing_image" width="100%" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
 </a>
 <div class="wrap_link_demo">
-	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_('http://www.mwebs.vn/demo/cus'.$this->product->id); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
+	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($this->product->folder_item) ? "cus".$this->product->id : $this->product->folder_item)); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
 	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" title="Purchase now using PayPal" href="#" class="btn">Purchase now »</a>
 </div>
 </div>
