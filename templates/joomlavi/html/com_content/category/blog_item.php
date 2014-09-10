@@ -53,8 +53,9 @@ $output->disqusIdentifier = substr(md5("mwebs"), 0, 10).'_id'.$this->item->id;
 <?php if (!$params->get('show_intro')) : ?>
 	<?php echo $this->item->event->afterDisplayTitle; ?>
 <?php endif; ?>
+<div class="jvcontent">
 <?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
-
+</div>
 <?php if ($useDefList) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 <?php  endif; ?>

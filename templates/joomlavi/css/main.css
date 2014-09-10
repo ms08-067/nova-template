@@ -9,6 +9,7 @@
   content:"";
   line-height:0;
 }
+
 #about-us {min-height: 510px;}
 .jv {min-height: 200px !important;}
 .blog {min-height: 550px;}
@@ -77,7 +78,7 @@ border: 1px solid #d6d6d6;
 }
 .blog-meta {
 	border-bottom: 1px solid #EEEEEE;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 .hide-text {
   font:0/0 a;
@@ -190,7 +191,7 @@ body h4 {
   padding:0;
 }
 .txtcontent a {
-    color: #0e532b;
+    color: #5e5e5e;
     font-style: italic;
     font-weight: bold;
 }
@@ -213,7 +214,10 @@ a {
   -o-transition:300ms;
   transition:300ms;
 }
-
+.jvcontent a {
+	color: #5e5e5e;
+	font-weight: bold;
+}
 a:hover,
 a:focus {
   color:#005580;
