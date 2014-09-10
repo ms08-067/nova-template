@@ -69,7 +69,7 @@ endfor; ?>
 <?php if(!empty($this->product->update_date)): ?>
 <tr>
 <td class="key"><strong>Last Updated:</strong></td>
-<td class="value"><?php echo date("m-d-Y",strtotime($this->product->update_date)); ?></td>
+<td class="value"><?php echo date("M d, Y",strtotime($this->product->update_date)); ?></td>
 </tr>
 <?php endif;?>
 <tr>
