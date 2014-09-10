@@ -13,7 +13,7 @@ class JvViewProducts extends JViewLegacy
 	function display($tpl = null)
 	{
 		$products = new JvModelProduct();
-		$products->_limit = 6;
+		$products->_limit = 9;
 		$products->_limitstart = JRequest::getInt("limitstart");		
 		
 		$this->assignRef('products',   $products->getData($publish = 1));
