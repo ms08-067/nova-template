@@ -233,9 +233,16 @@ Order
 </div>
 </td>
 <td>
+<?php if(empty($row->link_item_outer)): ?>
 <a href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($row->folder_item) ? "cus".$row->id : $row->folder_item)); ?>" target="_blank">
 <?php echo empty($row->folder_item) ? "cus".$row->id : $row->folder_item; ?>
 </a>
+<?php else:?>
+<a href="<?php echo JRoute::_( $row->link_item_outer ); ?>" target="_blank">
+	Link Outer
+</a>
+<?php endif;?>
+
 </td>
 <td><?php echo $row->categories;?></td>
 <td class="small hidden-phone"><?php echo $row->price." $"; ?></td>

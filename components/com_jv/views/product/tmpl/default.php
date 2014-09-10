@@ -1,7 +1,6 @@
 ﻿<?php
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
-//echo "<pre>";print_r($this->product);
 ?>
 <section id="product" class="container main">    
 <div class="row gallery col-4 row-fluid">
@@ -16,7 +15,15 @@ defined('_JEXEC') or die('Restricted access');
 <img id="thing_image" width="100%" alt="<?php echo $this->product->img_alt; ?>" title="<?php echo $this->product->img_alt; ?>" src="<?php echo $this->product->img; ?>" />
 </a>
 <div class="wrap_link_demo">
-	<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($this->product->folder_item) ? "cus".$this->product->id : $this->product->folder_item)); ?>" target="_blank" class="btn primary live_preview"><span>Live preview</span></a>&nbsp;
+
+	<?php if(empty($this->product->link_item_outer)): ?>
+		<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($this->product->folder_item) ? "cus".$this->product->id : $this->product->folder_item)); ?>" target="_blank" class="btn primary live_preview">
+	<?php else:?>
+		<a title="Live preview" rel="nofollow" href="<?php echo JRoute::_($this->product->link_item_outer); ?>" target="_blank" class="btn primary live_preview">
+	<?php endif;?>
+	
+	<span>Live preview</span></a>&nbsp;
+	
 	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" title="Purchase now using PayPal" href="#" class="btn">Purchase now »</a>
 </div>
 </div>

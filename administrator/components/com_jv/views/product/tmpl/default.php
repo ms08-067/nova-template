@@ -159,6 +159,7 @@ JHtml::_('formbehavior.chosen', 'select');
 </div>
 
 <div class="span7">
+
 <div class="control-group">
 <div class="control-label">
 <label class="hasTooltip" id="link_item"  aria-invalid="false">Link Items</label>
@@ -167,6 +168,16 @@ JHtml::_('formbehavior.chosen', 'select');
 <?php echo $this->form->getInput('link_item'); ?>
 </div>
 </div>
+
+<div class="control-group">
+<div class="control-label">
+<label class="hasTooltip" id="link_item_outer"  aria-invalid="false">Link Items Outer</label>
+</div>
+<div class="controls">
+<?php echo $this->form->getInput('link_item_outer'); ?>
+</div>
+</div>
+
 
 <div class="control-group">
 <div class="control-label">

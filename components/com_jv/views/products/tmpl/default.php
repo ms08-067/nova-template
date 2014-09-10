@@ -24,7 +24,13 @@ defined('_JEXEC') or die('Restricted access');
 			<a href="<?php echo JRoute::_('index.php?option=com_jv&view=product&Itemid=108&id='.$row->id); ?>">
 			View Detail
 			</a>
-			<a href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($row->folder_item) ? "cus".$row->id : $row->folder_item)); ?>" target="_blank">
+			
+			<?php if(empty($row->link_item_outer)): ?>
+				<a href="<?php echo JRoute::_("http://www.mwebs.vn/demo/". (empty($row->folder_item) ? "cus".$row->id : $row->folder_item)); ?>" target="_blank">
+			<?php else:?>
+				<a href="<?php echo JRoute::_( $row->link_item_outer ); ?>" target="_blank">
+			<?php endif; ?>
+			
 			Live Preview 
 			</a>                                
 		</div>

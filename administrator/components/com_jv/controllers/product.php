@@ -54,6 +54,7 @@ class JvControllerProduct extends JControllerForm
 			$post['img'] = $post['jform']['img'];
 			$post['img_alt'] = $post['jform']['img_alt'];
 			$post['link_item'] = $post['jform']['link_item'];
+			$post['link_item_outer'] = $post['jform']['link_item_outer'];
 			$post['folder_item'] = $post['jform']['folder_item'];
 			
 			if($post["id"]){
@@ -67,6 +68,7 @@ class JvControllerProduct extends JControllerForm
 				$obj->img = $post["img"];
 				$obj->img_alt = $post["img_alt"];
 				$obj->link_item = $post["link_item"];
+				$obj->link_item_outer = $post["link_item_outer"];
 				
 				if(empty($post['folder_item'])) $obj->folder_item = $this->mt_rand_str(8);
 				else $obj->folder_item = $post["folder_item"];
