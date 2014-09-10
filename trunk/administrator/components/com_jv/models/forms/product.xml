@@ -92,4 +92,11 @@
 			description="COM_JV_LINK_ITEM_DESC"
 			size="40"/>
 			
+		<field name="link_item_outer"
+			type="text"
+			class="input-xxlarge"
+			label="COM_JV_LINK_ITEM_OUTER"
+			description="COM_JV_LINK_ITEM_OUTER_DESC"
+			size="40"/>	
+			
 </form>
