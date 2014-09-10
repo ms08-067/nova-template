@@ -14,11 +14,11 @@
                     </li>
                     <li>
                         <i class="icon-envelope"></i>
-                        <strong>Email: </strong><a href="">hunguit@yahoo.com</a>
+                        <strong>Email: </strong><a href="mailto: hunguit@yahoo">hunguit@yahoo.com</a>
                     </li>
                     <li>
                         <i class="icon-globe"></i>
-                        <strong>Website:</strong><a href="">www.joomlavi.net</a>
+                        <strong>Website:</strong><a href="http://www.mwbs.vn">www.mwebs.vn</a>
                     </li>
                     <li>
                         <i class="icon-phone"></i>
@@ -30,15 +30,15 @@
 
             <!--Important Links-->
             <div class="span4" id="tweets">
-                <h4>OUR COMPANY</h4>
+                <h4>QUICK ACCESS</h4>
                 <div>
                     <ul class="arrow">
-                        <li><a href="introduction.html">About Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">We are hiring</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="javascript:void(0);">About Us</a></li>
+                        <li><a href="javascript:void(0);">Support</a></li>
+                        <li><a href="javascript:void(0);">Terms of Use</a></li>
+                        <li><a href="javascript:void(0);">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0);">We are hiring</a></li>
+                        <li><a href="javascript:void(0);">Blog</a></li>
                     </ul>
                 </div>  
             </div>
@@ -49,12 +49,12 @@
                 <h4>ARCHIVES</h4>
                 <div>
                     <ul class="arrow">
-                        <li><a href="#">November 2012 (5)</a></li>
-                        <li><a href="#">October 2012 (8)</a></li>
-                        <li><a href="#">September 2012 (10)</a></li>
-                        <li><a href="#">August 2012 (29)</a></li>
-                        <li><a href="#">July 2012 (1)</a></li>
-                        <li><a href="#">June 2012 (31)</a></li>
+                        <li><a href="javascript:void(0);">September 2014 (5)</a></li>
+                        <li><a href="javascript:void(0);">August 2014 (8)</a></li>
+                        <li><a href="javascript:void(0);">July 2014 (10)</a></li>
+                        <li><a href="javascript:void(0);">June 2014 (29)</a></li>
+                        <li><a href="javascript:void(0);">May 2014 (1)</a></li>
+                        <li><a href="javascript:void(0);">April 2014 (31)</a></li>
                     </ul>
                 </div>
             </div>
