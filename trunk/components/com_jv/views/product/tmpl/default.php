@@ -79,6 +79,12 @@ endfor; ?>
 <td class="value"><?php echo date("M d, Y",strtotime($this->product->update_date)); ?></td>
 </tr>
 <?php endif;?>
+<?php if(!empty($this->product->folder_item)): ?>
+<tr>
+<td class="key"><strong>Item:</strong></td>
+<td class="value"><?php echo $this->product->folder_item; ?></td>
+</tr>
+<?php endif;?>
 <tr>
 <td class="key"><strong>Categories:</strong></td>
 <td class="value">
@@ -106,12 +112,14 @@ endfor; ?>
 <div class="hide" id="errorBox"></div>
 <input type="hidden" name="button" value="buynow">
 <input type="hidden" name="item_name" value="<?php echo $this->product->name_project;?>">
+<input type="hidden" name="item_number" value="<?php echo $this->product->folder_item;?>">
 <input type="hidden" name="quantity" value="1">
 <input type="hidden" name="amount" value="<?php echo $this->product->price;?>">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="shipping" value="0">
 <input type="hidden" name="tax" value="0">
-<input type="hidden" name="notify_url" value="<?php echo JRoute::_('http://www.mwebs.vn/index.php?option=com_jv&view=product&Itemid=108&layout=notice&id='.$this->product->id); ?>">
+<input type="hidden" name="cpp_logo_image" value="http://www.mwebs.vn/templates/joomlavi/images/logo.png">
+<input type="hidden" name="return" value="<?php echo JRoute::_('http://www.mwebs.vn/index.php?option=com_jv&view=product&Itemid=108&layout=notice&id='.$this->product->id); ?>">
 <input type="hidden" name="cmd" value="_xclick">
 <input type="hidden" name="business" value="R738Z27BNXEYJ">
 <input type="hidden" name="bn" value="JavaScriptButton_buynow">
