@@ -21,7 +21,6 @@ class JvViewProducts extends JViewLegacy
 
 	public function display($tpl = null)
 	{
-		
 		$mainframe = &JFactory::getApplication();
 		
 		$filter_order      = $mainframe->getUserStateFromRequest( $context.$view.'filter_order','filter_order','id' );
@@ -50,6 +49,7 @@ class JvViewProducts extends JViewLegacy
 		JToolbarHelper::deleteList('Are you sure you want to do this?', 'delete', 'Delete');
 		JToolbarHelper::publish('publish', 'JTOOLBAR_PUBLISH', true);
 		JToolbarHelper::unpublish('unpublish', 'JTOOLBAR_UNPUBLISH', true);
+		JToolbarHelper::preferences('com_jv', '150', '570','Setting','administrator'.DS.'components'.DS.'com_jv' );
 	}
 
 

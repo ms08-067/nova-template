@@ -38,13 +38,13 @@ class ConfigViewComponentHtml extends ConfigViewCmsHtml
 		$component = null;
 
 		try
-		{
+		{ 
 			$form = $this->model->getForm();
 			$component = $this->model->getComponent();
 			$user = JFactory::getUser();
 		}
 		catch (Exception $e)
-		{
+		{ 
 			JFactory::getApplication()->enqueueMessage($e->getMessage(), 'error');
 
 			return false;
@@ -55,10 +55,11 @@ class ConfigViewComponentHtml extends ConfigViewCmsHtml
 		{
 			$form->bind($component->params);
 		}
-
+		//echo "<pre>";print_r($form);exit;
 		$this->form = &$form;
 		$this->component = &$component;
-
+		
+		
 		$this->components = ConfigHelperConfig::getComponentsWithConfig();
 		ConfigHelperConfig::loadLanguageForComponents($this->components);
 

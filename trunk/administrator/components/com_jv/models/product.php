@@ -1,4 +1,5 @@
 <?php
+
 defined('_JEXEC') or die();
 jimport('joomla.application.component.model');  
 
@@ -11,12 +12,15 @@ class JvModelProduct extends JModelAdmin
 	var $_limit = null;
 	var $_limitstart = null;
 	public $filter_state;
+	public $sort_field;
 	
 	function __construct(){
 	
 		parent::__construct();
-		
-		
+		$params = JComponentHelper::getParams("com_jv");
+		$sort_field = $params->get('sort_field');
+		$this->sort_field = empty($sort_field) ? "id" : $sort_field;
+		//var_dump($this->sort_field);
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
@@ -72,7 +76,9 @@ class JvModelProduct extends JModelAdmin
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
-		$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order','id');
+		
+		
+		$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order', $this->sort_field);
 		$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', 'DESC' );
 		$orderby 	= ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
 		
