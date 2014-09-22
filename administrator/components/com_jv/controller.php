@@ -16,6 +16,15 @@ defined('_JEXEC') or die;
 class JvController extends JControllerLegacy
 {
 	
+	/*
+	public function __construct($default = array()) {
+	
+		parent::__construct($default);
+		$view = empty(JRequest::getVar("view")) ? "products": JRequest::getVar("view");
+		$input = JFactory::getApplication()->input;
+        $input->set('view', $view);
+	}
+	
 	/**
 	 * Method to display a view.
 	 * @param   boolean			If true, the view output will be cached	 
