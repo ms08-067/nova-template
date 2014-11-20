@@ -13,6 +13,7 @@ class JvModelProduct extends JModelAdmin
 	var $_limitstart = null;
 	public $filter_state;
 	public $sort_field;
+	public $sort_field_oder =  null;
 	
 	function __construct(){
 	
@@ -20,7 +21,10 @@ class JvModelProduct extends JModelAdmin
 		$params = JComponentHelper::getParams("com_jv");
 		$sort_field = $params->get('sort_field');
 		$this->sort_field = empty($sort_field) ? "id" : $sort_field;
-		//var_dump($this->sort_field);
+		
+		$sort_field_oder = $params->get('sort_field_oder');
+		$this->sort_field_oder = empty($sort_field_oder) ? "DESC" : $sort_field_oder;
+		
 		$mainframe = &JFactory::getApplication();
 		$context = JRequest::getCmd('option');
 		$view = JRequest::getCmd('view');
@@ -79,7 +83,7 @@ class JvModelProduct extends JModelAdmin
 		
 		
 		$filter_order     = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_author','filter_order', $this->sort_field);
-		$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', 'DESC' );
+		$filter_order_Dir = $mainframe->getUserStateFromRequest( $context.$view.'filter_order_Dir',  'filter_order_Dir', $this->sort_field_oder );
 		$orderby 	= ' ORDER BY '.$filter_order.' '.$filter_order_Dir;
 		
 		if($publish) $where = " WHERE p.publish = 1 ";
