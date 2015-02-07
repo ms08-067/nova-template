@@ -245,7 +245,7 @@ Order
 
 </td>
 <td><?php echo $row->categories;?></td>
-<td class="small hidden-phone"><?php echo $row->price." $"; ?></td>
+<td class="small hidden-phone"><?php echo ($row->price) ? $row->price." $" : "<strong>FREE</strong>"; ?></td>
 
 <td class="nowrap small hidden-phone"><?php echo date("d-m-Y",strtotime($row->created_date)); ?></td>
 <td class="nowrap small hidden-phone"><?php echo empty($row->update_date) ? "": date("d-m-Y H:i:s",strtotime($row->update_date)); ?></td>
