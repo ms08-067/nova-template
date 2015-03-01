@@ -12,7 +12,7 @@
 
 #about-us {min-height: 510px;}
 .jv {min-height: 200px !important;}
-.blog {min-height: 550px;}
+.blog {min-height: 642px;}
 .message {
 background-color: #c3d2e5;
 border-radius: 4px;
@@ -119,10 +119,18 @@ section.services {
 body {	
   font-size:12px;
   color:#5e5e5e;
-  font:13px/1.5 Helvetica,Arial,Sens-serif;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  /*font:13px/1.5 Helvetica,Arial,Sens-serif;*/
   /*background: url("../images/bg_item.png") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
   background-color: #f5f5f5;
   /*background-color: #e9eaed*/
+}
+p {
+	font-family: Helvetica,Arial,Verdana,sans-serif;
+	font-size: 14px;
+	line-height: 20px;
 }
 .jvwrapper {
 	margin-top: -8px;
@@ -1093,7 +1101,7 @@ input[type="color"]:focus,
 	width: 42px;
     /*width: 15%;*/
 }
-
+.priceFree {width: 60px;background: #5e5e5e;}
 textarea#message {
   padding:10px 15px;
   height:219px;

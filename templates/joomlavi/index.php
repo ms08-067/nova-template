@@ -8,7 +8,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php $this->setMetaData('generator','Joomlavi | Joomla templates, Joomla extensions, JV Framework'); ?>
+	<?php $this->setMetaData('generator','Mwebs | Templates Bootstrap, Extensions Opensource,Template Market'); ?>
 	<jdoc:include type="head" />    
     <!-- Le styles -->
     <link href="<?php echo $temp_path; ?>/css/bootstrap.css" rel="stylesheet">
@@ -60,7 +60,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 	
 	<?php if ($this->countModules('right')) { ?>
 	
-    <section id="about-us" class="container">
+    <section id="about-us" class="container main">
 		<div class="row-fluid">
             
             <div class="span8">
@@ -89,7 +89,7 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
                 &copy; 2014 Mwebs. All Rights Reserved.
            
                 <ul class="social pull-right">
-                    <li><a target="_blank" href="https://www.facebook.com/Joomlavi.net"><i class="icon-facebook"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/mwebsvn"><i class="icon-facebook"></i></a></li>
                     <!--<li><a href="#"><i class="icon-google-plus"></i></a></li>-->   
 					<li class="go_top"> <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a></li>	
                 </ul>
@@ -117,9 +117,6 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
     <script src="<?php echo $temp_path; ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $temp_path; ?>/js/bootstrap-typeahead.js"></script>
-	<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>-->
-	
 	<script src="<?php echo $temp_path; ?>/js/jv.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -132,12 +129,8 @@ $temp_path = JURI::base() . 'templates/' . $app->getTemplate();
 
 	</script>
 	<script>
-		
-		
-		
-			//alert($(window).height());
-		
-		
+		//alert($(window).height());
 	</script>
+		
   </body>
 </html>

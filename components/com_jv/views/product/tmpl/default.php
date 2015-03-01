@@ -23,8 +23,11 @@ defined('_JEXEC') or die('Restricted access');
 	<?php endif;?>
 	
 	<span>Live preview</span></a>&nbsp;
-	
+	<?php if($this->product->price):?>
 	<a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" title="Purchase now using PayPal" href="#" class="btn">Purchase now »</a>
+	<?php else:?>
+	<a target="_blank" title="Download free" href="<?php echo JURI::root()."demo/".$this->product->folder_item;?>.zip" class="btn">Download free »</a>
+	<?php endif;?>
 </div>
 </div>
 <?php endif;?>
@@ -63,7 +66,13 @@ endfor; ?>
 	<h2><?php echo $this->product->name_project; ?></h2>
 </div>
 <div class="product_info">                    
+
+<?php if($this->product->price):?>
 <a onclick="document.getElementById('order').submit(); return false;" rel="nofollow" href="#" class="btn primary btn-xlarge" id="buynow"><span id="offer_price">$<?php echo $this->product->price;?></span></a>                       
+<?php else:?>
+<a href="<?php echo JURI::root()."demo/".$this->product->folder_item;?>.zip" class="btn primary btn-xlarge" id="buynow">Download Free</a>
+<?php endif;?>
+
 <div class="info_wrapper">
 <table class="attributes zebra-striped">
 <tbody>

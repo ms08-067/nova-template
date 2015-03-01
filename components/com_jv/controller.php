@@ -19,7 +19,6 @@ function getMoreProduct()
 		$products->_limit = 3;
 		$products->_limitstart = ($limitstart - 1)*3;
 		$listProduct = $products->getData();
-		//echo $listProduct;exit;
 		if(count($listProduct)){
 			$i=0;$arr = array(); 
 			foreach ($listProduct as $rows => $row) : 
