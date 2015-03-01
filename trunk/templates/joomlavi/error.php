@@ -8,7 +8,6 @@
  */
 
 defined('_JEXEC') or die;
-
 // Getting params from template
 $params = JFactory::getApplication()->getTemplate(true)->params;
 
@@ -54,6 +53,7 @@ else
 {
 	$logo = '<span class="site-title" title="'. $sitename .'">'. $sitename .'</span>';
 }
+header("Location: http://joomlavi.net");exit;
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -61,6 +61,7 @@ else
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title><?php echo $this->title; ?> <?php echo htmlspecialchars($this->error->getMessage()); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta HTTP-EQUIV="REFRESH" content="0; url=/">
 	<?php
 		// Use of Google Font
 		if ($params->get('googleFont'))

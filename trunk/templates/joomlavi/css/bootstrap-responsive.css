@@ -66,7 +66,11 @@
 }
 @media (min-width: 480px) and (max-width: 1024px) {
 .gallery .desc {
-	height: 50px;
+	height: 54px;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    padding-bottom: 9px;
+    padding-top: 2px;
 }
 .attributes td.key {
 padding-left: 0px;

@@ -38,7 +38,7 @@ defined('_JEXEC') or die('Restricted access');
 	<div class="desc">
 		<h5><?php echo $row->name_project; ?></h5>
 		<small><?php echo $row->short_des; ?></small>
-		<div class="price">$<?php echo $row->price; ?></div>
+		<div class="price <?php echo ($row->price) ? "": "priceFree" ?>"><?php echo ($row->price) ? "$".$row->price: "FREE"; ?></div>
 	</div>
 	<!---->
 	                
